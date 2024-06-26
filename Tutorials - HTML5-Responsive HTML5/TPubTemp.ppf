@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE polprojfile>
+<ppfml version="2.00" project="Tutorials - HTML5" type="4">
+ <windowlist defaultwindow="NewWindow">
+  <window name="NewWindow" x="5%" y="5%" width="90%" height="90%" viewtype="doublepane" workspacestyle="DEFAULT" toolbar="off" locationbar="off" menu="off" resizable="yes" statusbar="off" usecurrentwindowsettings="yes" caption="NewWindow">
+   <elements><element name="BrowseSequence" Present="yes" /><element name="SearchInput" Present="no" />
+   </elements>
+   <agents defaultagent="toc">
+    <agent>toc
+    </agent>
+    <agent>ndx
+    </agent>
+    <agent>nls
+    </agent>
+    <agent>gls
+    </agent>
+   </agents>
+  </window>
+ </windowlist>
+ <contextmap>
+ </contextmap>
+ <topiclist defaulttopic="Tutorials_-_HTML5\4118961_Tut_Quick_Start\4118961_Tut_Quick_Start.htm">
+  <topic>Tutorials_-_HTML5\4118961_Tut_Quick_Start\4118961_Tut_Quick_Start.htm
+  </topic>
+  <topic>Tutorials_-_HTML5\4118961_Tut_BeforeBegin\4118961_Tut_BeforeBegin.htm
+  </topic>
+  <topic>Tutorials_-_HTML5\4118961_Tut_SetUp\4118961_Tut_SetUp.htm
+  </topic>
+  <topic>Tutorials_-_HTML5\4118961_Tut_PrepareComputer\4118961_Tut_PrepareComputer.htm
+  </topic>
+  <topic>Tutorials_-_HTML5\4118961_Tut_DevelopApps\4118961_Tut_DevelopApps.htm
+  </topic>
+  <topic>Tutorials_-_HTML5\4118961_Tut_MakeConnection\4118961_Tut_MakeConnection.htm
+  </topic>
+  <topic>Tutorials_-_HTML5\4118961_Tut_AirVantage\4118961_Tut_AirVantage.htm
+  </topic>
+  <topic>Tutorials_-_HTML5\4118961_Tut_Appendix_-_Tips\4118961_Tut_Appendix_-_Tips.htm
+  </topic>
+  <topic>Tutorials_-_HTML5\4118961_Preface\4118961_Preface.htm
+  </topic>
+ </topiclist>
+ <projectincludes>
+ </projectincludes>
+ <filenamemap>
+  <filenameentry moniker="wh_languagetype">
+   <filename>en_US
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="nls">
+   <filename>.nla
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_lngfile">
+   <filename>index.lng
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_stoplist">
+   <filename>index.stp
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="startpage">
+   <filename>index.html
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="favicon">
+   <filename>Responsive HTML5_favicon.png
+   </filename>
+  </filenameentry>
+ </filenamemap>
+</ppfml>
