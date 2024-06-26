@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"7: Connect to the IoT Cloud\" url=\"Tutorials_-_HTML5/4118961_Tut_AirVantage/4118961_Tut_AirVantage.htm\"><book name=\"7.1 Register and connect to AirVantage\" url=\"Tutorials_-_HTML5/4118961_Tut_AirVantage/4118961_Tut_AirVantage.htm#TOC_7_1_Register_and_connectbc-1\" src=\"toc6.js\" /></data>";
