@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>SB555 Development Kit Enabling Software Guide</title>
+
+ <meta content="OEM, CDMA2000, 1xRTT, Watcher" name="search-keywords" />
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\41110402 mangOH Red Fundamentals v2 (Linux and Windows CLI)\41110479-80-81-82 UpLegato.fm" />
+ <link rel="stylesheet" href="41110479-80-81-82_UpLegato.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "8";
+</script>
+ <meta name="brsprev" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_Develop/41110479-80-81-82_Develop.htm">
+ <meta name="brsnext" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_Tips/41110479-80-81-82_Tips.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">B: <a name="XREF_77395_Tips"></a>Update Legato Application Framework</p>
+  <p dir="ltr" class="FM_Body">As part of the <a href="../41110479-80-81-82_PrepMangoh/41110479-80-81-82_PrepMangoh.htm#XREF_67774_4_2_1_Connect_the"><span class="FM_blue_color">Build and Install Legato Platform and mangOH Red Platform on Target</span></a>&#160;process, you downloaded and installed the latest version of the Legato Application Framework (AF).</p>
+  <p dir="ltr" class="FM_Body">When new versions of the framework are released, you can install them on your dev machine using the procedure below.</p>
+  <h1 dir="ltr"><a name="TOC_B_1_Update_the_Legato_AF"></a>B.1 Update the Legato AF on Your Dev Machine</h1>
+  <p dir="ltr" class="FM_Body">To update the Legato AF on your dev machine:</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a terminal window.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Configure your environment for development:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cfglegato</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Check the version of the Legato AF that is currently installed:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd $LEGATO_ROOT/..</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ls -al .repo</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="repo_manifest_2.png" style=" width:100%; margin-top:10pt; max-width:505.086pt;" id="image0" src="../../assets/repo_manifest_2.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented">The installed version is indicated in the manifest.xml link.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to <span class="FM_Link"><a href="http://legato.io/legato-docs/latest/aboutReleaseInfo.html">http://legato.io/legato-docs/latest/aboutReleaseInfo.html</a></span>&#160;to get the version number of the most recent release.</p>
+
+  <div align="left"><img alt="legato_release_num_5.png" style=" width:100%; margin-top:10pt; max-width:379.068pt;" id="image1" src="../../assets/legato_release_num_5.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If your release is older (lower version number) than the most recent release:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Download the framework files into your working directory (for example, &quot;legato_framework&quot;)<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Replace the release number in the ’repo’ command with the most recent release (this example downloads version 17.07.1):</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 53.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 450.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Through the rest of this guide, &quot;legato_framework&quot; is assumed to be the file you created. If you used a different name, make sure to use that name in any commands that refer to legato_framework.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Optionally, rename your existing legato folder so that you can restore the current framework if necessary at a later point (replace &lt;version&gt; with your current Legato AF version in the following command):</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ mv legato legato_&lt;version&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Download the framework files into the work directory and follow any prompts that may appear:</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ repo init -u git://github.com/legatoproject/\</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">manifest -m legato/releases/17.07.1.xml</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ repo sync</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="sync_framework1_5.png" style=" width:100%; margin-top:10pt; max-width:367.572pt;" id="image2" src="../../assets/sync_framework1_5.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <div align="left"><img alt="sync_framework3_new_5.png" style=" width:100%; margin-top:10pt; max-width:378.822pt;" id="image3" src="../../assets/sync_framework3_new_5.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 22.00pt;">
+   <td style="width : 35.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 468.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This may take several minutes to run.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Build and install the Legato AF:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd legato</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make clean</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;&#160;# Optional step to remove clutter from previous builds</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make wp85</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;&#160;&#160;# Build the framework</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cfglegato</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;&#160;&#160;# Set up the environment</p>
+
+  <p dir="ltr" class="FM_Figure"><span class="FM_Code_Background_Color" style="font-family : 'Courier New'; "></span></p>
+
+  <div align="left"><img alt="build_platform_1_5.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image4" src="../../assets/build_platform_1_5.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <div align="left"><img alt="build_platform_3_5.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image5" src="../../assets/build_platform_3_5.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 5.000pt; font-family : Arial;">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

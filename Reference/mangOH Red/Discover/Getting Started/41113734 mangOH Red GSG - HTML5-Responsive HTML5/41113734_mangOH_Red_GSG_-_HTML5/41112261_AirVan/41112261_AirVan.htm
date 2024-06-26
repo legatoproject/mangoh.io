@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41112261 AirVan</title>
+
+ <link rel="stylesheet" href="41112261_AirVan.css" type="text/css" />
+
+ <link rel="stylesheet" href="../../HTMLStyling.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+ <meta name="generator" content="Adobe FrameMaker 2019" />
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "2";
+</script>
+ <meta name="brsprev" value="41113734_mangOH_Red_GSG_-_HTML5/41112261_Connect/41112261_Connect.htm">
+ <meta name="brsnext" value="41113734_mangOH_Red_GSG_-_HTML5/41112261_PrepDevelop/41112261_PrepDevelop.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">5: <a name="XREF_84678_Hello_World"></a>Connect to AirVantage (The Cloud)</p>
+  <p dir="ltr" class="FM_Body">Now that your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span> is working, it’s time to send its sensor data to the cloud.</p>
+  <p dir="ltr" class="FM_Body">Your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>&#160;kit includes a free mangOH-customized account on the AirVantage IoT Acceleration Platform for your CF3&nbsp;module. This platform provides a cloud-based service to collect data from your device, and the infrastructure for you to build, connect, and operate your IoT applications in a single platform.</p>
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You can register up to five devices on your free account.</p>
+  <h1 dir="ltr"><a name="TOC_5_1_Claim_Your_Free"></a>5.1 Claim Your Free AirVantage Account</h1>
+  <p dir="ltr" class="FM_Body">To use AirVantage, you must register your CF3 module and then connect your mangOH&nbsp;Red to the AirVantage server. If you have an AirVantage account for non-mangOH devices, register for a new account for your mangOH device(s) to enable access to the mangOH-specific customizations.</p>
+  <p dir="ltr" class="FM_Body">To claim your free AirVantage account:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; font-weight : bold; font-size  : 16.0pt; "></span>Go to <span class="FM_Link"><a href="https://eu.airvantage.net/accounts/signup?type=Mangoh">https://eu.airvantage.net/accounts/signup?type=Mangoh</a></span>.</p>
+  <div align="left"><img alt="av_freetrial.png" id="image25" src="../../assets/av_freetrial.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Log in to AirVantage:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If you have not already created an AirVantage account for mangOH&nbsp;&#160;boards, click <span class="FM_UI_element">SIGN UP</span>. and go to step&nbsp;<a href="#XREF_34341_3_To_create_a_new">3</a>.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If you already have a mangOH AirVantage account, click the <span class="FM_UI_element">here</span>&#160;link in the AirVantage Login section, sign in, and go to step&nbsp;<a href="#XREF_89682_9_Click_Monitor">8</a>.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_34341_3_To_create_a_new"></a>To create a new Sierra Wireless User Account:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter your information and click <span class="FM_UI_element">SIGN UP</span> to create the account.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; "></span>Follow the instructions that appear to complete your Sierra Wireless account activation.<br />(When you receive your activation email, use it within 24 hours to register your Sierra Wireless account.)</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Follow the prompts to log in with your new account. An AirVantage Signup Request window will appear.</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You can use your Sierra Wireless account to access your AirVantage account, mangOH.io, the Source, and other Sierra Wireless sites.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_90750_4_Enter_the"></a>Enter the information to create your AirVantage account (Company), which will be used to hold your mangOH device(s), and click <span class="FM_UI_element">CONFIRM SIGN UP</span> when finished.</p>
+  <div align="left"><img alt="av_confirm_signup.png" id="image26" src="../../assets/av_confirm_signup.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Important_Indented2"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-family : Helvetica; font-style : normal; font-size  : 10.0pt; "></span>The company name must be unique (e.g. use a combination of your company name, the project name, your name, etc.)<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>If the name has been used by any other person to set up their account, you will have to change this to make it unique.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>An email is sent automatically to your email address with a link to AirVantage. Click the link to access your account for the first time (<span class="FM_Link"><a href="https://eu.airvantage.net/start">https://eu.airvantage.net/start</a></span>).</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; "></span><a name="XREF_91222_6_The_first_time"></a>The first time you log in to your AirVantage account, a walkthrough tutorial appears.</p>
+  <p dir="ltr" class="FM_Indented">If you don’t want to use it, click <span class="FM_UI_element">Skip</span>. Otherwise, click <span class="FM_UI_element">Next</span> to step through it.</p>
+  <div align="left"><img alt="av_walkthrough1.png" id="image27" src="../../assets/av_walkthrough1.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_54313_7_Link_your"></a>Link your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>’s CF3 module and SIM to your AirVantage account:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the mangOH tile, click <span class="FM_UI_element">Register</span>.</p>
+  <div align="left"><img alt="av_11.png" id="image28" src="../../assets/av_11.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Register a new mangOH window, enter your SIM and device information:</p>
+  <div align="left"><img alt="41112261_AirVan00037.jpg" id="image29" src="../../assets/41112261_AirVan00037.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-family : Helvetica; font-style : normal; font-size  : 10.0pt; "></span>If you are using a Sierra Wireless SIM provided with the kit, it is now activated and your CF3 module will be able to register on a mobile network.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">8.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_89682_9_Click_Monitor"></a>Now that your ’system’ (module + SIM combination) is registered, go to the system dashboard and make any final required configuration adjustments:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click <span class="FM_UI_element">Monitor</span>, then select <span class="FM_UI_element">Systems</span> to display your registered devices.</p>
+  <div align="left"><img alt="av_monitor.png" id="image30" src="../../assets/av_monitor.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click anywhere in the line showing your device to display the system’s dashboard (System Details).</p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>(All the devices registered on your account appear in this list; make sure to click the correct device.)</p>
+  <div align="left"><img alt="av_systems.png" id="image31" src="../../assets/av_systems.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented2">The dashboard appears, showing information about the system, recent communications, and widgets for the sensor data sent by your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>.</p>
+  <div align="left"><img alt="av_system_dashboard.png" id="image32" src="../../assets/av_system_dashboard.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-family : Helvetica; font-style : normal; font-size  : 10.0pt; "></span>The communication and sensor widgets are initially blank because you have not connected your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>&#160;to AirVantage yet.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If you are using the Sierra Wireless SIM included with the kit, check the <span class="FM_UI_element">General</span>&#160;field in the Provisioning options tile:</p>
+  <div align="left"><img alt="av_system_dashboard00042.png" id="image33" src="../../assets/av_system_dashboard00042.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If General<span style="font-size: x-small;">&nbsp;</span>=<span style="font-size: x-small;">&nbsp;</span>LTE, no change is required.</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If General<span style="font-size: x-small;">&nbsp;</span>=<span style="font-size: x-small;">&nbsp;</span>LTE-Only:</p>
+  <p dir="ltr" class="FM_Numbered4_Restart"><span class="FM_Number"> &#160;&#160;i.<span style="padding-left: 4pt;" class="FMAutoNumber_1"></span></span>Click the <span class="FM_UI_element">Change Provisioning Options</span> icon in the toolbar:</p>
+  <div align="left"><img alt="av_system_dashboard_changeprovisioning.png" id="image34" src="../../assets/av_system_dashboard_changeprovisioning.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented4">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered4"><span class="FM_Number"> &#160;&#160;ii.<span style="padding-left: 2pt;" class="FMAutoNumber_1"></span></span>In the <span class="FM_UI_element">Provisioning options</span> box, begin typing &quot;SMS - MO&quot; and select the option when it appears.</p>
+  <div align="left"><img alt="av_select_sms-mo.png" id="image35" src="../../assets/av_select_sms-mo.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented4">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered4"><span class="FM_Number"> &#160;&#160;iii.</span>Repeat and select <span class="FM_UI_element">SMS-MT</span>.</p>
+  <p dir="ltr" class="FM_Numbered4"><span class="FM_Number"> &#160;&#160;iv.</span>Click <span class="FM_UI_element">Change Provisioning Options</span>.<br />This change will take a few minutes to take effect, and the General option will change to &quot;LTE&quot;.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">9.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Keep your browser open to the AirVantage dashboard and continue to <a href="#XREF_67433_7_1_2_Connect_to"><span class="FM_blue_color">Send Sensor Data to AirVantage</span></a>, below.</p>
+  <h1 dir="ltr"><a name="TOC_5_2_Send_Sensor_Data_to"></a>5.2 <a name="XREF_67433_7_1_2_Connect_to"></a>Send Sensor Data to AirVantage</h1>
+  <p dir="ltr" class="FM_Body">Now that your &quot;system&quot; is registered on AirVantage, connect your mangOH&nbsp;Red to the AirVantage server and begin transmitting sensor data:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>On your computer, open a terminal window.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>The mangOH&nbsp;Red platform includes two applications to collect sensor data and communicate it (send<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>receive) to AirVantage<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>redSensor activates the mangOH&nbsp;Red’s sensors, and redCloud communicates the sensor data to the IoT cloud.</p>
+  <p dir="ltr" class="FM_Indented">By default, redSensor should be running (sensors active) and, to conserve data, redCloud is stopped by default.</p>
+  <p dir="ltr" class="FM_Indented">Start redCloud to start sending data to AirVantage, and confirm that it is running:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color" style="background-color: #aacdd9; "># app start redCloud</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color" style="background-color: #aacdd9; "># app status</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_AirVan00046.jpg" id="image36" src="../../assets/41112261_AirVan00046.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; font-style : italic; font-size  : 9.0pt; "></span>In your browser, refresh the dashboard screen.</p>
+  <p dir="ltr" class="FM_Indented">The Last Communication section shows your Registration connection or sensor data (whichever was most recently received) and the sensor widgets will show the readings that are detailed in the communication entries.</p>
+  <div align="left"><img alt="av_system_dashboard00048.png" id="image37" src="../../assets/av_system_dashboard00048.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <div align="left"><img alt="av_system_dashboard00050.png" id="image38" src="../../assets/av_system_dashboard00050.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>All data sent between your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span> and AirVantage can be viewed in the communications Timeline.<br />To view details (e.g. specific sensor readings, events, etc.), in the Last Communication Section, click <span class="FM_UI_element">See all communications (Timeline)</span>.</p>
+  <div align="left"><img alt="av_system_dashboard00052.png" id="image39" src="../../assets/av_system_dashboard00052.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <div align="left"><img alt="av_timeline.png" id="image40" src="../../assets/av_timeline.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>You have now successfully transmitted data to&#160;the cloud. You can now stop sending sensor data from the device (if desired, to stop using your data allocation):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color" style="background-color: #aacdd9; "># app stop redCloud</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Make sure redCloud has stopped:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color" style="background-color: #aacdd9; "># app status</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_AirVan00055.jpg" id="image41" src="../../assets/41112261_AirVan00055.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The data connection closes automatically when redSensorToCloud is stopped.</p>
+  <p dir="ltr" class="FM_Body"><img alt="canstockphoto49616503.jpg" align="left" id="image42" src="../../assets/canstockphoto49616503.jpg" style="max-width: 100% ;height: auto" />You have now registered and connected your device to AirVantage, and completed the <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>&#160;Getting Started tutorial. For more information on the mangOH platform, visit <span class="FM_Link"><a href="http://mangoh.io">mangoh.io</a></span>.</p>
+  <p dir="ltr" class="FM_Body">To begin developing simple applications or modifying existing applications, work through the examples in <a href="../41112261_PrepDevelop/41112261_PrepDevelop.htm#XREF_22697_Prepare_your"><span class="FM_blue_color">Prepare Your System For Development</span></a>.</p>
+ </div>
+</body>
+
+</html>
+

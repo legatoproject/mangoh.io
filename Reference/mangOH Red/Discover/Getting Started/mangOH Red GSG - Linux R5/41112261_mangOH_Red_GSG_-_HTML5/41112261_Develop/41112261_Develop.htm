@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41112261 Develop</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="F:\JaggedPeak\Current Projects\SWI\CTO\41112261-4112327 mangOH Red Getting Started r5\41112261 Develop.fm" />
+ <link rel="stylesheet" href="41112261_Develop.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "6";
+</script>
+ <meta name="brsprev" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_AirVan/41112261_AirVan.htm">
+ <meta name="brsnext" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_UpLegato/41112261_UpLegato.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">A: <a name="XREF_84678_Hello_World"></a>Develop and Test Applications</p>
+  <p dir="ltr" class="FM_Body">In this section, you will learn how to develop applications in the Legato development environment, install them onto your mangOH&nbsp;Red, and test that they run.</p>
+  <p dir="ltr" class="FM_Body">Legato provides two interfaces for developing applications:</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>CLI<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Command Line Interpreter in a terminal window.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Developer Studio<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>A GUI (Graphical User Interface) development environment.</p>
+  <p dir="ltr" class="FM_Body">This section describes development using CLI.</p>
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You will be updating application source code in this section. Use whichever editor you prefer<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>these instructions do not refer to a specific editor.</p>
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This tutorial touches on the basics of using the Legato development environment. After completing the examples in this chapter, see <span class="FM_Link"><a href="http://legato.io/legato-docs/latest/mangOH_developers.html"></a><a href="http://legato.io/legato-docs/latest/mangOH_developers.html">http://legato.io/legato-docs/latest/mangOH_developers.html</a></span> for detailed references, forums, etc.</p>
+  <h1 dir="ltr"><a name="TOC_A_1_Develop_using_the"></a>A.1 <a name="XREF_80001_5_1_Develop_using"></a>Develop using the CLI<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Command Line Interpreter</h1>
+  <h2 dir="ltr"><a name="TOC_A_1_1_Configure_the_Dev"></a>A.1.1 <a name="XREF_11754_A_1_1_Configure"></a>Configure the Dev Machine’s Terminal Windows for Development</h2>
+
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If you installed Legato to a subdirectory of your home directory using a different name than ’legato’, replace &quot;~/legato&quot; with &quot;~/&lt;yourDirectory&gt;&quot; in the commands in this section.</p>
+
+  <p dir="ltr" class="FM_Body">To use the CLI in a terminal window to compile and build applications, you must configure the window to work with Legato tools.</p>
+  <p dir="ltr" class="FM_Body">Each time you open a new terminal window, do the following:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Configure the window:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cfglegato</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Develop00150.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:487.589pt;" id="image0" src="../../assets/41112261_Develop00150.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If you did not set up the cfglegato command in <a href="../41112261_PrepMangoh/41112261_PrepMangoh.htm#XREF_20958_3_To_use_the"><span class="FM_blue_color">Step 3</span></a>&#160;of <a href="../41112261_PrepMangoh/41112261_PrepMangoh.htm#XREF_68638_3_1_Install_mangOH"><span class="FM_blue_color">Build<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>Install mangOH Distribution</span></a>, do it now.</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>One thing the command does is check to see which toolchains you have on your development machine and warn you about any that are missing. Since you have loaded only the wp85 toolchain, warnings appear about the others. You can ignore these messages.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Confirm that the environment was set correctly:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ echo $LEGATO_ROOT</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Develop00153.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.840pt;" id="image1" src="../../assets/41112261_Develop00153.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented">If a directory path appears, the command worked. If no value was returned, there was a problem with the command<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>make sure that you entered the alias correctly, using the actual directory name that you used to install Legato.</p>
+  <h2 dir="ltr"><a name="TOC_A_1_2_Update_an"></a>A.1.2 <a name="XREF_42102_5_1_2_Develop_and"></a>Update an Installed Application</h2>
+  <p dir="ltr" class="FM_Body">As you saw when you set up your AirVantage account, one of the mangOH platform applications loaded on your device in <a href="../41112261_PrepMangoh/41112261_PrepMangoh.htm#XREF_68638_3_1_Install_mangOH"><span class="FM_blue_color">Build<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>Install mangOH Distribution</span></a>&#160;was redSensorToCloud. This application reports sensor readings to the cloud (e.g. AirVantage) every two&nbsp;minutes.</p>
+  <p dir="ltr" class="FM_Body">In this section you will increase the reporting frequency of the redSensorToCloud application and install the new version on the mangOH&nbsp;Red. </p>
+  <p dir="ltr" class="FM_Body">To update redSensorToCloud:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>On the dev machine, open a new terminal window.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Configure the window for development:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cfglegato</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Change directory to the folder containing the application’s source code:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd $MANGOH_ROOT/apps/RedSensorToCloud</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>The source code components for this application are in two sub-folders<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>avPublisherComponent and sensorsComponent. The code that controls the publishing frequency is in avPublisherComponent<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>change directory to that folder:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd avPublisherComponent</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open and edit avPublisher.c (the source code file)<span style="font-size: x-small;">&nbsp;</span>with your preferred editor<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>two values must be updated to adjust the reporting frequency:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Search for the variable declaration for MaxIntervalBetweenPublish.</p>
+  <p dir="ltr" class="FM_Indented2">static const int MaxIntervalBetweenPublish = 120;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Change the interval value to 30<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>This increases the reporting frequency to at least once every 30 seconds from once every 120 seconds.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Search for the variable declaration for TimeToStale.</p>
+  <p dir="ltr" class="FM_Indented2">static const int TimeToStale = 60;<span style="font-family : 'Courier New'; "><span style="font-size: x-small;">&nbsp;</span></span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Change the stale value to 30<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>This decreases the length of time a sensor reading is considered to be ’current’ before a new sensor reading must be taken.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Save your changes and exit the editor.</p>
+  <p dir="ltr" class="FM_Body">At this point, you have modified the redSensorToCloud application’s source code. Now you have to build (compile) it.</p>
+  <p dir="ltr" class="FM_Body">This application was created as part of the mangOH&nbsp;Red platform; to rebuild the application, you will rebuild the whole platform. This method is suggested when applications may interact with each other. If only one application is rebuilt, it may not work properly with other applications that it depends on (or that depend on it).</p>
+  <p dir="ltr" class="FM_Body">To rebuild the mangOH&nbsp;Red platform, including redSensorToCloud with your changes, and install it onto your mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Build and install the mangOH&nbsp;Red platform (use ’make’ to build for all devices, or use the correct device-specific parameter for your module<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>see <a href="../41112261_Tips/41112261_Tips.htm#XREF_34284_C_3_mangOH"><span class="FM_blue_color">Section&nbsp;C.3 mangOH Platform ’make’ parameters</span></a> for details):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd $MANGOH_ROOT</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make red_wp76xx</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;(Or use &quot;make&quot; with no parameters to build all platforms.)</p>
+  <div align="left"><img alt="41112261_Develop00156.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.840pt;" id="image2" src="../../assets/41112261_Develop00156.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This may take several minutes to run.</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This ’make’ command uses the Makefile in $LEGATO_ROOT to build the entire system.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Verify that the update files were created for the mangOH distributions you built by checking their time stamps:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ls -al build/update_files/*</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Develop00159.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.840pt;" id="image3" src="../../assets/41112261_Develop00159.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Make sure the mangOH board is powered on and is connected to your dev machine<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the board is connected if you receive ping responses:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ping 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented">Press Ctrl+C to return to the command prompt.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install the mangOH&nbsp;Red platform specific to the CF3 module on your mangOH board:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ update ~/mangOH/build/update_files/red/&lt;updatefile&gt; 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented">If the applications install successfully, the last message shown will be &quot;SUCCESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Done&quot;.</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If the CF3&nbsp;module has any problems starting the mangOH&nbsp;Red platform applications, it automatically reboots and restores to its original state (prior to the instsys command). If this happens, the CF3&nbsp;module will not be reachable while it is rebooting.</p>
+  <div align="left"><img alt="41112261_Develop00162.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.840pt;" id="image4" src="../../assets/41112261_Develop00162.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>After the installation is done, open a terminal window and connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>By default, redSensorToCloud is installed but not started. Start the application to send data to AirVantage:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># app start redSensorToCloud</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>redSensorToCloud automatically opens a data connection, so you do not need to use &quot;cm data connect&quot;.</p>
+  <p dir="ltr" class="FM_Indented">In your AirVantage account, you will start to see sensor reports appearing on your new schedule<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>on the Timeline screen you can compare the timestamp intervals for new reports compared to reports received before you made your changes as shown in the following figure. (To see new reports received while this screen is being viewed, click the Sync. status icon.)</p>
+  <div align="left"><img alt="timestamps.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.762pt;" id="image5" src="../../assets/timestamps.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>When you’re ready to stop sending data:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># app stop redSensorToCloud</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>redSensorToCloud automatically closes the data connection, so you do not need to use &quot;cm data connect -1&quot;.</p>
+  <h2 dir="ltr"><a name="TOC_A_1_3_Update_and_Install"></a>A.1.3 Update and Install a New Application</h2>
+  <p dir="ltr" class="FM_Body">When you installed Legato, sample application files were also stored. In this section, you will build and then install the &quot;hello world&quot; application on the mangOH&nbsp;Red’s CF3&nbsp;module.</p>
+  <p dir="ltr" class="FM_Body">Build (compile) an application on the dev machine and install it on the CF3&nbsp;module:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>On the dev machine, open a new terminal window.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Configure the window for development:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cfglegato</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Change directory to the sample application directory for Hello World:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd $LEGATO_ROOT/apps/sample/helloWorld</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Compile the application. (Valid module series are listed in the $LEGATO_ROOT/Makefile<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>wp750x, wp85, wp76xx, wp77xx)</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make wp76xx</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;(Or use &quot;make&quot; with no parameters to build all distributions.)</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This ’make’ command uses the Makefile in the current directory to build only the sample application. It does not build the entire system like the ’make’ command in <a href="#XREF_42102_5_1_2_Develop_and"><span class="FM_blue_color">Update an Installed Application</span></a>.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Verify that the update file helloWorld.wp76xx.update was created:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ls -al</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Develop00167.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image6" src="../../assets/41112261_Develop00167.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install the application on the mangOH&nbsp;Red’s CF3&nbsp;module:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ update helloWorld.wp76xx.update 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Develop00170.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image7" src="../../assets/41112261_Develop00170.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This application will remain on the CF3&nbsp;module until you either specifically remove it, or until the next time you reinstall the system on the CF3&nbsp;module.</p>
+  <p dir="ltr" class="FM_Body">Log in to the mangOH&nbsp;Red’s CF3&nbsp;module and run the application:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Set up a window to show the application’s output (the &quot;Hello World&quot; application writes to a log file) as follows:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a new terminal window (referred to as LOG_TERM in this procedure).</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Watch the log file and show when a message from &quot;hello world&quot; appears:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># logread -f | grep &quot;Hello&quot;</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Nothing will appear to happen until you run the Hello World application in the next step. Leave this command running until after you see the Hello World output, then you can press Ctrl+C to cancel it and return to the command prompt.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Run the application:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open another terminal window to run the application.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Check that the application is installed:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># app status</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Develop00173.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image8" src="../../assets/41112261_Develop00173.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented2">The &quot;hello world&quot; application should appear in the list with a status of ’running’. The application was built to run automatically; when you write your own applications, you can make them install without running, if you prefer.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Stop the application (so you can restart it and see the output):</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># app stop helloWorld</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Run the application and see that it outputs a &quot;Hello, world.&quot; message to the LOG_TERM terminal window:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># app start helloWorld</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Develop00176.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image9" src="../../assets/41112261_Develop00176.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <div align="left"><img alt="41112261_Develop00179.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.304pt;" id="image10" src="../../assets/41112261_Develop00179.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">f.<span style="padding-left: 12pt;" class="FMAutoNumber_1"></span></span>(Optional) If you want to see information about the application, enter the following command:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># app info helloWorld</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Develop00182.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image11" src="../../assets/41112261_Develop00182.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">g.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the LOG_TERM terminal window, press Ctrl+C to return to the command prompt.</p>
+  <p dir="ltr" class="FM_Body">You have now successfully compiled a working application, and installed, stopped, and run it on the module.</p>
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>To learn more about the Legato development environment, visit <span class="FM_Link"><a href="http://legato.io/legato-docs/latest/">http://legato.io/legato-docs/latest/</a></span>.</p>
+ </div>
+</body>
+
+</html>
+

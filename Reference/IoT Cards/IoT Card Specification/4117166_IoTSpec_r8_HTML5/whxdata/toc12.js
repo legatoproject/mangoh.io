@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc11.js\"  name=\"6.3 ESD Protection\" url=\"IPM_Specification_-_HTML5/Mounting/Mounting.htm#TOC_6_3_ESD_Protectionbc-3\"><item name=\"6.3.1 Grounding Clips\" url=\"IPM_Specification_-_HTML5/Mounting/Mounting.htm#TOC_6_3_1_Grounding_Clipsbc-4\" /></data>";

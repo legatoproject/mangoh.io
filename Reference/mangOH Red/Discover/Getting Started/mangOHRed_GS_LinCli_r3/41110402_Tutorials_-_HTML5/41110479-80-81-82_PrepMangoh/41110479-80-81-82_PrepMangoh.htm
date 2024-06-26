@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41110479-80-81-82 PrepMangoh</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\41110402 mangOH Red Fundamentals v2 (Linux and Windows CLI)\41110479-80-81-82 PrepMangoh.fm" />
+ <link rel="stylesheet" href="41110479-80-81-82_PrepMangoh.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "4";
+</script>
+ <meta name="brsprev" value="41110402_Tutorials_-_HTML5/PrepComp/PrepComp.htm">
+ <meta name="brsnext" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_Connect/41110479-80-81-82_Connect.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">5: <a name="XREF_22697_Prepare_your"></a>Prepare Your mangOH Red For Development</p>
+  <p dir="ltr" class="FM_Body">In this chapter, you will update the CF3 module on your mangOH Red with the basic mangOH Red Platform (application suite).</p>
+  <h1 dir="ltr"><a name="TOC_5_1_Build_and_Install"></a>5.1 <a name="XREF_67774_4_2_1_Connect_the"></a><a name="XREF_68638_3_1_Install_mangOH"></a>Build and Install Legato Platform and mangOH Red Platform on Target</h1>
+
+  <p dir="ltr" class="FM_Body">Now that your dev machine has its development environment set up, you will:</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Build the Legato Platform (development applications) on your dev machine.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Use the Legato Platform to build the mangOH Red Platform (target applications) and install it onto your target (the CF3 module in your mangOH&nbsp;Red)</p>
+
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_91930_6_Get_the_Legato"></a>Get the Legato Application Framework (AF):</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to <span class="FM_Link"><a href="http://legato.io/legato-docs/latest/aboutReleaseInfo.html">http://legato.io/legato-docs/latest/aboutReleaseInfo.html</a></span>&#160;to get the version number of the most recent release.</p>
+
+  <div align="left"><img alt="legato_release_num_4.png" style=" width:100%; margin-top:10pt; max-width:379.068pt;" id="image0" src="../../assets/legato_release_num_4.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Download the framework files into a working directory (for example, &quot;legato_framework&quot;)::</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Create a working directory below your home directory to hold the framework files (for example, &quot;legato_framework&quot;):</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ mkdir ~/legato_framework</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 53.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 450.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Through the rest of this guide, &quot;legato_framework&quot; is assumed to be the file you created. If you used a different name, make sure to use that name in any commands that refer to legato_framework.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Download the framework files into the work directory<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Replace the release number in the ’repo’ command with the most recent release (this example downloads version 17.07.1):</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~/legato_framework</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ repo init -u git://github.com/legatoproject/\</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">manifest -m legato/releases/17.07.1.xml</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ repo sync</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="sync_framework1_4.png" style=" width:100%; margin-top:10pt; max-width:367.572pt;" id="image1" src="../../assets/sync_framework1_4.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <div align="left"><img alt="sync_framework3_new_4.png" style=" width:100%; margin-top:10pt; max-width:378.822pt;" id="image2" src="../../assets/sync_framework3_new_4.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 22.00pt;">
+   <td style="width : 35.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 468.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This may take several minutes to run.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In a terminal window, build the Legato AF:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~/legato_framework/legato</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make clean</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;# Optional step to remove clutter from previous builds</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make wp85</span> &#160;&#160;&#160;# Build the framework</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 43.00pt;">
+   <td style="width : 17.241pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 487.369pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You don’t need to use make clean’ the first time you use this procedure to build the Legato AF. If you have to redo the procedure for some reason, use this command to clear out build artifacts (files generated and stored by the ’make wp85’ command.).</p>
+</td>
+</tr>
+  </table>
+</div>
+  <div align="left"><img alt="build_platform_1_4.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image3" src="../../assets/build_platform_1_4.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <div align="left"><img alt="build_platform_3_4.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image4" src="../../assets/build_platform_3_4.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_20958_3_To_use_the"></a>To use the Legato AF’s tools in the terminal window, you must configure it to work with the tools. To do this, you will define a short ’alias’ in your ~/.bashrc file (the startup script that runs each time you open a new terminal window) that you can use to run the required commands (instead of entering the commands manually every time):</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Edit your ~/.bashrc file and add the following lines at the end of the file:</p>
+
+  <p dir="ltr" class="FM_Wide_CodeFragment"><span class="FM_Code_Background_Color">alias cfglegato=\</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">&quot;pushd . &amp;&amp; cd ~/legato_framework/legato &amp;&amp; source ./bin/configlegatoenv ; popd&quot;</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Save and close the file.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Exit the window:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ exit</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a new terminal window<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>This automatically executes the .bashrc script, which makes the cfglegato shortcut available for use.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Configure the terminal window to work with the Legato AF’s tools:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cfglegato</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;# Set up the environment</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.87pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 17.683pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 487.185pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_ImportantNote"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You must enter the ’cfglegato’ command n any terminal window that you open on the dev machine, if you want to use the framework’s tools in that window.</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 67.52pt;">
+   <td style="width : 34.491pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; ">
+   <div align="left"><img alt="mangoh_important_2.png" style=" width:100%; margin-top:10pt; max-width:32.250pt;" id="image5" src="../../assets/mangoh_important_2.png" />
+   </div>
+   <p dir="ltr" class="FM_Spacer">&nbsp;</p>
+</td>
+   <td style="width : 470.118pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_ImportantNote"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span class="FM_Bold_Red_Important">You MUST do the following step!</span> The Legato AF that you just installed, and the mangOH&nbsp;Red platform apps that you are going to install, both require you to have the correct (latest) firmware installed on your CF3 module. The platform apps will not install if you do not have the correct firmware.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Update the target’s firmware to the latest available version:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : 'Palatino Linotype'; font-size  : 2.0pt; color   : #000000; "></span>Go to <span class="FM_Link"><a href="https://source.sierrawireless.com">https://source.sierrawireless.com</a></span> and do the following:</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Devices section, click AirPrime.</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Click WP series.</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Click your module type.</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iv.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>In the Software download section, click Firmware to display the list of available firmware packages.</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> v.<span style="padding-left: 7pt;" class="FMAutoNumber_1"></span></span><a name="XREF_20617_g_In_the_Windows"></a>In the Combined Images table, click the Download link in the Binaries column for the Generic carrier.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install the firmware:</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a terminal window.</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Change directory to the Downloads folder:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~/Downloads</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Make sure you downloaded the correct file</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ ls -al *.spk</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:505.36pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 53.241pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 452.118pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The downloaded file will be an &quot;.spk&quot; file. If the file is not listed, go back to <a href="#XREF_20617_g_In_the_Windows"><span class="FM_blue_color">Step v</span></a>&#160;and make sure to click the Binaries link (not the Windows EXE link).</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iv.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>Install the new firmware (replace &lt;file&gt; with the name of the file that you downloaded):</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ fwupdate download &lt;file&gt; 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 22.00pt;">
+   <td style="width : 35.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 468.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This will take several minutes to run.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <div align="left"><img alt="fwupdate_message_2.png" style=" width:100%; margin-top:10pt; max-width:378.894pt;" id="image6" src="../../assets/fwupdate_message_2.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Wait (1–2&nbsp;minutes) while the module reboots with the new firmware.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Verify that the firmware updated:</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>The following message appears if you are using your CF3 module for the first time (modules are shipped without a password).</p>
+
+  <p dir="ltr" class="FM_Figure">&#160;</p>
+
+  <div align="left"><img alt="login_nagger_2.png" style=" width:100%; margin-top:10pt; max-width:321.000pt;" id="image7" src="../../assets/login_nagger_2.png" />
+  </div>
+  <p dir="ltr" class="FM_Indented3">For now, type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">3</span>&#160;and press Enter, then type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">Y</span>&#160;and press Enter to be reminded the next time you connect.</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 53.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 450.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>After completing this tutorial, you should select an appropriate login authentication method (ssh keys or password) from this menu<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>see <span class="FM_Link"><a href="legato.io/legato-docs/latest/basicTarget.html">legato.io/legato-docs/latest/basicTarget.html</a></span> for details.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Display information about the CF3 module and confirm that the Firmware version shown is the one that you downloaded:</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color"># cm info</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="cm_info_new_2.png" style=" width:100%; margin-top:10pt; max-width:395.394pt;" id="image8" src="../../assets/cm_info_new_2.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iv.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>Disconnect from the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color"># exit</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_50472_3_Go_to_the_mangoh"></a>Change directory to the mangoh work directory:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd $MANGOH_ROOT</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Build the mangOH&nbsp;Red platform:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make red_wp85</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="build_platform_4_4.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image9" src="../../assets/build_platform_4_4.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <div align="left"><img alt="build_platform_6_4.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image10" src="../../assets/build_platform_6_4.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:503.86pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 35.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 467.868pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• This may take several minutes to run.<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• The number of packages listed will vary (newer platform releases will have different numbers of files).</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:503.86pt;">
+   <tr style=" height : 55.00pt;">
+   <td style="width : 35.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 467.868pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>In the command &quot;make red_wp85&quot;, ’wp85’ indicates the target type on which the applications will run. If a different module type is used, the make command must be modified to indicate the correct type. For example, if the CF3 module is a WP7602, the target must be changed from &quot;wp85&quot; to &quot;wp76&quot;. This applies to all make commands described in this guide.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">8.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Verify that the update file mangOH_Red.wp85.update was created:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ls -al *.update</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="build_platform_7_4.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image11" src="../../assets/build_platform_7_4.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">9.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Make sure the mangOH board is powered on and is connected to your dev machine<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the board is connected if you receive ping responses:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ping 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented">Press Ctrl+C to return to the command prompt.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">10.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span><a name="XREF_87875_6_Install_the"></a>Install the mangOH_Red platform on your mangOH board:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ instsys mangOH_Red.wp85.update 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented">If the applications install successfully, the last message shown will be &quot;SUCCESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Done&quot;.</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 43.00pt;">
+   <td style="width : 17.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 486.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If the target has any problems starting the mangOH&nbsp;Red platformat applications, it automatically reboots and restores to its original state (prior to the instsys command). If this happens, the target will not be reachable whlie it is rebooting.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <div align="left"><img alt="41110479-80-81-82_PrepMangoh00105.jpg" style=" width:100%; margin-top:10pt; max-width:378.750pt;" id="image12" src="../../assets/41110479-80-81-82_PrepMangoh00105.jpg" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">11.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; font-style : italic; font-size  : 9.0pt; "></span>Verify the mangOH platform apps installed correctly:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Show the list of installed apps to confirm the build and install succeeded:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># app status</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented2">If the following apps appear in the list, the build and install succeeded:</p>
+
+  <div align="left"><img alt="app_status_new_2.png" style=" width:100%; margin-top:10pt; max-width:379.416pt;" id="image13" src="../../assets/app_status_new_2.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Disconnect from the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># exit</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Body"><img alt="happy_mangoh_canstockphoto11432497_10.jpg" style=" width:100%; margin-top:10pt; max-width:44.496pt;" align="left" id="image14" src="../../assets/happy_mangoh_canstockphoto11432497_10.jpg" />Now that the mangOH&nbsp;Red platform is installed, you will learn how to <a href="../41110479-80-81-82_Connect/41110479-80-81-82_Connect.htm#XREF_84678_Hello_World"><span class="FM_blue_color">Connect To Mobile Networks</span></a>.</p>
+  <p dir="ltr" class="FM_Body">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

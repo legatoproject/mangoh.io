@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"Signal Name Variations\"><item name=\"Signal Name Variations\" url=\"41113116_mangOH_Yellow_HW_Guide_-_HTML5/Signal_Name_Variations/Signal_Name_Variations.htm\" /></data>";

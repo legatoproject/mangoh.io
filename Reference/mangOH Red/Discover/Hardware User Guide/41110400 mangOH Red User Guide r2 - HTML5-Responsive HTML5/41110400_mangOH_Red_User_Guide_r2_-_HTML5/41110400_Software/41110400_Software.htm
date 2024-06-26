@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41110400 Software</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\41110400 mangOH Red User Guide v2\41110400 Software.fm" />
+ <link rel="stylesheet" href="41110400_Software.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "4";
+</script>
+ <meta name="brsprev" value="41110400_mangOH_Red_User_Guide_r2_-_HTML5/41110400_Hardware/41110400_Hardware.htm">
+ <meta name="brsnext" value="41110400_mangOH_Red_User_Guide_r2_-_HTML5/41110400_Preface/41110400_Preface.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">4: <a name="XREF_61993_Introduction"></a>Software Setup</p>
+  <p dir="ltr" class="FM_Body">This chapter describes software resources that you will need on your computer to access the <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag" x-format="Product_Tag">mangOH&nbsp;Red</uservariable> and develop applications for its CF3 module.</p>
+  <p dir="ltr" class="FM_Body">Sample applications and instructional materials are available from the sites mentioned in this chapter. For detailed information on developing for the <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag" x-format="Product_Tag">mangOH&nbsp;Red</uservariable>, see the mangOH Red Developer’s Guide and related documents (available from <span class="FM_Link"><a href="http://mangoh.io">mangoh.io</a></span>).</p>
+  <h1 dir="ltr"><a name="TOC_Install_Update_Windows"></a><a name="XREF_62711_Install_update"></a>Install / Update Windows Driver</h1>
+  <p dir="ltr" class="FM_Body">If you are using a Windows computer, you must install the Legato driver for the CF3 module that you install in your <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag" x-format="Product_Tag">mangOH&nbsp;Red</uservariable>.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Visit <span class="FM_Link"><a href="http://mangoh.io/">mangoh.io</a></span> to download the Windows driver and driver installation instruc&#173;tions for your CF3 module.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install the Windows driver.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>When the <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag" x-format="Product_Tag">mangOH&nbsp;Red</uservariable>&#160;is connected via USB to the computer, display the Device Manager (Control&nbsp;Panel&nbsp;&gt;&nbsp;System&nbsp;&gt;&nbsp;Device&nbsp;Manager).</p>
+
+  <div align="left"><img alt="device_manager_listing.jpg" style=" width:100%; margin-top:10pt; max-width:306.720pt;" id="image0" src="../../assets/device_manager_listing.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureCaptionIndented">Figure 4-1:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span>Windows Device Manager</p>
+  <p dir="ltr" class="FM_Body">If the driver installed correctly, you will see the following items listed:</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Modems &gt; Sierra Wireless WWAN Modem (This is the module in socket J200.)</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Ports [COM &amp; LPT] &gt; Sierra Wireless AT Command Port</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Ports [COM &amp; LPT] &gt; Sierra Wireless DM Port</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Ports [COM &amp; LPT] &gt; Sierra Wireless NMEA Port (This is the port that you will use to communicate with the module from your terminal emulator.)</p>
+  <h1 dir="ltr"><a name="TOC_Install_a_Terminal"></a><a name="XREF_57876_Install_Terminal"></a>Install a Terminal Emulator</h1>
+  <p dir="ltr" class="FM_Body">To communicate with the <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag" x-format="Product_Tag">mangOH&nbsp;Red</uservariable>, you need a terminal emulator program such as Tera&nbsp;Term or HyperTerminal<sup>®</sup>.</p>
+  <p dir="ltr" class="FM_Body">When you have an emulator installed, use it to establish a console connection to the <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag" x-format="Product_Tag">mangOH&nbsp;Red</uservariable>:</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Port<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Serial modem COM port (for Sierra Wireless devices, this is the Sierra Wireless NMEA Port)</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Baud rate<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>115200</p>
+  <h1 dir="ltr"><a name="TOC_Install_the_Legato"></a>Install the Legato Developer Studio</h1>
+  <p dir="ltr" class="FM_Body">To create Legato applications for the CF3 module, download and install the Open AT Developer Studio (a Legato IDE) available at <span class="FM_Link"><a href="http://mangoh.io/">mangoh.io</a></span>.</p>
+  <h1 dir="ltr"><a name="TOC_Download_Firmware_Updates"></a>Download Firmware Updates</h1>
+  <p dir="ltr" class="FM_Body">Firmware updates will be made available for download from <span class="FM_Link"><a href="http://mangoh.io/">mangoh.io</a></span>.</p>
+  <h1 dir="ltr"><a name="TOC_Write_Your_First_Program"></a><a name="XREF_79393_Write_Your_First"></a>Write Your First Program</h1>
+  <p dir="ltr" class="FM_Body">For instructions on building applications (including writing a ‘Hello World’ program to test your <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag" x-format="Product_Tag">mangOH&nbsp;Red</uservariable>), and to download sample Legato applications, visit <span class="FM_Link"><a href="http://mangoh.io/">mangoh.io</a></span>.</p>
+ </div>
+</body>
+
+</html>
+

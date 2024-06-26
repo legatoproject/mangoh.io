@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41112261 PrepMangoh</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="F:\JaggedPeak\Current Projects\SWI\CTO\41112261 mangOH Red Getting Started Guide r2\41112261 PrepMangoh.fm" />
+ <link rel="stylesheet" href="41112261_PrepMangoh.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "3";
+</script>
+ <meta name="brsprev" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_PrepComp/41112261_PrepComp.htm">
+ <meta name="brsnext" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_Connect/41112261_Connect.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">5: <a name="XREF_22697_Prepare_your"></a>Prepare Your mangOH Red For Development</p>
+  <p dir="ltr" class="FM_Body">In this chapter, you will build the mangOH Distribution (mangOH Platform and Legato Application Framework) on your computer, and install the mangOH Platform applications on your mangOH&nbsp;Red.</p>
+  <p dir="ltr" class="FM_Body">The mangOH Platform includes a suite of applications customized for the mangOH hardware platform, and a set of Linux kernel modules. The platform is built using features of the Legato Application Framework, which includes its own set of applications and Linux kernel modules.</p>
+
+  <h1 dir="ltr"><a name="TOC_5_1_Build_Install_mangOH"></a>5.1 <span style="font-style : italic; font-weight : normal; font-size  : 9.0pt; "></span><a name="XREF_68638_3_1_Install_mangOH"></a>Build<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>Install mangOH Distribution</h1>
+
+  <p dir="ltr" class="FM_Body">Now that your dev machine has its development environment set up, you will build the mangOH Distribution and install it on the CF3 module in your mangOH&nbsp;Red:</p>
+
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_91930_6_Get_the_Legato"></a>Get the Legato Application Framework (AF):</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to <span class="FM_Link"><a href="http://legato.io/legato-docs/latest/aboutReleaseInfo.html">http://legato.io/legato-docs/latest/aboutReleaseInfo.html</a></span>&#160;to get the version number of the most recent release.</p>
+
+  <div align="left"><img alt="41112261_PrepMangoh00070.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:405.000pt;" id="image0" src="../../assets/41112261_PrepMangoh00070.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Get the source files for the Legato&nbsp;AF:</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Create the legato_framework directory to hold the Legato&nbsp;AF:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ mkdir legato_framework</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Download the framework files into the work directory<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Replace the release number in the ’repo’ command with the most recent release (this example downloads version 18.03.0):</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ cd legato_framework</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ repo init -u git://github.com/legatoproject/manifest -m \<br />legato/releases/18.03.0/legato.xml</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ repo sync</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="example_text_2.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image1" src="../../assets/example_text_2.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+
+  <p dir="ltr" class="FM_NoteIndented3Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This may take several minutes to run.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Get the source files for the mangOH platform:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ git clone --recursive git://github.com/mangOH/mangOH</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="example_text_3.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image2" src="../../assets/example_text_3.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_20958_3_To_use_the"></a>To work with the Legato AF in a terminal window, you must configure required environment variables and a command alias:</p>
+
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>LEGATO_ROOT<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Indicates the root directory of the Legato AF</p>
+
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>device-specific SYSROOT variables<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Indicates the root directory of device-specific toolchains (the pathname used includes the symlink(s) created earlier). Only the devices you support need to have a SYSROOT variable defined.</p>
+
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>cfglegato<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>an alias to run a command sequence that makes the Legato AF tools available.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Edit ~/.bashrc and add the following lines at the end of the file (include only the device-specific SYSROOTs that you are developing for):</p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color">$ export LEGATO_ROOT=~/legato_framework/legato</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color">$ export \<br />WP750X_SYSROOT=/opt/swi/y17-ext-wp750x/sysroots/armv7a-vfp-neon-poky-linux-gnueabi</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color">$ export \<br />WP76XX_SYSROOT=/opt/swi/y22-ext-wp76xx/sysroots/armv7a-neon-poky-linux-gnueabi</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color">$ export \<br />WP77XX_SYSROOT=/opt/swi/y22-ext-wp77xx/sysroots/armv7a-neon-poky-linux-gnueabi</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color">$ export \</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">WP85_SYSROOT=/opt/swi/y17-ext-wp85/sysroots/armv7a-vfp-neon-poky-linux-gnueabi</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color">$ alias cfglegato=\<br />&quot;pushd . &amp;&amp; cd ~/legato_framework/legato &amp;&amp; source ./bin/configlegatoenv ; popd&quot;</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="41112261_PrepMangoh00077.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.304pt;" id="image3" src="../../assets/41112261_PrepMangoh00077.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Save and close the file.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Exit the window:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ exit</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a new terminal window<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>This automatically executes the .bashrc script, which makes the cfglegato shortcut available for use.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Build the Legato&nbsp;AF and mangOH platforms for the CF3&nbsp;module in your mangOH&nbsp;Red (replace &lt;module_series&gt; with your CF3 module series; see the list of supported values below the example):</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~/mangOH</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ git pull &amp;&amp; git submodule update --init</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The &quot;git pull &amp;&amp; git submodule update --init&quot; command gets any changes that have been made to the mangOH distribution source files on your system. This command can be run at any time to ensure your builds are up to date.</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make &lt;module_series&gt;</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;(Or use &quot;make&quot; with no parameters to build all plat&#173;forms.)</p>
+
+  <p dir="ltr" class="FM_Indented">(For example, &quot;make red_wp76xx&quot;.)</p>
+
+  <div align="left"><img alt="example_text_4.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image4" src="../../assets/example_text_4.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body" style="margin-left : 62.250pt;"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• This may take several minutes to run.<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• &#160;The number of packages listed will vary (newer platform releases will have different numbers of files)</p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The make command uses optional parameters to limit the deliverables being built.<br />Full command format: [LEGATO=&lt;enable&gt;] make &lt;module_series&gt;<br />Where:<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>LEGATO=&lt;enable&gt;<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>0 —<span style="font-size: x-small;">&nbsp;</span>Legato AF is not built<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>1 —<span style="font-size: x-small;">&nbsp;</span>Legato AF is built (Default)<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>&lt;module_series&gt;<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Build only the specified mangOH platform (additional platforms will be added as new products become available):<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• green_wp85<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• green_wp750x<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• red_wp85<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• red_wp750x<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• red_wp76xx<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>• red_wp77x</p>
+
+  <p dir="ltr" class="FM_Tip_Indented2"><span class="FM_Bold">Tip:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Optionally, before using the make command to build the AF<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>mangOH platform, you can use &quot;make clean&quot; to clear out any build artifacts that are generated and stored by the make command.</p>
+
+  <div align="left"><img alt="41112261_PrepMangoh00082.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:409.536pt;" id="image5" src="../../assets/41112261_PrepMangoh00082.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Verify that the update files were created for the mangOH platforms you built by checking their time stamps:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ls -al build/update_files/*</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="example_text_5.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image6" src="../../assets/example_text_5.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Configure the terminal window to work with the Legato AF’s tools:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cfglegato</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;# Set up the environment</p>
+
+  <p dir="ltr" class="FM_Important"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You must enter the ’cfglegato’ command in any terminal window that you open on the dev machine, if you want to use the framework’s tools in that window.</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 67.52pt;">
+   <td style="width : 34.491pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; ">
+   <div align="left"><img alt="mangoh_important.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:32.250pt;" id="image7" src="../../assets/mangoh_important.png" />
+   </div>
+   <p dir="ltr" class="FM_Spacer">&nbsp;</p>
+</td>
+   <td style="width : 470.118pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : middle;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_ImportantNote"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span class="FM_Bold_Red_Important">You MUST do the following step!</span> The Legato AF that you just installed, and the mangOH&nbsp;Red platform apps that you are going to install, both require you to have the correct (latest) firmware installed on your CF3 module. The distribution applications may not install if you do not have the correct firmware.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Update the CF3&nbsp;module’s firmware to the latest available version (which you downloaded earlier along with the Legato toolchain):</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_89708_a_Disconnect_power"></a>Disconnect power from the mangOH&nbsp;Red (remove the jumper from the power header, or unplug the micro-USB cable that is providing power).</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>The firmware update is loaded using the &quot;swiflash&quot; tool, available from <span class="FM_Link"><a href="https://source.sierrawireless.com/resources/airprime/software/swiflash/">source.sierrawireless.com/resources/airprime/software/swiflash</a></span> command<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Follow the Ubuntu/Debian Distributions instructions in the Installation section.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Reconnect the power (plug in the micro-USB cable or insert the jumper on the power header on the same pins it was removed from in <a href="#XREF_89708_a_Disconnect_power"><span class="FM_blue_color">step a</span></a>. The Power LED will light immediately.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install the firmware (replace &lt;module_series&gt; with your CF3 module’s series: WP85XX, WP750X, or WP76XX):</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a terminal window.</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Change directory to the Downloads folder:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~/Downloads</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Check the name of the firmware file that you downloaded earlier:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ ls -al *.spk</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="41112261_PrepMangoh00087.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image8" src="../../assets/41112261_PrepMangoh00087.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+
+  <p dir="ltr" class="FM_NoteIndented3Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The downloaded file will be an &quot;.spk&quot; file. If the file is not listed, repeat <a href="../41112261_PrepComp/41112261_PrepComp.htm#XREF_27573_7_Install_the"><span class="FM_blue_color">Step 7 on page 15</span></a>&#160;up to step <a href="../41112261_PrepComp/41112261_PrepComp.htm#XREF_70766_d_In_a_later_step"><span class="FM_blue_color">Step d</span></a>. Make sure to click the link in the Instructions for Legato CLI Users (Linux) row (do <span style="font-weight : bold; ">not</span> click the link in the Instruc&#173;tions with one-click tool (Windows) row.</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iv.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>Install the new firmware (replace &lt;module_series&gt; with your CF3 module’s series: WP85XX, WP750X, or WP76XX, and replace &lt;file&gt; with the name of the file that you downloaded):</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ swiflash -m &lt;module_series&gt; -i &lt;file&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented3">(e.g. &quot;swiflash -m WP76XX -i WP76xx_release8_RC4_GENERIC_SPK.spk&quot;</p>
+
+  <div align="left"><img alt="41112261_PrepMangoh00090.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.304pt;" id="image9" src="../../assets/41112261_PrepMangoh00090.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+
+  <p dir="ltr" class="FM_NoteIndented3Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This will take several minutes to run. If the download fails, repeat the swiflash command. If you still have difficulties, refer to <span class="FM_Link"><a href="https://source.sierrawireless.com/resources/airprime/software/swiflash">source.sierrawireless.com/resources/airprime/software/swiflash</a></span> for additional usage sugges&#173;tions.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Wait (1–2&nbsp;minutes) while the module reboots with the new firmware.</p>
+
+  <p dir="ltr" class="FM_Tip_Indented2"><span class="FM_Bold">Tip:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Ping the mangOH&nbsp;Red<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>when replies appear, the module has rebooted and you can continue.<br /><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>$ ping 192.168.2.2 &#160;&#160;&#160;&#160;(Press CTRL-C to cancel)</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">f.<span style="padding-left: 12pt;" class="FMAutoNumber_1"></span></span>Verify that the firmware updated:</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Display information about the CF3 module and confirm that the Firmware version shown is the one that you downloaded:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color"># cm info</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="example_text_6.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image10" src="../../assets/example_text_6.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Disconnect from the mangOH&nbsp;Red:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color"># exit</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">8.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_71712_3_Install_the"></a>Install the mangOH&nbsp;Red platform:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install the mangOH&nbsp;Red platform specific to the CF3 module on your mangOH board:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ update ~/mangOH/build/update_files/red/&lt;updatefile&gt; 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented2">For example, if the CF3 module in your mangOH&nbsp;Red is a WP7603, use:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment">$ update ~/mangOH/build/update_files/red/mangOH.wp76xx.update 192.168.2.2</p>
+
+  <p dir="ltr" class="FM_Tip_Indented2"><span class="FM_Bold">Tip:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>For detailed information about the build process, view the Readme file in /home/mangoh/mangOH.</p>
+
+  <p dir="ltr" class="FM_Indented2">If the applications install successfully, the last message shown will be &quot;SUCCESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Done&quot;.</p>
+
+  <div align="left"><img alt="vb_instlegato.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:466.590pt;" id="image11" src="../../assets/vb_instlegato.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If the CF3&nbsp;module has any problems starting the mangOH&nbsp;Red platform applications, it automatically reboots and restores to its original state (prior to the instsys command). If this happens, the CF3&nbsp;module will not be reachable while it is rebooting.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">9.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_38369_4_Verify_the"></a>Verify the mangOH platform apps installed correctly:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Show the list of installed apps to confirm the build and install succeeded:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># app status</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented2">The Legato system distributed as part of the WP firmware image does not include the redSensorToCloud app. If redSensorToCloud appears in the list, then the update has been applied:</p>
+
+  <div align="left"><img alt="41112261_PrepMangoh00097.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image12" src="../../assets/41112261_PrepMangoh00097.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Disconnect from the mangOH&nbsp;Red:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># exit</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Body"><img alt="happy_mangoh_canstockphoto11432497_3.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:28.746pt;" align="left" id="image13" src="../../assets/happy_mangoh_canstockphoto11432497_3.jpg" />Now that the mangOH&nbsp;Red platform is installed, you will learn how to <a href="../41112261_Connect/41112261_Connect.htm#XREF_44019_Register_On_Mobile"><span class="FM_blue_color">Register On Mobile Network</span></a>.</p>
+ </div>
+</body>
+
+</html>
+

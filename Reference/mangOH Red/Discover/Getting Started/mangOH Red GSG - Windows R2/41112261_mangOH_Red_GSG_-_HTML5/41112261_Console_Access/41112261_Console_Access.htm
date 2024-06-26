@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>SB555 Development Kit Enabling Software Guide</title>
+
+ <meta content="OEM, CDMA2000, 1xRTT, Watcher" name="search-keywords" />
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="F:\JaggedPeak\Current Projects\SWI\CTO\41112261 mangOH Red Getting Started Guide r2\41112261 Console Access.fm" />
+ <link rel="stylesheet" href="41112261_Console_Access.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "9_1";
+</script>
+ <meta name="brsprev" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_HardwareTips/41112261_HardwareTips.htm">
+ <meta name="brsnext" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_Module_install_extract/41112261_Module_install_extract.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">E: <a name="XREF_77395_Tips"></a>Console Access<span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span></p>
+  <p dir="ltr" class="FM_Body">If you have two USB ports on your dev machine, you can use one of them to display the mangOH&nbsp;Red’s diagnostic messages when the device boots, when certain commands are run, etc.</p>
+  <p dir="ltr" class="FM_Body">To set up a window to display diagnostic messages:</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH&nbsp;Red’s CONSOLE&nbsp;USB port to a USB port on the dev machine.</p>
+  <div align="left"><img alt="Mangoh_red_connect_cf3_to_computer.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.288pt;" id="image0" src="../../assets/Mangoh_red_connect_cf3_to_computer.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_78882_9_Open_a_terminal"></a>Open a terminal window connected to the CF3&nbsp;module’s Linux console as follows:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open Windows Device Manager, then expand Ports (COM &amp;LPT). The mangOH&nbsp;Red’s CONSOLE&nbsp;USB port enumerates as USB Serial Port (COMxx). (In the example below, it enumerates as COM72.)</p>
+
+  <div align="left"><img alt="Device_Manager_-_USB_COM.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:288.000pt;" id="image1" src="../../assets/Device_Manager_-_USB_COM.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a terminal window (e.g. PuTTY) connected to the mangOH&nbsp;Red’s console using the following settings:</p>
+
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Connection type = Serial</p>
+
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Serial line = [USB Serial port COM port]</p>
+
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Speed = 115200</p>
+
+  <div align="left"><img alt="putty_open_console.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:234.000pt;" id="image2" src="../../assets/putty_open_console.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click Open. The window will remain empty until you power up the mangOH&nbsp;Red in the next step.</p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-family : Helvetica; font-style : normal; font-size  : 10.0pt; "></span>Only one console connection can be opened at any time since it locks the USB serial port.</p>
+  <p dir="ltr" class="FM_HeadingExample">Example</p>
+  <p dir="ltr" class="FM_Body">If you open the console terminal window before you connect power to the mangOH&nbsp;Red, you will see the messages that are generated during the module boot process:</p>
+
+  <div align="left"><img alt="41112261_Console_Access00163.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:470.839pt;" id="image3" src="../../assets/41112261_Console_Access00163.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Body" style="font-family : Arial;">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41112261 PrepDevelop</title>
+
+ <link rel="stylesheet" href="41112261_PrepDevelop.css" type="text/css" />
+
+ <link rel="stylesheet" href="../../HTMLStyling.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+ <meta name="generator" content="Adobe FrameMaker 2019" />
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "3";
+</script>
+ <meta name="brsprev" value="41113734_mangOH_Red_GSG_-_HTML5/41112261_AirVan/41112261_AirVan.htm">
+ <meta name="brsnext" value="41113734_mangOH_Red_GSG_-_HTML5/41112261_Firmware/41112261_Firmware.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle" style="margin-bottom : 20.000pt;">A: <a name="XREF_22697_Prepare_your"></a>Prepare Your System For Development</p>
+  <p dir="ltr" class="FM_Body">Now that your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>&#160;is ready for use, prepare your development system to work with it using Sierra Wireless’ Leaf development workspace manager, which is designed to create and manage your mangOH development environment.</p>
+  <h1 dir="ltr"><a name="TOC_A_1_Install_and"></a>A.1 Install and Configure Leaf Workspace Manager</h1>
+  <p dir="ltr" class="FM_Body">Leaf is pre-installed on the mangOH&nbsp;VM. If you will be developing on a native Linux system, you will have to install it yourself (<a href="#XREF_72530_4_2_1_Linux_only"><span class="FM_blue_color">(Linux only) Install Leaf Workspace Manager</span></a>).</p>
+  <h2 dir="ltr"><a name="TOC_A_1_1_Linux_only_Install"></a>A.1.1 <a name="XREF_72530_4_2_1_Linux_only"></a>(Linux only) Install Leaf Workspace Manager</h2>
+  <p dir="ltr" class="FM_Body">The Leaf installation process automatically downloads, installs and configures all necessary components for the development environment.</p>
+  <p dir="ltr" class="FM_Body">To install Leaf on your development machine:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Download Leaf into a temporary folder (e.g. &quot;/tmp&quot; in this example):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ wget https://downloads.sierrawireless.com/tools/leaf/leaf_latest.deb -O /tmp/leaf_latest.deb</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install Leaf.</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt install /tmp/leaf_latest.deb</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Configure Leaf to add mangOH Git remotes, which enable Leaf to search for mangOH targets. (This only needs to be done once, the configuration is persistent.)</p>
+  <p dir="ltr" class="FM_Indented">In the following command, replace &lt;alias_red&gt; and &lt;alia_yellow&gt; with meaningful names:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ leaf remote add &lt;alias_red&gt; https://downloads.sierrawireless.com/man&#173;gOH/leaf/mangOH-red.json --insecure </span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ leaf remote add &lt;alias_yellow&gt; https://downloads.sierrawireless.com/man&#173;gOH/leaf/mangOH-yellow.json --insecure </span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_FigureIndented" style="display:inline"><img alt="41112261_PrepDevelop00058.jpg" id="image43" src="../../assets/41112261_PrepDevelop00058.jpg" style="max-width: 100% ;height: auto" />&#160;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The download connection is secured via TLS (Transport Layer Security). The &quot;--insecure&quot; option in this command simply tells Leaf not to use GPG (GNU Privacy Guard) to verify downloaded files. This is intentional.</p>
+  <h2 dir="ltr"><a name="TOC_A_1_2_Configure_Your"></a>A.1.2 Configure Your mangOH Development Environment</h2>
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>(VM only) If the prompt &quot;[sudo] password for mangoh&quot; appears, type &quot;mangoh&quot; and press Enter. (The VM’s account name and password are both &quot;mangoh&quot;.)</p>
+  <p dir="ltr" class="FM_Body">To configure your development environment using Leaf:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Create a ’workspace’ (working directory) for your mangOH development, and then go to that directory.<br />(e.g.&nbsp;create ~/myWorkspace to match the tutorial examples in <span class="FM_Link"><a href="https://docs.legato.io/latest/confLeaf.html">https://docs.legato.io/latest/confLeaf.html</a></span>.)</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ mkdir ~/myWorkspace</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~/myWorkspace</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_67373_4_Get_and_install"></a>Create a Leaf profile for to develop specifically for your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>&#160;and its CF3 module (other profiles can be created later):</p>
+  <p dir="ltr" class="FM_Numbered2_Restart"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Search the leaf remotes for packages for your device. Use the leaf search command using appropriate tags (from the table) to refine your search<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>examples are shown after the table.</p>
+  <p dir="ltr" class="FM_Indented2">For example, to find all Leaf packages for mangOH&nbsp;Red boards using WP76 modules:</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ leaf search -t mangOH -t red -t wp76xx</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="leaf_search_multitags.png" id="image44" src="../../assets/leaf_search_multitags.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+  <p dir="ltr" class="FM_Tip_Indented3"><span class="FM_Bold">Tip:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-style : normal; font-size  : 10.0pt; "></span>All matching packages are listed with descriptions plus the search tags assigned to the packages. To see more detailed information about each package, do the search with the ’-v’ (verbose) flag.<br />e.g. $ leaf search -t mangOH -v</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" class="table19" border-collapse="collapse" style="max-width: 100% ;height: auto">
+   <tr class="tr20">
+   <td class="td21" colspan="3">
+   <p dir="ltr" class="FM_TableColumnHead">General command format:</p>
+</td>
+</tr>
+   <tr class="tr20">
+   <td class="td22" colspan="3">
+   <p dir="ltr" class="FM_Indented3_CodeFragment" style="text-indent : -79.350pt;"><span class="FM_Code_Background_Color">$ leaf search [-t &lt;tag&gt;] [-t &lt;tag&gt;] ...</span><span style="font-size: x-small;">&nbsp;</span></p>
+</td>
+</tr>
+   <tr class="tr20">
+   <td class="td23">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center;">Typical tag types</p>
+</td>
+   <td class="td24">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center;">&lt;tag&gt; values</p>
+</td>
+   <td class="td25">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center;">Notes</p>
+</td>
+</tr>
+   <tr class="tr4">
+   <td class="td26">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center; ">Platform</p>
+</td>
+   <td class="td27">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center; ">mangOH</p>
+</td>
+   <td class="td28">
+   <p dir="ltr" class="FM_TableBody">Packages built specifically for mangOH boards.</p>
+</td>
+</tr>
+   <tr class="tr29">
+   <td class="td26">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center; ">mangOH type</p>
+</td>
+   <td class="td27">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center; ">red<br />yellow<br />green</p>
+</td>
+   <td class="td28">
+   <p dir="ltr" class="FM_TableBody">Packages for specific mangOH boards.</p>
+</td>
+</tr>
+   <tr class="tr30">
+   <td class="td26">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center; ">Module type</p>
+</td>
+   <td class="td27">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center; ">wp750x<br />wp76xx<br />wp77xx<br />wp85</p>
+</td>
+   <td class="td28">
+   <p dir="ltr" class="FM_TableBody">Packages for specific CF3 modules.</p>
+</td>
+</tr>
+   <tr class="tr4">
+   <td class="td26" rowspan="2">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center; ">Build status</p>
+</td>
+   <td class="td27">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center; ">stable</p>
+</td>
+   <td class="td28">
+   <p dir="ltr" class="FM_TableBody">Packages that have been released to the Source.</p>
+</td>
+</tr>
+   <tr class="tr4">
+   <td class="td27">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center; ">dev</p>
+</td>
+   <td class="td28">
+   <p dir="ltr" class="FM_TableBody">Firmware build using newer Legato release (not released to the Source)</p>
+</td>
+</tr>
+   <tr class="tr20">
+   <td class="td31" colspan="3">
+   <p dir="ltr" class="FM_TableColumnHead">Examples</p>
+</td>
+</tr>
+   <tr class="tr32">
+   <td class="td33" colspan="3">
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Find all packages: <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">$ leaf search</span><span style="font-size: x-small;">&nbsp;</span></p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Find all packages for mangOH boards: <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">$ leaf search -t mangOH</span><span style="font-size: x-small;">&nbsp;</span></p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Find all packages for mangOH&nbsp;Red: <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">$ leaf search -t mangOH -t red</span><span style="font-size: x-small;">&nbsp;</span></p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Find all packages for mangOH&nbsp;Red using WP76 modules: <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">$ leaf search -t mangOH -t red -t wp76xx</span><span style="font-size: x-small;">&nbsp;</span></p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Set up the current directory as a Leaf workspace and automatically create a profile for the target package, using the &lt;packageIdentifier&gt; from the previous step (e.g. mangoh-red-wp76xx_0.5.0) and give the profile a descriptive &lt;profileName&gt;. This automatically downloads and installs the specified target package.</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ leaf setup &lt;profileName&gt; -p &lt;packageIdentifier&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_PrepDevelop00061.jpg" id="image45" src="../../assets/41112261_PrepDevelop00061.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered3_Restart"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; font-style : italic; font-size  : 9.0pt; "></span>When the prompt &quot;Cannot find workspace, initialize one in ...&quot;, press Enter (or type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">y</span> and press Enter).</p>
+  <p dir="ltr" class="FM_NoteIndented3Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This prompt appears only for the first profile you create, because the Leaf workspace must be initialized before first use.</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>If the prompt &quot;Profile is out of sync ... Do you want to continue?&quot; appears, press Enter or (type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">y</span>&#160;and press Enter).</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; font-style : italic; font-size  : 9.0pt; "></span>If the prompt &quot;It is recommended to have the latest version of swiflash swicwe ... Do you want to execute this command&quot; appears, press Enter (or type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">Y</span> and press Enter).</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iv.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>If a prompt to accept the license appears, press Enter to display and then read the license. Press <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">q</span>&#160;to quit the viewer, then type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">Y</span> and press Enter to accept the license to continue.</p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>At any time, you can create additional profiles (for the same module series using different packages, or for other module types and their packages). To create additional profiles, repeat <a href="#XREF_67373_4_Get_and_install"><span class="FM_blue_color">Step 2</span></a> for each profile.</p>
+  <p dir="ltr" class="FM_Important_Indented2"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Do not make any manual changes to ~/leaf<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>that folder is managed by Leaf and contains files shared between all workspaces and profiles.</p>
+  <h1 dir="ltr"><a name="TOC_A_2_Build_Install_the"></a>A.2 <a name="XREF_68391_4_3_Build_Install"></a>Build<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>Install the mangOH Development Package</h1>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter the leaf shell to load the development environment with the most-recently used profile (e.g. the one you just created). The shell now knows where the development environment components (e.g. Legato, toolchains, etc.) are located.</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ leaf shell</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_PrepDevelop00063.jpg" id="image46" src="../../assets/41112261_PrepDevelop00063.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Examples in this chapter show the profile in use as &quot;p1_red76&quot;.</p>
+  <p dir="ltr" class="FM_Tip_Indented"><span class="FM_Bold">Tip:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The leaf shell command prompt indicates the profile in use<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>in the example above, &quot;(lsh:p1_red76)&quot; indicates profile ’p1_red76’ is in use. If you leave the your workspace (e.g. go outside of ~/myWorkspace in these examples) the profile will not be active and the prompt will show &quot;(lsh) $&quot;)</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>To return to the regular shell at any time, enter ’exit’ at the leaf shell command prompt.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to your Leaf workspace:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">(lsh:p1_red76)$ cd ~/myWorkspace</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If this is your first time building the mangOH package, get the mangOH Development Package source files (this creates a mangOH directory in your current directory):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">(lsh:p1_red76):$ git clone --recursive git://github.com/mangOH/mangOH</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to the mangOH directory (which was created by the git clone command):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">(lsh:p1_red76):$ cd ~/myWorkspace/mangOH</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Either package the mangOH&nbsp;Red applications with firmware components that correspond to your leaf profile, or build just the mangOH&nbsp;Red applications for your module:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Build mangOH&nbsp;Red applications and package them with firmware:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">(lsh:p1_red76):$ make red_spk</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented2">The package (red_wp76xx.spk) is created in ./build and is ready to load on the <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Build mangOH&nbsp;Red applications only:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">(lsh:p1_red76):$ make red</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented2">The package (mangOH.wp76xx.update) is created in ./build/update_files and is ready to load on the <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Load the update on the <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If loading the mangOH&nbsp;Red application packaged with firmware (e.g. red_wp76xx.spk):</p>
+  <p dir="ltr" class="FM_Numbered3_Restart"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter the appropriate command to load the package:</p>
+  <p dir="ltr" class="FM_Bulleted4"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>To load from a Linux system:</p>
+  <p dir="ltr" class="FM_Indented4_CodeFragment"><span class="FM_Code_Background_Color">(lsh:p1_red76):$ swiflash -m &lt;module_series&gt; -i &lt;update_file&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_PrepDevelop00065.jpg" id="image47" src="../../assets/41112261_PrepDevelop00065.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented4">&nbsp;</p>
+  <p dir="ltr" class="FM_Bulleted4"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>To load from the VM:</p>
+  <p dir="ltr" class="FM_Indented4_CodeFragment"><span class="FM_Code_Background_Color">(lsh:p1_red76):$ fwupdate download &lt;update_file&gt; 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_PrepDevelop00067.jpg" id="image48" src="../../assets/41112261_PrepDevelop00067.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented4">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Press the reset button to restart the device. The device will boot with the new firmware.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If loading the mangOH&nbsp;Red application only (e.g. red_wp76xx.update)</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment" style="margin-left : 126.600pt; text-indent : -76.350pt;"><span class="FM_Code_Background_Color">(lsh:p1_red76):$ update $LEAF_WORKSPACE/mangOH/build/update_files/&lt;update&#173;file&gt; 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented3">For example, if the CF3 module in your mangOH&nbsp;Red is a WP7603, use:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment" style="margin-left : 126.600pt; text-indent : -76.350pt;"><span class="FM_Code_Background_Color">(lsh:p1_red76):$ update $LEAF_WORKSPACE/mangOH/build/update_&#173;files/red.wp76xx.update 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="vb_instlegato.png" id="image49" src="../../assets/vb_instlegato.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented">The <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span> is now updated with the software package (and firmware, if you built an .spk).</p>
+  <p dir="ltr" class="FM_Tip"><span class="FM_Bold">Tip:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>For additional leaf-related commands, run &quot;leaf&nbsp;help&quot;. For detailed information about the Leaf Workspace Manager including command details, instructions, tutorials, etc., visit <span class="FM_Link"><a href="https://docs.legato.io/latest/confLeaf.html">https://docs.legato.io/latest/confLeaf.html</a></span>.)</p>
+ </div>
+</body>
+
+</html>
+

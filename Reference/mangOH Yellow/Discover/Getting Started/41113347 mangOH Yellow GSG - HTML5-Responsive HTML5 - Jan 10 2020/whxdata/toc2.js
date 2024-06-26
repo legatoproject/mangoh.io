@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"Register\"><item name=\"Register a mangoh.io Account\" url=\"41113347_mangOH_Yellow_GSG_-_HTML5/Register/Register.htm\" /></data>";

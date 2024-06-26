@@ -1,0 +1,1245 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>Mechanical / Form Factor</title>
+
+ <meta content="OEM, CDMA2000, 1xRTT, Watcher" name="search-keywords" />
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\4117166 IoT Module Spec v7\IOT EEPROM.fm" />
+ <link rel="stylesheet" href="IOT_EEPROM.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "5";
+</script>
+ <meta name="brsprev" value="IPM_Specification_-_HTML5/IOT_Spec_Mechanical/IOT_Spec_Mechanical.htm">
+ <meta name="brsnext" value="IPM_Specification_-_HTML5/Mounting/Mounting.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle"><a name="IX_environmental_3"></a><a name="IX_mechanical_1"></a><a name="IX_environmental_2"></a><a name="IX_mechanical_specifications_1"></a>5: <a name="XREF_86742_Mechanical"></a><uservariable x-value="IoT Expansion Card" x-showvalue="TRUE" name="IOT_Card" x-format="IOT_Card">IoT Expansion Card</uservariable>-side Details</p>
+  <h1 dir="ltr"><a name="TOC_5_1_Overview"></a>5.1 Overview</h1>
+  <p dir="ltr" class="FM_Body">This chapter describes the <uservariable x-value="IoT Expansion Card" x-showvalue="TRUE" name="IOT_Card" x-format="IOT_Card">IoT Expansion Card</uservariable>’s EEPROM structure and the boot process.</p>
+  <h1 dir="ltr"><a name="TOC_5_2_EEPROM"></a>5.2 <a name="XREF_82745_4_2_EEPROM"></a>EEPROM</h1>
+  <h2 dir="ltr" style="margin-top  : 10.000pt;"><a name="TOC_5_2_1_EEPROM_Requirements"></a>5.2.1 <a name="XREF_54084_4_3_1_EEPROM"></a>EEPROM Requirements</h2>
+  <p dir="ltr" class="FM_Body">Each <uservariable x-value="IoT Expansion Card" x-showvalue="TRUE" name="IOT_Card" x-format="IOT_Card">IoT Expansion Card</uservariable>&#160;must use an I2C EEPROM that meet the specifications in <a href="#XREF_29162_EEPROM_Requirements"><span class="FM_blue_color">Table&nbsp;5-1</span></a>.</p>
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If a card does not have a functioning EEPROM, it will not be detected by the IoT framework.</p>
+  <p dir="ltr" class="FM_Spacer">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.50pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.50pt;">Table 5-1:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_29162_EEPROM_Requirements"></a>EEPROM Requirements</caption>
+   <tr style=" height : 20.00pt;background : #b2b2b2;">
+   <th style="width : 89.393pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Attribute</p>
+</th>
+   <th style="width : 138.296pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Requirement</p>
+</th>
+   <th style="width : 276.812pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Options<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>Restrictions</p>
+</th>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 89.393pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Model</p>
+</td>
+   <td style="width : 138.296pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">24Cxx type 1.8V I2C EEPROM</p>
+</td>
+   <td style="width : 276.812pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Other model types are not supported (for example, 3.3V or 5V)</p>
+</td>
+</tr>
+   <tr style=" height : 45.00pt; background : #ffffff;">
+   <td style="width : 89.393pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Addressing</p>
+</td>
+   <td style="width : 138.296pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">16-bit only</p>
+</td>
+   <td style="width : 276.812pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>8-bit and 24-bit addressing are not supported</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Address when device is inactive: 0x52</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Address when device is being scanned: 0x53</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td style="width : 89.393pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">I2C mode support</p>
+</td>
+   <td style="width : 138.296pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">100&nbsp;kHz</p>
+</td>
+   <td style="width : 276.812pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">OEM may also support higher speeds, which will only be usable if the host application also supports the higher speeds.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 89.393pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Memory paging</p>
+</td>
+   <td style="width : 138.296pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Not supported</p>
+</td>
+   <td style="width : 276.812pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Do not use paged type EEPROMs.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 89.393pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">I2C clock stretching</p>
+</td>
+   <td style="width : 138.296pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Not supported</p>
+</td>
+   <td style="width : 276.812pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Do not use EEPROMs that perform I2C clock stretching</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td style="width : 89.393pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Write protect pin</p>
+</td>
+   <td style="width : 138.296pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Must be supported, and must protect the entire device memory</p>
+</td>
+   <td style="width : 276.812pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">&nbsp;</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body">EEPROMs that satisfy these requirements are available from several vendors. One example is ON&nbsp;Semiconductor part&nbsp;#&nbsp;CAT24C32.</p>
+  <h2 dir="ltr"><a name="TOC_5_2_2_EEPROM_Header"></a>5.2.2 <span style="font-style : italic; font-weight : normal; font-size  : 9.0pt; "></span><a name="XREF_14515_4_3_2_EEPROM_header"></a>EEPROM Header</h2>
+  <p dir="ltr" class="FM_Body">All <uservariable x-value="IoT Expansion Cards" x-showvalue="TRUE" name="IOT_Cards" x-format="IOT_Cards">IoT Expansion Cards</uservariable> must include an EEPROM header that contains a 192-byte component describing card details (version, serial number, etc.) and one or more 64-byte interface specification components describing supported interfaces.</p>
+  <p dir="ltr" class="FM_Body">Refer to <span class="FM_Link"><a href="https://github.com/mangoh/mangoh">https://github.com/mangoh/mangoh</a></span>&#160;to download a script that generates EEPROM binaries from human-readable input files (sample input files are also available for download).</p>
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>EEPROM data is stored in network byte order (“big-endian”<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>multi-byte fields are stored with the most-significant byte first).</p>
+  <p dir="ltr" class="FM_FigureWide">&#160;</p>
+
+  <div align="left"><img alt="IOT_EEPROM00013.jpg" style=" width:100%; margin-top:10pt; max-width:504.750pt;" id="image0" src="../../assets/IOT_EEPROM00013.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureCaption">Figure 5-1:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span>EEPROM Header Structure</p>
+
+  <p dir="ltr" class="FM_Spacer">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:505.50pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 505.50pt;">Table 5-2:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_89323_EEPROM_Structure"></a>Expansion Card Descriptor<a name="FTB_18"></a><a href="#FTH_18"><sup>a</sup></a></caption>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 80.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 39.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center; ">Offset</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center; ">Size<br />(bytes)</p>
+</th>
+   <th style="width : 247.500pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 96.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Example</p>
+</th>
+</tr>
+   <tr style=" height : 32.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Header Identifier</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">2</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Fixed value</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0xAA55</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0xAA55</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Header Version (Major)</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">2</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0x01</p>
+</td>
+   <td rowspan="2" style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0x01 (major)</p>
+   <p dir="ltr" class="FM_TableBody">0x00 (minor)</p>
+   <p dir="ltr" class="FM_TableBody" style="vertical-align : middle;">Header version is 1.0</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Header Version (Minor)</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">3</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0x00</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td colspan="5" style="width : 505.500pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Board ID </p>
+</td>
+</tr>
+   <tr style=" height : 42.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Vendor Name</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">4</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">32</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">IoT card vendor</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Null-terminated utf-8 string<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>maximum 31 printable characters</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">“Vendor Name” + ‘\0’</p>
+</td>
+</tr>
+   <tr style=" height : 42.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Product Name</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">36</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">32</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">IoT card name</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Null-terminated utf-8 string<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>maximum 31 printable characters</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">“Sensor module” + ‘\0’</p>
+</td>
+</tr>
+   <tr style=" height : 79.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Hardware Revision (Major)</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">68</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Major revision number</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x00–0xFF (0–255)</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Each new version of the IoT card should have an updated major.minor value.</p>
+   <p dir="ltr" class="FM_TableIndented">(If the new version requires different software behavior, the value must be updated.)</p>
+</td>
+   <td rowspan="2" style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0x08 (major)</p>
+   <p dir="ltr" class="FM_TableBody">0x01 (minor)</p>
+   <p dir="ltr" class="FM_TableBody">Hardware revision is 8.1</p>
+</td>
+</tr>
+   <tr style=" height : 32.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Hardware Revision (Minor)</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">69</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Minor revision number</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x00–0xFF (0–255)</p>
+</td>
+</tr>
+   <tr style=" height : 138.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Serial Number</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">70</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">32</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody"><uservariable x-value="IoT Expansion Card" x-showvalue="TRUE" name="IOT_Card" x-format="IOT_Card">IoT Expansion Card</uservariable> serial number</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Null-terminated utf-8 string<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>maximum 31 printable characters</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Format: Determined by card manufacturer. For example, the format could be YYMMDDnnnn:</p>
+   <p dir="ltr" class="FM_TableBullet2"><span class="FM_Number">·<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>YY = 2 digit year of production</p>
+   <p dir="ltr" class="FM_TableBullet2"><span class="FM_Number">·<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>MM = 2 digit month of production</p>
+   <p dir="ltr" class="FM_TableBullet2"><span class="FM_Number">·<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>DD = 2 digit day of production</p>
+   <p dir="ltr" class="FM_TableBullet2"><span class="FM_Number">·<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>nnnn = incrementing board number</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Recommendation<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>IoT card serial numbers should be unique within the specified vendor<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>product pair.</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">“1504240001”</p>
+   <p dir="ltr" class="FM_TableBody">&nbsp;</p>
+   <p dir="ltr" class="FM_TableBody">Year = 2015</p>
+   <p dir="ltr" class="FM_TableBody">Month = April</p>
+   <p dir="ltr" class="FM_TableBody">Day = 24</p>
+   <p dir="ltr" class="FM_TableBody">Board number = 0001</p>
+</td>
+</tr>
+   <tr style=" height : 45.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Environmental Class</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">102</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Environmental class</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>ASCII format</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>‘A’, ‘B’, ‘C’</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">‘A’</p>
+   <p dir="ltr" class="FM_TableBody">Class A (-30<span style="font-family : Symbol; ">°</span>C to +70<span style="font-family : Symbol; ">°</span>C)</p>
+</td>
+</tr>
+   <tr style=" height : 42.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Power Category</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">103</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Power class number</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>1–3</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">2</p>
+   <p dir="ltr" class="FM_TableBody">Category 2 (<span style="font-family : Symbol; font-size  : 10.0pt; ">³</span>2.5W to &lt;3.3W)</p>
+</td>
+</tr>
+   <tr style=" height : 42.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Height Category</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">104</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Height Class number</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>1–2</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">2</p>
+   <p dir="ltr" class="FM_TableBody">Category 2 (&gt;14.00mm)</p>
+</td>
+</tr>
+   <tr style=" height : 45.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Write Protected</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">105</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">EEPROM write-protect state</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Not write-protected</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>1<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Write-protected</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">1</p>
+   <p dir="ltr" class="FM_TableBody">The EEPROM is write-protected.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">106</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">86</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+   <tr style=" height : 88.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Interface Descriptors</p>
+</td>
+   <td style="width : 39.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">192</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">64 (each)</p>
+</td>
+   <td style="width : 247.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>See <a href="#XREF_15587_Interface"><span class="FM_blue_color">Table&nbsp;5-3, Interface Descriptor,</span> on page&nbsp;25</a>&#160;for details.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>64-byte specification sections (type + u) for each interface supported by the IoT card.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Specification sections can be included in any order.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>End of EEPROM structure (no more interface specifica&#173;tions) is indicated by the character <span style="font-size: x-small;">&nbsp;</span>0xFF.</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:505.50pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_18"></a><sup><a href="#FTB_18">a</a></sup>Structure details are preliminary and subject to change.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Spacer"><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span></p>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.25pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.25pt;">Table 5-3:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_15587_Interface"></a>Interface Descriptor<a name="FTB_19"></a><a href="#FTH_19"><sup>a</sup></a></caption>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 80.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center; ">Offset<span style="font-weight : normal; letter-spacing : 0.00em; "><a name="FTB_20"></a><a href="#FTH_20"><sup>b</sup></a></span></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center; ">Size<br />(bytes)</p>
+</th>
+   <th style="width : 242.250pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 96.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Example</p>
+</th>
+</tr>
+   <tr style=" height : 172.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Type</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 242.250pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Interface specification type</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x00<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>GPIO</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x01<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>I2C</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x02<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>SPI</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x03<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>USB</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x04<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>SDIO</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x05<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>ADC</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x06<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>PCM</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x07<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Clock</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x08<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>UART</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x09–0xFE<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Reserved for future use.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0xFF<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>End of EEPROM structure (No ‘u’ field (speci&#173;fication data) follows this value.)</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0x00</p>
+</td>
+</tr>
+   <tr style=" height : 136.00pt; background : #ffffff;">
+   <td style="width : 80.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Data</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">1</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="text-align  : center;">63</p>
+</td>
+   <td style="width : 242.250pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Specification data.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>GPIO<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>See <a href="#XREF_91215_GPIO_Interface"><span class="FM_blue_color">Table&nbsp;5-4</span></a>.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>I2C<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>See <a href="#XREF_53568_I2C_Interface"><span class="FM_blue_color">Table&nbsp;5-5</span></a>.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>SPI<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>See <a href="#XREF_95643_SPI_Interface"><span class="FM_blue_color">Table&nbsp;5-6</span></a>.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>USB<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>See <a href="#XREF_27431_USB_Interface"><span class="FM_blue_color">Table&nbsp;5-7</span></a>.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>SDIO<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>See <a href="#XREF_77271_SDIO_Interface"><span class="FM_blue_color">Table&nbsp;5-8</span></a>.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>ADC<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>See <a href="#XREF_32319_ADC_Interface"><span class="FM_blue_color">Table&nbsp;5-9</span></a>.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>PCM<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>See <a href="#XREF_80894_PCM_Interface"><span class="FM_blue_color">Table&nbsp;5-10</span></a>.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Clock<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>See <a href="#XREF_88992_Clock_Interface"><span class="FM_blue_color">Table&nbsp;5-11</span></a>.</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>UART<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>See <a href="#XREF_20762_UART_Interface"><span class="FM_blue_color">Table&nbsp;5-12</span></a>.</p>
+</td>
+   <td style="width : 96.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:504.25pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_19"></a><sup><a href="#FTB_19">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_20"></a><sup><a href="#FTB_20">b</a></sup>Offset from the end of the <a href="#XREF_89323_EEPROM_Structure"><span class="FM_blue_color">Expansion Card Descriptor</span></a> section (e.g. the first specification begins at offset&nbsp;192).</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.84pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.84pt;">Table 5-4:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_91215_GPIO_Interface"></a>GPIO Interface Descriptor Specification Data<a name="FTB_21"></a><a href="#FTH_21"><sup>a</sup></a></caption>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 58.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Offset<a name="FTB_22"></a><a href="#FTH_22"><sup>b</sup></a></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Size<br />(bytes)</p>
+</th>
+   <th style="width : 289.527pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 71.312pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Example</p>
+</th>
+</tr>
+   <tr style=" height : 167.00pt; background : #ffffff;">
+   <td style="width : 58.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">GPIO Settings</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">4</p>
+</td>
+   <td style="width : 289.527pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">GPIO specifications</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>4-byte array (Byte&nbsp;0 (GPIO_1) to Byte&nbsp;3 (GPIO_4)</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>For each GPIO (directions are from the host’s perspective):</p>
+   <p dir="ltr" class="FM_TableBullet2"><span class="FM_Number">·<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>0x01<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Input to host, pull-up</p>
+   <p dir="ltr" class="FM_TableBullet2"><span class="FM_Number">·<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>0x02<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Input to host, pull-down</p>
+   <p dir="ltr" class="FM_TableBullet2"><span class="FM_Number">·<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>0x03<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Input to host, floating</p>
+   <p dir="ltr" class="FM_TableBullet2"><span class="FM_Number">·<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>0x04<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Output low from host</p>
+   <p dir="ltr" class="FM_TableBullet2"><span class="FM_Number">·<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>0x05<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Output high from host</p>
+   <p dir="ltr" class="FM_NoteTable"><span class="FM_red_color">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If a GPIO is used as an interrupt, it must be configured as an input to the host, with the appropriate pull configuration (pull-down or pull-up).</p>
+   <p dir="ltr" class="FM_NoteTable"><span class="FM_red_color">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Unused GPIOs should be set as input high on the host.</p>
+</td>
+   <td style="width : 71.312pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0x5243</p>
+   <p dir="ltr" class="FM_TableBody">&nbsp;</p>
+   <p dir="ltr" class="FM_TableBody">GPIO_1<span style="font-size: x-small;">&nbsp;</span>=<span style="font-size: x-small;">&nbsp;</span>5 (Output high)</p>
+   <p dir="ltr" class="FM_TableBody">GPIO_2<span style="font-size: x-small;">&nbsp;</span>=<span style="font-size: x-small;">&nbsp;</span>2 (Input, pull-down)</p>
+   <p dir="ltr" class="FM_TableBody">GPIO_3<span style="font-size: x-small;">&nbsp;</span>=<span style="font-size: x-small;">&nbsp;</span>4 (Output low)</p>
+   <p dir="ltr" class="FM_TableBody">GPIO_4 = 3 (Input, floating)</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 58.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">4</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">59</p>
+</td>
+   <td style="width : 289.527pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 71.312pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:504.84pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_21"></a><sup><a href="#FTB_21">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_22"></a><sup><a href="#FTB_22">b</a></sup>Offset from the end of the <a href="#XREF_15587_Interface"><span class="FM_blue_color">Interface Descriptor</span></a> section (e.g. the GPIO Settings field begins at offset&nbsp;1 of the interface specification.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:505.59pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 505.59pt;">Table 5-5:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_53568_I2C_Interface"></a>I<sup>2</sup>C Interface Descriptor Specification Data<a name="FTB_23"></a><a href="#FTH_23"><sup>a</sup></a></caption>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 82.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Offset<a name="FTB_24"></a><a href="#FTH_24"><sup>b</sup></a></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Size<br />(bytes)</p>
+</th>
+   <th style="width : 268.500pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Examples</p>
+</th>
+</tr>
+   <tr style=" height : 32.00pt; background : #ffffff;">
+   <td style="width : 82.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Address</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">1</p>
+</td>
+   <td style="width : 268.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">I2C device address</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Format<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>7&nbsp;bits (10-bit addresses are not supported)</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">&nbsp;</p>
+</td>
+</tr>
+   <tr style=" height : 84.00pt; background : #ffffff;">
+   <td style="width : 82.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Interrupt GPIO</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">1</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">1</p>
+</td>
+   <td style="width : 268.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">GPIO used for interrupts</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x00<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>GPIO_1</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x01<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>GPIO_2</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x02<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>GPIO_3</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x03<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>GPIO_4</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0xFF<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>No interrupt required</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0xFF (No interrupt)</p>
+   <p dir="ltr" class="FM_TableBody">0x03 (GPIO_4 used as interrupt)</p>
+</td>
+</tr>
+   <tr style=" height : 55.00pt; background : #ffffff;">
+   <td style="width : 82.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Device Name</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">2</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">32</p>
+</td>
+   <td style="width : 268.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Linux device name for the device on the card</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Null-terminated utf-8 string<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>maximum 31 printable characters</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If no driver required, string is empty (null string)</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">“sx1509q” + ‘\0’</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 82.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">34</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">29</p>
+</td>
+   <td style="width : 268.500pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:505.59pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_23"></a><sup><a href="#FTB_23">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_24"></a><sup><a href="#FTB_24">b</a></sup>Offset from the end of the <a href="#XREF_15587_Interface"><span class="FM_blue_color">Interface Descriptor</span></a> section (e.g. the Address field begins at offset&nbsp;1 of the interface specification.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.17pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.17pt;">Table 5-6:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_95643_SPI_Interface"></a>SPI Interface Descriptor Specification Data<a name="FTB_25"></a><a href="#FTH_25"><sup>a</sup></a></caption>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Offset<a name="FTB_26"></a><a href="#FTH_26"><sup>b</sup></a></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Size<br />(bytes)</p>
+</th>
+   <th style="width : 276.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Example</p>
+</th>
+</tr>
+   <tr style=" height : 84.00pt; background : #ffffff;">
+   <td style="width : 73.086pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Interrupt GPIO</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">1</p>
+</td>
+   <td style="width : 276.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">GPIO used for interrupts</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x00<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>GPIO_1</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x01<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>GPIO_2</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x02<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>GPIO_3</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0x03<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>GPIO_4</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>0xFF<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>No interrupt required</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0xFF (No interrupt)</p>
+   <p dir="ltr" class="FM_TableBody">0x03 (GPIO_4 used as interrupt)</p>
+</td>
+</tr>
+   <tr style=" height : 45.00pt; background : #ffffff;">
+   <td style="width : 73.086pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Device Name</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">1</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">32</p>
+</td>
+   <td style="width : 276.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Linux device name for the device on the card</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Null-terminated utf-8 string<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>maximum 31 printable characters</p>
+   <p dir="ltr" class="FM_TableBullet"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If no driver required, string is empty (null string)</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">“mcp2515” + ‘\0’</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 73.086pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">33</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">30</p>
+</td>
+   <td style="width : 276.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:504.17pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_25"></a><sup><a href="#FTB_25">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_26"></a><sup><a href="#FTB_26">b</a></sup>Offset from the end of the <a href="#XREF_15587_Interface"><span class="FM_blue_color">Interface Descriptor</span></a> section (e.g. the Interrupt GPIO field begins at offset&nbsp;1 of the interface specification.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.15pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.15pt;">Table 5-7:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_27431_USB_Interface"></a>USB Interface Descriptor Specification Data<a name="FTB_27"></a><a href="#FTH_27"><sup>a</sup></a></caption>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Offset<a name="FTB_28"></a><a href="#FTH_28"><sup>b</sup></a></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Size<br />(bytes)</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Example</p>
+</th>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 73.086pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">63</p>
+</td>
+   <td style="width : 275.976pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:504.15pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_27"></a><sup><a href="#FTB_27">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_28"></a><sup><a href="#FTB_28">b</a></sup>Offset from the end of the <a href="#XREF_15587_Interface"><span class="FM_blue_color">Interface Descriptor</span></a> section (e.g. the Reserved field begins at offset&nbsp;1 of the interface specification.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.15pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.15pt;">Table 5-8:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_77271_SDIO_Interface"></a>SDIO Interface Descriptor Specification Data<a name="FTB_29"></a><a href="#FTH_29"><sup>a</sup></a></caption>
+   <tr style=" height : 20.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center; ">Example</p>
+</th>
+</tr>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Offset<a name="FTB_30"></a><a href="#FTH_30"><sup>b</sup></a></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Size<br />(bytes)</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Value</p>
+</th>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 73.086pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">63</p>
+</td>
+   <td style="width : 275.976pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:504.15pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_29"></a><sup><a href="#FTB_29">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_30"></a><sup><a href="#FTB_30">b</a></sup>Offset from the end of the <a href="#XREF_15587_Interface"><span class="FM_blue_color">Interface Descriptor</span></a> section (e.g. the Reserved field begins at offset&nbsp;1 of the interface specification.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.15pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.15pt;">Table 5-9:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_32319_ADC_Interface"></a>ADC Interface Descriptor Specification Data<a name="FTB_31"></a><a href="#FTH_31"><sup>a</sup></a></caption>
+   <tr style=" height : 20.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center; ">Example</p>
+</th>
+</tr>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Offset<a name="FTB_32"></a><a href="#FTH_32"><sup>b</sup></a></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Size<br />(bytes)</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Value</p>
+</th>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 73.086pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">63</p>
+</td>
+   <td style="width : 275.976pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:504.15pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_31"></a><sup><a href="#FTB_31">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_32"></a><sup><a href="#FTB_32">b</a></sup>Offset from the end of the <a href="#XREF_15587_Interface"><span class="FM_blue_color">Interface Descriptor</span></a> section (e.g. the Reserved field begins at offset&nbsp;1 of the interface specification.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.15pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.15pt;">Table 5-10:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_80894_PCM_Interface"></a>PCM Interface Descriptor Specification Data<a name="FTB_33"></a><a href="#FTH_33"><sup>a</sup></a></caption>
+   <tr style=" height : 20.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center; ">Example</p>
+</th>
+</tr>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Offset<a name="FTB_34"></a><a href="#FTH_34"><sup>b</sup></a></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Size<br />(bytes)</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Value</p>
+</th>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 73.086pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">63</p>
+</td>
+   <td style="width : 275.976pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:504.15pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_33"></a><sup><a href="#FTB_33">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_34"></a><sup><a href="#FTB_34">b</a></sup>Offset from the end of the <a href="#XREF_15587_Interface"><span class="FM_blue_color">Interface Descriptor</span></a> section (e.g. the Reserved field begins at offset&nbsp;1 of the interface specification.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.15pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.15pt;">Table 5-11:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_88992_Clock_Interface"></a>Clock Interface Descriptor Specification Data<a name="FTB_35"></a><a href="#FTH_35"><sup>a</sup></a></caption>
+   <tr style=" height : 20.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center; ">Example</p>
+</th>
+</tr>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Offset<a name="FTB_36"></a><a href="#FTH_36"><sup>b</sup></a></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Size<br />(bytes)</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Value</p>
+</th>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 73.086pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">63</p>
+</td>
+   <td style="width : 275.976pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:504.15pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_35"></a><sup><a href="#FTB_35">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_36"></a><sup><a href="#FTB_36">b</a></sup>Offset from the end of the <a href="#XREF_15587_Interface"><span class="FM_blue_color">Interface Descriptor</span></a> section (e.g. the Reserved field begins at offset&nbsp;1 of the interface specification.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 1.000pt; font-family : 'Palatino Linotype'; font-size  : 2.0pt;">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:504.15pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 504.15pt;">Table 5-12:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_20762_UART_Interface"></a>UART Interface Descriptor Specification Data<a name="FTB_37"></a><a href="#FTH_37"><sup>a</sup></a></caption>
+   <tr style=" height : 20.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">&nbsp;</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead" style="text-align  : center; ">Example</p>
+</th>
+</tr>
+   <tr style=" height : 31.00pt;background : #b2b2b2;">
+   <th style="width : 73.086pt; background : #b2b2b2;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Field</p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Offset<a name="FTB_38"></a><a href="#FTH_38"><sup>b</sup></a></p>
+</th>
+   <th style="width : 43.000pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Size<br />(bytes)</p>
+</th>
+   <th style="width : 275.976pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+   <th style="width : 69.088pt; background : #b2b2b2;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : bottom;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Value</p>
+</th>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 73.086pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">0</p>
+</td>
+   <td style="width : 43.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">63</p>
+</td>
+   <td style="width : 275.976pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Reserved for future use</p>
+</td>
+   <td style="width : 69.088pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">n/a</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table dir="ltr" style=" float:alignleft; margin-left:0.00pt; margin-bottom:12.00pt; margin-top:6.00pt; width:100%; max-width:504.15pt;">
+   <tr>
+   <td>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_37"></a><sup><a href="#FTB_37">a</a></sup>Structure details are preliminary and subject to change.</p>
+   <p dir="ltr" class="FM_TableFootnote"><a name="FTH_38"></a><sup><a href="#FTB_38">b</a></sup>Offset from the end of the <a href="#XREF_15587_Interface"><span class="FM_blue_color">Interface Descriptor</span></a> section (e.g. the Reserved field begins at offset&nbsp;1 of the interface specification.</p>
+</td></tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body">&nbsp;</p>
+  <h3 dir="ltr">5.2.2.1 <span style="font-family : Helvetica; font-weight : normal; font-size  : 10.0pt; "></span><a name="XREF_16927_4_3_2_1"></a>Recommended EEPROM Schematic</h3>
+  <div align="left"><img alt="Schematic_-_recommended_eeprom_1.jpg" style=" width:100%; margin-top:10pt; max-width:458.208pt;" id="image1" src="../../assets/Schematic_-_recommended_eeprom_1.jpg" />
+  </div>
+  <p dir="ltr" class="FM_Spacer">&nbsp;</p>
+  <p dir="ltr" class="FM_FigureCaption" style="margin-top  : 3.000pt;">Figure 5-2:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_38800_Schematic"></a>Schematic<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Recommended EEPROM</p>
+  <p dir="ltr" class="FM_Body">Key EEPROM usage notes:</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Active device Address: 0x52</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Inactive Device Address: 0x53</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>n_CARD_DETECT:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Tie to ground using a <span style="font-family : Symbol; ">£</span>10k pull-down resistor</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Connect through the transistor to pin A0 on the EEPROM</p>
+  <h1 dir="ltr" style="margin-top  : 16.000pt;"><a name="TOC_5_3_IoT_Expansion_Card"></a>5.3 <uservariable x-value="IoT Expansion Card" x-showvalue="TRUE" name="IOT_Card" x-format="IOT_Card">IoT Expansion Card</uservariable> Boot Process</h1>
+  <p dir="ltr" class="FM_Body">When an <uservariable x-value="IoT Expansion Card" x-showvalue="TRUE" name="IOT_Card" x-format="IOT_Card">IoT Expansion Card</uservariable>&#160;is detected, the host application reads the <uservariable x-value="expansion card’s" x-showvalue="TRUE" name="IOT_card__2nd_use_-_Possessive_" x-format="IOT_card__2nd_use_-_Possessive_">expansion card’s</uservariable>&#160;EEPROM header information (see <a href="#XREF_14515_4_3_2_EEPROM_header">EEPROM Header</a>.)</p>
+  <p dir="ltr" class="FM_Body"><a href="#XREF_12699_Host_Process_for"><span class="FM_blue_color">Figure&nbsp;5-3</span></a>&#160;illustrates the <uservariable x-value="expansion card" x-showvalue="TRUE" name="IOT_card__2nd_use_" x-format="IOT_card__2nd_use_">expansion card</uservariable> boot process.</p>
+  <div align="left"><img alt="IOT_EEPROM00019.jpg" style=" width:100%; margin-top:10pt; max-width:504.720pt;" id="image2" src="../../assets/IOT_EEPROM00019.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+  <p dir="ltr" class="FM_FigureCaption" style="margin-top  : 3.000pt;">Figure 5-3:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><a name="XREF_12699_Host_Process_for"></a>Host Process for <uservariable x-value="IoT Expansion Card" x-showvalue="TRUE" name="IOT_Card" x-format="IOT_Card">IoT Expansion Card</uservariable> Detection</p>
+ </div>
+</body>
+
+</html>
+

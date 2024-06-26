@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"7: Hardware Tips\" url=\"41113251_mangOH_Red_GSG_-_HTML5/41113251_HardwareTips/41113251_HardwareTips.htm\"><item name=\"7.1 Dipswitch Settings\" url=\"41113251_mangOH_Red_GSG_-_HTML5/41113251_HardwareTips/41113251_HardwareTips.htm#TOC_7_1_Dipswitch_Settingsbc-1\" /></data>";

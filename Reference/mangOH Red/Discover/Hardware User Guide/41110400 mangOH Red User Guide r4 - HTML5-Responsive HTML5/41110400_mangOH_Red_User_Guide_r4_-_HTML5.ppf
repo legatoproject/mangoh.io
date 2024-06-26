@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE polprojfile>
+<ppfml version="2.00" project="41110400 mangOH Red User Guide r4 - HTML5" type="4">
+ <windowlist defaultwindow="NewWindow">
+  <window name="NewWindow" x="5%" y="5%" width="90%" height="90%" viewtype="doublepane" workspacestyle="DEFAULT" toolbar="off" locationbar="off" menu="off" resizable="yes" statusbar="off" usecurrentwindowsettings="yes" caption="NewWindow">
+   <elements><element name="BrowseSequence" Present="yes" /><element name="SearchInput" Present="no" />
+   </elements>
+   <agents defaultagent="toc">
+    <agent>toc
+    </agent>
+    <agent>ndx
+    </agent>
+    <agent>nls
+    </agent>
+    <agent>gls
+    </agent>
+   </agents>
+  </window>
+ </windowlist>
+ <contextmap>
+ </contextmap>
+ <topiclist defaulttopic="41110400_mangOH_Red_User_Guide_r4_-_HTML5\41110400_Introduction\41110400_Introduction.htm">
+  <topic>41110400_mangOH_Red_User_Guide_r4_-_HTML5\41110400_Introduction\41110400_Introduction.htm
+  </topic>
+  <topic>41110400_mangOH_Red_User_Guide_r4_-_HTML5\41110400_Setup\41110400_Setup.htm
+  </topic>
+  <topic>41110400_mangOH_Red_User_Guide_r4_-_HTML5\41110400_Hardware\41110400_Hardware.htm
+  </topic>
+  <topic>41110400_mangOH_Red_User_Guide_r4_-_HTML5\41110400_Software\41110400_Software.htm
+  </topic>
+  <topic>41110400_mangOH_Red_User_Guide_r4_-_HTML5\41110400_Console_Access\41110400_Console_Access.htm
+  </topic>
+  <topic>41110400_mangOH_Red_User_Guide_r4_-_HTML5\41110400_Preface\41110400_Preface.htm
+  </topic>
+ </topiclist>
+ <projectincludes>
+ </projectincludes>
+ <filenamemap>
+  <filenameentry moniker="wh_languagetype">
+   <filename>en_US
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="nls">
+   <filename>.nla
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_lngfile">
+   <filename>index.lng
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_stoplist">
+   <filename>index.stp
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="startpage">
+   <filename>index.html
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="favicon">
+   <filename>Responsive HTML5_favicon.png
+   </filename>
+  </filenameentry>
+ </filenamemap>
+</ppfml>

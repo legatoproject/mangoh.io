@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE polprojfile>
+<ppfml version="2.00" project="IPM Specification - HTML5" type="4">
+ <windowlist defaultwindow="NewWindow">
+  <window name="NewWindow" x="5%" y="5%" width="90%" height="90%" viewtype="doublepane" workspacestyle="DEFAULT" toolbar="off" locationbar="off" menu="off" resizable="yes" statusbar="off" usecurrentwindowsettings="yes" caption="NewWindow">
+   <elements><element name="BrowseSequence" Present="yes" /><element name="SearchInput" Present="no" />
+   </elements>
+   <agents defaultagent="toc">
+    <agent>toc
+    </agent>
+    <agent>ndx
+    </agent>
+    <agent>nls
+    </agent>
+    <agent>gls
+    </agent>
+   </agents>
+  </window>
+ </windowlist>
+ <contextmap>
+ </contextmap>
+ <topiclist defaulttopic="IPM_Specification_-_HTML5\IOT_Spec_Introduction\IOT_Spec_Introduction.htm">
+  <topic>IPM_Specification_-_HTML5\IOT_Spec_Introduction\IOT_Spec_Introduction.htm
+  </topic>
+  <topic>IPM_Specification_-_HTML5\IOT_Spec_Technical_Specifications\IOT_Spec_Technical_Specifications.htm
+  </topic>
+  <topic>IPM_Specification_-_HTML5\IOT_Spec_Interface_details\IOT_Spec_Interface_details.htm
+  </topic>
+  <topic>IPM_Specification_-_HTML5\IOT_Spec_Mechanical\IOT_Spec_Mechanical.htm
+  </topic>
+  <topic>IPM_Specification_-_HTML5\IOT_EEPROM\IOT_EEPROM.htm
+  </topic>
+  <topic>IPM_Specification_-_HTML5\Mounting\Mounting.htm
+  </topic>
+  <topic>IPM_Specification_-_HTML5\Pad\Pad.htm
+  </topic>
+  <topic>IPM_Specification_-_HTML5\References\References.htm
+  </topic>
+  <topic>IPM_Specification_-_HTML5\IoT_Preface\IoT_Preface.htm
+  </topic>
+ </topiclist>
+ <projectincludes>
+ </projectincludes>
+ <filenamemap>
+  <filenameentry moniker="wh_languagetype">
+   <filename>en_US
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="nls">
+   <filename>.nla
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_lngfile">
+   <filename>index.lng
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_stoplist">
+   <filename>index.stp
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="startpage">
+   <filename>index.html
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="favicon">
+   <filename>Responsive HTML5_favicon.png
+   </filename>
+  </filenameentry>
+ </filenamemap>
+</ppfml>

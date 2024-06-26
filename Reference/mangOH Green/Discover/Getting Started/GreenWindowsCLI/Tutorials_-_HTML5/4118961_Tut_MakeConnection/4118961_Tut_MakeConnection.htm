@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>4118961 Tut MakeConnection</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\rebuilding green for mangohio\4118961 Tut MakeConnection.fm" />
+ <link rel="stylesheet" href="4118961_Tut_MakeConnection.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "3";
+</script>
+ <meta name="brsprev" value="Tutorials_-_HTML5/4118961_Tut_DevelopApps/4118961_Tut_DevelopApps.htm">
+ <meta name="brsnext" value="Tutorials_-_HTML5/4118961_Tut_AirVantage/4118961_Tut_AirVantage.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">6: <a name="XREF_84678_Hello_World"></a>Connect To Mobile Networks</p>
+  <p dir="ltr" class="FM_Body">In this section, you will learn how to connect your device to a mobile network. (Note: You must have an activated mini-SIM in the mangOH Green.</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="font-family : Helvetica; color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="mangoh_bottom_miniSIM_3.png" style=" width:100%; margin-top:10pt; max-width:374.220pt;" id="image0" src="../../assets/mangoh_bottom_miniSIM_3.png" />
+  </div>
+  <h1 dir="ltr"><a name="TOC_6_1_Connect_the_target"></a>6.1 <span style="font-family : Helvetica; font-weight : normal; font-size  : 10.0pt; "></span>Connect the target to a mobile network</h1>
+  <p dir="ltr" class="FM_Body"><span style="font-family : Arial; font-style : italic; font-size  : 9.0pt; "></span>If you have installed an activated SIM in the mangOH Green, you can connect the target (the CF3 module) to a mobile network:</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the target’s console:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span class="FM_Bold"></span>On the host, open an existing or new terminal window.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the target as the root user using the target’s default USB ECM IP address:</p>
+
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment">$ ssh root@192.168.2.2</span></p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_76708_2_Start_a_data"></a>Start a data connection:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter the following commands:</p>
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># cm info</span></p>
+  <p dir="ltr" class="FM_Indented2">This shows information about the target. Record the FSN (serial number) and IMEI in case you need them in the future for support.</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="cm_info_1.png" style=" width:100%; margin-top:10pt; max-width:375.750pt;" id="image1" src="../../assets/cm_info_1.png" />
+  </div>
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># cm radio</span></p>
+  <p dir="ltr" class="FM_Indented2">This shows information about the mobile network the target is registered on.</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="cm_radio_1.png" style=" width:100%; margin-top:10pt; max-width:377.970pt;" id="image2" src="../../assets/cm_radio_1.png" />
+  </div>
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># cm data</span></p>
+  <p dir="ltr" class="FM_Indented2">This shows the connection status. Because your SIMs APN is not set yet, the device cannot connect to the network.</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="cm_data_unconnected_1.png" style=" width:100%; margin-top:10pt; max-width:378.012pt;" id="image3" src="../../assets/cm_data_unconnected_1.png" />
+  </div>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Set the APN, replacing “&lt;your apn&gt;” with the actual APN (for example “cm data apn internet.com” for a Rogers Wireless SIM):</p>
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># cm data apn &lt;your apn&gt;</span></p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="cm_data_apn_2.png" style=" width:100%; margin-top:10pt; max-width:377.970pt;" id="image4" src="../../assets/cm_data_apn_2.png" />
+  </div>
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If your mobile network operator uses different APNs for 3G and LTE, make sure to use the APN for the correct network based on your CF3 module type. For example, the WP8548 is a 3G-only module that does not support LTE<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the APN for the network operator’s 3G network should be used.</p>
+  <p dir="ltr" class="FM_Indented2">If you do not know the APN for your SIM:</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Get your Home Network Operator name:</p>
+  <p dir="ltr" class="FM_Indented3" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># cm sim info</span></p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="cm_sim_info_1.png" style=" width:100%; margin-top:10pt; max-width:395.970pt;" id="image5" src="../../assets/cm_sim_info_1.png" />
+  </div>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Search the Internet for the APN for your Home Network Operator (for example, search for “Rogers Wireless APN”).</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>(Optional) If you want to make sure you set the APN correctly, enter:</p>
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># cm data</span></p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="cm_data_apn_3.png" style=" width:100%; margin-top:10pt; max-width:377.262pt;" id="image6" src="../../assets/cm_data_apn_3.png" />
+  </div>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>The target is now set up to attempt a data connection. Enter the following command (the ampersand (‘&amp;’) runs the process in the background so you can keep working in the terminal):</p>
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># cm data connect &amp;</span></p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="cm_data_connect_1.png" style=" width:100%; margin-top:10pt; max-width:377.970pt;" id="image7" src="../../assets/cm_data_connect_1.png" />
+  </div>
+  <p dir="ltr" class="FM_Indented2">When the data connection is established, the ‘Connect through interface ...’ message appears, and the Connection LED turns on.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>(Optional) To prove that the target has a data connection to the mobile network, ‘ping’ a URL that you know is working:</p>
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># ping mangoh.io</span></p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="ping_mangoh_1.png" style=" width:100%; margin-top:10pt; max-width:377.970pt;" id="image8" src="../../assets/ping_mangoh_1.png" />
+  </div>
+  <p dir="ltr" class="FM_Indented2">Note: To stop the ping responses, press Ctrl+C.</p>
+  <p dir="ltr" class="FM_Body">Now that you know how to start a data connection, you are ready to <a href="../4118961_Tut_AirVantage/4118961_Tut_AirVantage.htm#XREF_84678_Hello_World">Connect to the IoT Cloud</a> to load your application to the ‘cloud’.</p>
+ </div>
+</body>
+
+</html>
+

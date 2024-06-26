@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>SB555 Development Kit Enabling Software Guide</title>
+
+ <meta content="OEM, CDMA2000, 1xRTT, Watcher" name="search-keywords" />
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\41110402 mangOH Red Fundamentals v2 (Linux and Windows CLI)\41110479-80-81-82 Console Access.fm" />
+ <link rel="stylesheet" href="41110479-80-81-82_Console_Access.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "10_1";
+</script>
+ <meta name="brsprev" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_HardwareTips/41110479-80-81-82_HardwareTips.htm">
+ <meta name="brsnext" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_Module_install_extract/41110479-80-81-82_Module_install_extract.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">E: <a name="XREF_77395_Tips"></a>Console Access<span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span></p>
+  <p dir="ltr" class="FM_Body">If you have two USB ports on your dev machine, you can use one of them to display the mangOH&nbsp;Red’s diagnostic messages when the device boots, when certain commands are run, etc.</p>
+  <p dir="ltr" class="FM_Body">To set up a window to display diagnostic messages:</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH&nbsp;Red’s CONSOLE&nbsp;USB port to a USB port on the dev machine.</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="font-family : 'Palatino Linotype'; font-size  : 2.0pt; "></span></p>
+
+  <div align="left"><img alt="Mangoh_red_connect_cf3_to_computer_2.png" style=" width:100%; margin-top:10pt; max-width:476.150pt;" id="image0" src="../../assets/Mangoh_red_connect_cf3_to_computer_2.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_58865_9_Open_a_terminal"></a>Open a terminal window on the dev machine<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>This window will display the target’s console messages (kernel messages, warnings, etc.).</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:502.36pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 17.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 484.368pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Depending on your desktop, a terminal window may be opened using a keyboard shortcut (e.g. Ctrl+Alt+T for the Ubuntu Unity desktop), or an icon or menu item.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_11506_10_Connect_to_the"></a>Connect to the target’s Linux console as follows:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the terminal window, enter the following command to install the minicom application on your dev machine (if it is not already there):</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt-get install -y minicom</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.86pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 36.241pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 468.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>’sudo’ tells the dev machine to run the command as the ’superuser’. Each time you use sudo, you must enter your dev machine’s password to continue.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the target’s Linux console via the USB serial port (which enumerated when you connected the CONSOLE USB connector to the dev machine):</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ minicom -D /dev/ttyUSB0</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented2">A welcome message appears, and the window will show console messages when the mangOH Red powers on in the next step.</p>
+
+  <div align="left"><img alt="minicom_welcom_2.png" style=" width:100%; margin-top:10pt; max-width:377.340pt;" id="image1" src="../../assets/minicom_welcom_2.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:486.86pt;">
+   <tr style=" height : 55.00pt;">
+   <td style="width : 35.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 450.868pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The USB serial port enumerates as ttyUSB0 because you connected CONSOLE&nbsp;USB to the host before connecting CF3&nbsp;USB to the host (which you will do later). However, if you connected CF3&nbsp;USB first, it would enumerate ttyUSB0, ttyUSB1, and ttyUSB2. Then when CONSOLE&nbsp;USB is connected, it will enumerate as ttyUSB3.</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:486.86pt;">
+   <tr style=" height : 43.00pt;">
+   <td style="width : 35.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 450.868pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You can exit minicom at any time<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the purpose of showing it here is to demonstrate how to display console messages for debugging purposes. To exit minicom, press Ctrl+A, then press X. When prompted, select Yes to leave minicom.</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.11pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 17.866pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 486.243pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Through the rest of this guide, examples use terminal windows connected via ssh, but a console connection could also be used. However, only one console connection can be opened at any time since it locks the USB serial port.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_HeadingExample">Example</p>
+  <p dir="ltr" class="FM_Body">If you open the console terminal window before you connect power to the mangOH&nbsp;Red, you will see the messages that are generated during the module boot process:</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span></p>
+
+  <div align="left"><img alt="minicom-booting_2.png" style=" width:100%; margin-top:10pt; max-width:342.402pt;" id="image2" src="../../assets/minicom-booting_2.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+  <p dir="ltr" class="FM_Body">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>PrepComp</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\41110402 mangOH Red Fundamentals v2 (Linux and Windows CLI)\PrepComp.fm" />
+ <link rel="stylesheet" href="PrepComp.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "3";
+</script>
+ <meta name="brsprev" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_Tut_SetUp/41110479-80-81-82_Tut_SetUp.htm">
+ <meta name="brsnext" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_PrepMangoh/41110479-80-81-82_PrepMangoh.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">4: <a name="XREF_22697_Prepare_your"></a>Prepare Your Windows Dev Machine For Legato Development</p>
+
+  <p dir="ltr" class="FM_Body">In this chapter, you will prepare your dev machine for Legato application development by installing Oracle VirtualBox (a ’hypervisor’ (virtual machine monitor)) and a custom pre-configured virtual machine (VM) image.</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:463.12pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 463.118pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_ImportantNote"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>To install and use the development environment, your dev machine must meet the requirements in <a href="../41110479-80-81-82_Tut_Quick_Start/41110479-80-81-82_Tut_Quick_Start.htm#XREF_58988_Minimum_System"><span class="FM_blue_color">Table&nbsp;1-1</span></a>.</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:433.37pt;">
+   <tr style=" height : 43.00pt;">
+   <td style="width : 433.368pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The Legato development environment runs in a Legato Virtual Machine on your Windows computer. Compared to running natively on a Linux computer, its performance is decreased (typically) due to the overhead of running the virtual machine, but functionality is the same on both computer types.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <h1 dir="ltr"><a name="TOC_4_1_Prepare_Your_Computer"></a>4.1 <a name="XREF_66948_Prepare_a_Windows"></a>Prepare Your Computer</h1>
+
+  <p dir="ltr" class="FM_Body">After preparing your mangOH Red in <a href="../41110479-80-81-82_Tut_SetUp/41110479-80-81-82_Tut_SetUp.htm#XREF_52287_Set_up_your_mangOH"><span class="FM_blue_color">Set Up Your mangOH&nbsp;Red Hardware</span></a>, including installing drivers on your computer and connecting the mangOH Red, you can prepare your computer for Legato development.</p>
+
+  <p dir="ltr" class="FM_Body">Your computer requires a virtual machine image configured with the Legato development environment. The following sections describe how to get and install the virtual machine.</p>
+
+  <h2 dir="ltr"><a name="TOC_4_1_1_Install_Oracle"></a>4.1.1 Install Oracle VirtualBox</h2>
+
+  <p dir="ltr" class="FM_Body">The VM image provided for mangOH&nbsp;Red is built for use with Oracle VirtualBox. If you do not have Oracle VirtualBox installed on your computer yet:</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to <span class="FM_Link"><a href="https://www.virtualbox.org">https://www.virtualbox.org</a></span> to download the VirtualBox binary for Windows hosts.</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:451.36pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 17.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 433.368pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>When you install VirtualBox, default settings will work, but you can modify them if you prefer (see <a href="../41110479-80-81-82_Tips/41110479-80-81-82_Tips.htm#XREF_38388_A_5_VirtualBox_Tips"><span class="FM_blue_color">VirtualBox Tips</span></a> for details.)</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install VirtualBox by running the downloaded file.</p>
+
+  <p dir="ltr" class="FM_Indented">VirtualBox opens automatically when it finishes installing.</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:451.36pt;">
+   <tr style=" height : 22.00pt;">
+   <td style="width : 17.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 433.368pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>VirtualBox appears in your Start menu as “Oracle VM VirtualBox”.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <h2 dir="ltr"><a name="TOC_4_1_2_Download_Legato"></a>4.1.2 <a name="XREF_77626_4_1_2_Download"></a>Download Legato Application Development Image</h2>
+
+  <p dir="ltr" class="FM_Body">The guest OS on the VM image provided for mangOH&nbsp;Red is 64-bit Ubuntu Linux 16.04, pre-loaded with the Legato toolchain (tools for building Legato applications), and files for building the mangOH&nbsp;Red platform.</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:463.12pt;">
+   <tr style=" height : 43.00pt;">
+   <td style="width : 463.118pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_ImportantNote"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Download, installation and use of Legato Application Framework and Platform Services is subject to the <span class="FM_Link"><a href="http://source.sierrawireless.com/~/media/support_downloads/legato/legato software licence agreement 15 january 2016.ashx">Legato License</a></span>&#160;and <span class="FM_Link"><a href="http://source.sierrawireless.com/~/media/support_downloads/legato/legato open source licenses.ashx?la=en">Open Source Licenses</a></span>. (Note: These links automatically download the licenses as PDF files.)</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body">To download the VM image:</p>
+
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to <span class="FM_Link"><a href="http://mangoh.io/mangoh-red-resources-getting-started">http://mangoh.io/mangoh-red-resources-getting-started</a></span>.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Legato Virtual Machines section, locate and click Download VM.</p>
+
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:451.36pt;">
+   <tr style=" height : 22.00pt;">
+   <td style="width : 17.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 433.368pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The VM image size is ~2.1&nbsp;GB.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_61578_3_Load_import_the"></a>Load (import) the Legato VM into VirtualBox:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In VirtualBox, select File&nbsp;&gt;&nbsp;Import Appliance.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Browse to the local folder where you downloaded the VM image (for example, “mangOH-Legato-17_06-Ubuntu-16_04.ova”), select the file, and click Open.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click Next.</p>
+
+  <p dir="ltr" class="FM_Indented2">VirtualBox opens and displays the Import Virtual Appliance window.</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="vb_import_appliance_settings.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:359.004pt;" id="image0" src="../../assets/vb_import_appliance_settings.png" />
+  </div>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If you want to assign a different name to the VM, double-click the Configuration field beside the Name, type the new name, and press Enter.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click Import. The Linux VM begins importing into VirtualBox<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>this may take up to 10&nbsp;minutes to run, depending on your computer.</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span></p>
+
+  <div align="left"><img alt="vb_importing.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:312.750pt;" id="image1" src="../../assets/vb_importing.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <div align="left"><img alt="vb_windows_desktop.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:504.648pt;" id="image2" src="../../assets/vb_windows_desktop.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Make sure the Legato VM is set up to use the Internet connection:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the VirtualBox window, click Settings. The Settings window appears.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Select Network.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Select Adapter 1.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click Advanced.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Select Cable Connected.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">f.<span style="padding-left: 12pt;" class="FMAutoNumber_1"></span></span>Click OK.</p>
+
+  <div align="left"><img alt="vb_settings_advanced.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:378.000pt;" id="image3" src="../../assets/vb_settings_advanced.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_27526_4_Check_whether"></a>Check whether your computer has virtualization enabled (which allows you to run the Linux VM):</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the VirtualBox window, click Settings. The Settings window appears.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Select System.</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="vb_settings_system.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:359.856pt;" id="image4" src="../../assets/vb_settings_system.png" />
+  </div>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_27228_c_If_the"></a>Try to select Acceleration:</p>
+
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If Acceleration cannot be selected (grayed out):</p>
+
+  <p dir="ltr" class="FM_Numbered3_Indent_Restart"><span class="FM_Number"> &#160;i.<span style="padding-left: 7pt;" class="FMAutoNumber_1"></span></span>You must enable virtualization in your computer’s BIOS. See <a href="../41110479-80-81-82_Tips/41110479-80-81-82_Tips.htm#XREF_32188_A_6_Enabling"><span class="FM_blue_color">C.6 Enable virtualization on a Windows computer</span></a> for details.</p>
+
+  <p dir="ltr" class="FM_Numbered3_Indent"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>After you reboot, launch VirtualBox from your Start menu, and repeat <a href="#XREF_27526_4_Check_whether"><span class="FM_blue_color">Step 5</span></a>.</p>
+
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If Acceleration can be selected:</p>
+
+  <p dir="ltr" class="FM_Numbered3_Indent_Restart"><span class="FM_Number"> &#160;i.<span style="padding-left: 7pt;" class="FMAutoNumber_1"></span></span>Make sure both Hardware Virtualization options are selected.</p>
+
+  <p dir="ltr" class="FM_Numbered3_Indent"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Click OK.</p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="vb_settings_acceleration.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:375.546pt;" id="image5" src="../../assets/vb_settings_acceleration.png" />
+  </div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the VirtualBox window, launch (double-click, or click to select and click Start) the virtual machine (for example, “mangOH Dev using Legato ...”).</p>
+
+  <p dir="ltr" class="FM_Indented">As VirtualBox begins to load the image, one of the following will happen:</p>
+
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>A VirtualBox window should appear, showing progress messages as the image loads. This may take a few minutes before the Ubuntu desktop appears.</p>
+
+  <p dir="ltr" class="FM_Indented2">If prompted to enter the mangOH password, type “<span class="FM_Code_Background_Color">mangoh</span>” and press Enter.</p>
+
+  <p dir="ltr" class="FM_FigureWide">&#160;</p>
+
+  <div align="left"><img alt="vb_windows_desktop_all.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:524.148pt;" id="image6" src="../../assets/vb_windows_desktop_all.png" />
+  </div>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If a VirtualBox Error appears with the message “VT-x/AMD-V hardware acceleration is not available on your system...”, you must enable virtualization in your computer’s BIOS. See <a href="../41110479-80-81-82_Tips/41110479-80-81-82_Tips.htm#XREF_32188_A_6_Enabling"><span class="FM_blue_color">C.6 Enable virtualization on a Windows computer</span></a> for details.</p>
+
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If the image doesn’t load properly (the program hangs, or the desktop does not appear), you must:</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Close VirtualBox.</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Start VirtualBox.</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Delete the VM image.</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iv.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>Re-import the VM image<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>repeat <a href="#XREF_77626_4_1_2_Download"><span class="FM_blue_color">Download Legato Application Development Image</span></a>, beginning at <a href="#XREF_61578_3_Load_import_the"><span class="FM_blue_color">Step 3 on page 14</span></a>.</p>
+
+  <p dir="ltr" class="FM_Important"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The Linux VM will not lock if it is left unused. However, if you manually lock it, the password to unlock it is ‘mangoh’.</p>
+
+  <div align="left"><img alt="happy_mangoh_canstockphoto11432497_1.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:44.496pt;" align="left" id="image7" src="../../assets/happy_mangoh_canstockphoto11432497_1.jpg" />
+  </div>
+  <p dir="ltr" class="FM_Body">Now that the VM is loaded and running and you have a terminal emulator installed, you can <a href="../41110479-80-81-82_PrepMangoh/41110479-80-81-82_PrepMangoh.htm#XREF_22697_Prepare_your"><span class="FM_blue_color">Prepare Your mangOH Red For Development</span></a> .</p>
+  <p dir="ltr" class="FM_Body">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

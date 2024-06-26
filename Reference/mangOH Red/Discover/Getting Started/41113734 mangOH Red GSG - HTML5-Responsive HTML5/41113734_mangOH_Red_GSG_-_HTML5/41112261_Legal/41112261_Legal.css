@@ -1,0 +1,1125 @@
+﻿
+p.FM_TableRowHead {
+        margin-left:     8.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     -2.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.05em;
+        
+}
+caption.FM_TableRowHead {
+        margin-left:     8.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     -2.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.05em;
+        
+}
+p.FM_TableFootnote {
+        margin-left:     28.346pt;
+        margin-right:    14.173pt;
+        text-align:      left;
+        text-indent:     -14.173pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       8.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_TableFootnote {
+        margin-left:     28.346pt;
+        margin-right:    14.173pt;
+        text-align:      left;
+        text-indent:     -14.173pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       8.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_Footer {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      justify;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       10.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_Footer {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      justify;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       10.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_CellBody {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     'Times New Roman';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_CellBody {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     'Times New Roman';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_TableBody {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      3.000pt;
+        margin-bottom:   3.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       9.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_TableBody {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      3.000pt;
+        margin-bottom:   3.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       9.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_ImportantNote {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      7.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      italic;
+        font-weight:     normal;
+        font-size:       9.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_ImportantNote {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      7.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      italic;
+        font-weight:     normal;
+        font-size:       9.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_Header {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       10.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.05em;
+        
+}
+caption.FM_Header {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       10.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.05em;
+        
+}
+p.FM_Footnote {
+        margin-left:     28.346pt;
+        margin-right:    14.173pt;
+        text-align:      left;
+        text-indent:     -14.173pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       9.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_Footnote {
+        margin-left:     28.346pt;
+        margin-right:    14.173pt;
+        text-align:      left;
+        text-indent:     -14.173pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       9.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_ChapterTitleNoNum {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      28.000pt;
+        margin-bottom:   5.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       20.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_ChapterTitleNoNum {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      28.000pt;
+        margin-bottom:   5.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       20.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_CellHeading {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      center;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     'Times New Roman';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_CellHeading {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      center;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     'Times New Roman';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_TableTitle {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.05em;
+        
+}
+caption.FM_TableTitle {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.05em;
+        
+}
+p.FM_RegularNote {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      7.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      italic;
+        font-weight:     normal;
+        font-size:       9.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_RegularNote {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      7.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      italic;
+        font-weight:     normal;
+        font-size:       9.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_TableColumnHead {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.05em;
+        
+}
+caption.FM_TableColumnHead {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      0.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #000000;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.05em;
+        
+}
+p.FM_HeadingMargin {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      19.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       14.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_HeadingMargin {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      19.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       14.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+p.FM_Body {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      6.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Helvetica;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+caption.FM_Body {
+        margin-left:     0.000pt;
+        margin-right:    0.000pt;
+        text-align:      left;
+        text-indent:     0.000pt;
+        margin-top:      6.000pt;
+        margin-bottom:   0.000pt;
+        word-spacing:    0.250em;
+        font-family:     Helvetica;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        background-color: none;
+        text-decoration:  none  ;
+		letter-spacing:  0.00em;
+        
+}
+OL, UL {
+        margin-top: 0px;
+        margin-bottom: 0px;
+}
+
+span.FM_WW8Num8z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Default_Paragraph_Font {
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_CitationGrey {
+        font-family:     'Microsoft Sans Serif';
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #e6e6e6;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Bullet2 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Code_Background_Color {
+        background-color: #d2cdbc;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Code_Background_Color {
+        
+                               background:#ffff99;
+
+}
+span.FM_Bullet1 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_CodeFragment {
+        font-family:     'Courier New';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_CodeFragment {
+        
+                      background:#ccffcc;
+
+}
+span.FM_Numbered3 {
+        font-family:     Helvetica;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Hyperlink {
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #0000ff;
+        text-decoration :  underline  ;
+		
+}
+span.FM_Emphasis {
+        font-style:      italic;
+        
+}
+span.FM_CitationBlue {
+        font-family:     'Microsoft Sans Serif';
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #0000ff;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_AT_command {
+        font-family:     'Microsoft Sans Serif';
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_UI_element {
+        font-family:     Helvetica;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_ThumbOpen {
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       24.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_SectionHead {
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #ffffff;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Prompt {
+        font-family:     'Microsoft Sans Serif';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_ParagraphLead {
+        font-family:     Helvetica;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Absatz_Standardschriftart {
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num1z2 {
+        font-family:     'Courier New';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Link {
+        color:           #0000ff;
+        text-decoration :  none  ;
+		
+}
+span.FM_Citation {
+        font-family:     'Microsoft Sans Serif';
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Bold_Red_Important {
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #ff1a00;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_WW8Num1z3 {
+        font-family:     Wingdings;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Warning {
+        font-family:     Helvetica;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #ff1a00;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_pagenos {
+        font-family:     Helvetica;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       8.0pt;
+        color:           #0000ff;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_WW8Num1z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Blue {
+        color:           #0000ff;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_WW8Num6z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num7z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_red_color {
+        color:           #ff0000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Caution {
+        font-style:      normal;
+        font-weight:     bold;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Symbol {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_FigureText {
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       8.0pt;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Document_title {
+        font-family:     Helvetica;
+        font-style:      italic;
+        font-weight:     normal;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_WW8Num15z3 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num15z2 {
+        font-family:     Wingdings;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num15z1 {
+        font-family:     'Courier New';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num15z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       8.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_WW8Num14z3 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num14z2 {
+        font-family:     Wingdings;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num14z1 {
+        font-family:     'Courier New';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num14z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       8.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_WW8Num12z3 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num12z2 {
+        font-family:     Wingdings;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num12z1 {
+        font-family:     'Courier New';
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num12z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       8.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_WW8Num11z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Tip {
+        font-style:      normal;
+        font-weight:     bold;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Superscript {
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_startrange {
+        
+}
+span.FM_Bold_Red {
+        font-weight:     bold;
+        color:           #ff1a00;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_WW8Num2z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       8.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Related_topic {
+        font-family:     Helvetica;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #ff1a00;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Bullet6 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_Bold {
+        font-family:     Arial;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_blue_color {
+        color:           #0000ff;
+        text-decoration :  none  ;
+		
+}
+span.FM_Bullet5 {
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WebJump {
+        font-family:     'Microsoft Sans Serif';
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Number {
+        font-family:     Helvetica;
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       10.0pt;
+        color:           #333a3f;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_IssueHighlight {
+        font-family:     'Palatino Linotype';
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.5pt;
+        color:           #ff0000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_FollowedHyperlink {
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #800180;
+        text-decoration :  underline  ;
+		
+}
+span.FM_CitationRed {
+        font-family:     'Microsoft Sans Serif';
+        font-style:      normal;
+        font-weight:     bold;
+        font-size:       9.0pt;
+        color:           #ff0000;
+        text-decoration :  none  ;
+		letter-spacing:  0.00em;
+        
+}
+span.FM_Bullet4 {
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_WW8Num9z0 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}
+span.FM_EquationVariables {
+        font-style:      italic;
+        
+}
+span.FM_Bullet3 {
+        font-family:     Symbol;
+        font-style:      normal;
+        font-weight:     normal;
+        font-size:       12.0pt;
+        color:           #000000;
+        text-decoration :  none  ;
+		
+}

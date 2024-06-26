@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>Updating the Firmware on a mangOH</title>
+
+ <link rel="stylesheet" href="Firmware.css" type="text/css" />
+
+ <link rel="stylesheet" href="../../HTMLStyling.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+ <meta name="generator" content="Adobe FrameMaker 2019" />
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "7.0_1";
+</script>
+ <meta name="brsprev" value="41113347_mangOH_Yellow_GSG_-_HTML5/Install_Leaf_and_Build_mangOH_Software/Install_Leaf_and_Build_mangOH_Software.htm">
+ <meta name="brsnext" value="41113347_mangOH_Yellow_GSG_-_HTML5/Legal/Legal.htm">
+ <meta name="topic-breadcrumbs" content="Firmware" />
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">B: <a name="XREF_43758_Set_Up_Your"></a>Updating the Firmware on a mangOH</p>
+  <p dir="ltr" class="FM_Body">There are a few ways to update the firmware of a mangOH board:</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span> Platform independent</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Linux</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Windows</p>
+  <p dir="ltr" class="FM_Figure"><span style="font-family : Helvetica; ">The firmware on a mangOH board is updated over the mangOH’s USB port. </span></p>
+  <div align="left"><img alt="Yellow_fw_USB.jpg" id="image34" src="../../assets/Yellow_fw_USB.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_Heading4">Platform-independent</p>
+  <p dir="ltr" class="FM_Body">This approach has the advantage of working using a Linux or Windows PC to perform the update. The disadvantage of this method is that it requires the user to login to the device via ssh or console and this is a bit inconvenient and may not even be possible if a bad firmware was installed previously.</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH’s USB (not console) port to a powered USB port on your computer.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Locate the firmware .spk file that is to be installed and copy it to the mangOH:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ scp some_file.spk root@192.168.2.2:/tmp</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Log in to the mangOH:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install the firmware update:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># fwupdate download /tmp/some_file.spk</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Press the reset button to restart the device. The device will boot with the new firmware.</p>
+  <p dir="ltr" class="FM_Heading4">Linux</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH’s USB (not console) port to a powered USB port on your computer running Linux.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Locate the firmware .spk file that is to be installed and install it on the mangOH:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ swiflash -m wp77xx path/to/some_file.spk</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If you're using leaf, the swiflash command may have already been installed. If not, <span class="FM_Link"><a href="https://source.sierrawireless.com/">source.sierrawireless.com</a></span> has instal&#173;lation instructions for leaf.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Press the reset button to restart the device. The device will boot with the new firmware.</p>
+  <p dir="ltr" class="FM_Heading4">Windows</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH’s USB (not console) port to a powered USB port on your computer running Windows.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Locate the firmware .exe file that is to be installed.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Log in to the mangOH:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Stop legato:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># legato stop</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The software in the firmware .exe file does not wait long enough for a device that is running Legato to enter the mode where it is ready for programming. By stopping Legato before running the .exe, the device will be able to enter programming mode quickly enough when the .exe is run.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>On your PC, double-click the firmware .exe file to install it on the mangOH.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Press the reset button to restart the device. The device will boot with the new firmware.</p>
+  <p dir="ltr" class="FM_Heading4">Troubleshooting</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If the platform-independent method doesn't work, try the platform-specific Linux or Windows methods.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If the Linux or Windows methods are not working:</p>
+  <p dir="ltr" class="FM_Numbered2_Restart"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Try moving the TP1_BOOT DIP switch into the ON position and then press the reset button before initi&#173;ating programming.</p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>On the mangOH Yellow, TP1_BOOT is DIP switch 2 on SW403. On the mangOH Red, TP1_BOOT is DIP switch 7 on SW401.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Once programming has begun, move the TP1_BOOT DIP switch back to the OFF position. On the mangOH Yellow, TP1_BOOT is DIP switch 2 on SW403.</p>
+ </div>
+</body>
+
+</html>
+

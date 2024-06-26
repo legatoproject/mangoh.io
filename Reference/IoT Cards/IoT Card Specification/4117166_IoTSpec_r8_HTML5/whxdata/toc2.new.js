@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"type":"item","name":"2.1 Overview","url":"IPM_Specification_-_HTML5/IOT_Spec_Technical_Specifications/IOT_Spec_Technical_Specifications.htm#TOC_2_1_Overviewbc-1"},{"type":"item","name":"2.2 Environmental Specifications","url":"IPM_Specification_-_HTML5/IOT_Spec_Technical_Specifications/IOT_Spec_Technical_Specifications.htm#TOC_2_2_Environmentalbc-2"},{"type":"book","name":"2.3 Power Requirement","key":"toc3","url":"IPM_Specification_-_HTML5/IOT_Spec_Technical_Specifications/IOT_Spec_Technical_Specifications.htm#TOC_2_3_Power_Requirementbc-3"},{"type":"item","name":"2.4 EMC and ESD Recommendations","url":"IPM_Specification_-_HTML5/IOT_Spec_Technical_Specifications/IOT_Spec_Technical_Specifications.htm#TOC_2_4_EMC_and_ESDbc-6"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

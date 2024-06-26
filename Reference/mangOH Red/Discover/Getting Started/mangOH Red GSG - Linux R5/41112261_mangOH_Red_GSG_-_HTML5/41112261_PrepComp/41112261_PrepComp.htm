@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41112261 PrepComp</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="F:\JaggedPeak\Current Projects\SWI\CTO\41112261-4112327 mangOH Red Getting Started r5\41112261 PrepComp.fm" />
+ <link rel="stylesheet" href="41112261_PrepComp.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "2";
+</script>
+ <meta name="brsprev" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_Tut_SetUp/41112261_Tut_SetUp.htm">
+ <meta name="brsnext" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_PrepMangoh/41112261_PrepMangoh.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle" style="margin-bottom : 20.000pt;">4: <a name="XREF_22697_Prepare_your"></a>Prepare Your Dev Machine For Legato Development</p>
+
+  <p dir="ltr" class="FM_Body">In this chapter, you will prepare your dev machine for Legato application development by setting up the development environment with required applications and packages.</p>
+
+  <p dir="ltr" class="FM_Important"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>To install and use the development environment, your dev machine must meet the requirements in <a href="../41112261_Tut_Quick_Start/41112261_Tut_Quick_Start.htm#XREF_67185_Minimum_System"><span class="FM_blue_color">Table&nbsp;1-1</span></a>.</p>
+
+  <h1 dir="ltr"><a name="TOC_4_1_Prepare_Dev_Machine"></a>4.1 <a name="XREF_87760_Prepare_a_Ubuntu"></a>Prepare Dev Machine For Application Development</h1>
+
+  <p dir="ltr" class="FM_Body">After preparing your mangOH Red hardware in <a href="../41112261_Tut_SetUp/41112261_Tut_SetUp.htm#XREF_43758_Set_Up_Your"><span class="FM_blue_color">Set Up Your mangOH&nbsp;Red</span></a>, you can prepare your dev machine for application development:</p>
+
+  <p dir="ltr" class="FM_Important"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Download, installation and use of Legato Application Framework and Platform Services is subject to the <span class="FM_Link"><a href="http://source.sierrawireless.com/~/media/support_downloads/legato/legato software licence agreement 15 january 2016.ashx">Legato License</a></span>&#160;and <span class="FM_Link"><a href="http://source.sierrawireless.com/~/media/support_downloads/legato/legato open source licenses.ashx?la=en">Open Source Licenses</a></span>. (Note: These links automatically download the licenses as PDF files.)</p>
+
+  <h1 dir="ltr"><a name="TOC_4_2_Build_and_Install"></a>4.2 <a name="XREF_67774_4_2_1_Connect_the"></a><a name="XREF_68638_3_1_Install_mangOH"></a>Build and Install the Development Environment</h1>
+
+  <p dir="ltr" class="FM_Body">In this section you will build and install the environment to develop applications for the CF3 module used in your mangOH&nbsp;Red. The environment includes:</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Legato toolchain<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Tools and libraries used to build the Legato Platform for your CF3 module. The Legato toolchain is module-specific; you must make sure you install the toolchain designed for your module.</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>mangOH Red platform<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Drivers for on-board components, and a basic device-to-cloud application.</p>
+
+  <p dir="ltr" class="FM_Body">To build and install the development environment on your dev machine:</p>
+
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a terminal window.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Make sure you are running Ubuntu&nbsp;16.04.0 or higher (these instructions will not work on older versions)<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>display your Ubuntu version: </p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ lsb_release -d</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="41112261_PrepComp00036.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image0" src="../../assets/41112261_PrepComp00036.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_25537_2_Check_whether"></a>Check whether your dev machine is 32-bit or 64-bit:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ uname -m</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="41112261_PrepComp00039.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image1" src="../../assets/41112261_PrepComp00039.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Indented">The dev machine’s hardware type appears <span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>e.g. &quot;x86_64&quot; is a 64-bit system.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Optionally, make sure your Ubuntu release is up-to-date:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt-get update</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;&#160;&#160;(Check to see which packages need to be updated)</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt-get upgrade</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;&#160;(Installs the latest updates)</p>
+
+  <div align="left"><img alt="41112261_PrepComp00042.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image2" src="../../assets/41112261_PrepComp00042.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install required packages (’dependencies’) for the Legato AF and the mangOH&nbsp;Red platform:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt-get install -y \<br />cmake \<br />git \<br />ninja-build </span><span class="FM_Code_Background_Color">\<br /></span><span class="FM_Code_Background_Color">repo \<br />python-jinja2 \<br />dh-autoreconf</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The ’\’ at the ends of the lines tells the system that the command continues on the next line. When you run this command (and any others in this guide that use the ’\’), you can copy and paste the full command (including ’\’ characters) in your terminal window. If you type the command manually all on one line, do not type the ’\’ characters.</p>
+
+  <div align="left"><img alt="example_text.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image3" src="../../assets/example_text.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Tip"><span class="FM_Bold">Tip:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The output you see when you run some commands in the terminal window on the Linux system or the mangOH&nbsp;Red may differ from the examples shown. To check if a command succeeded or failed, enter the following command:<br /><span class="FM_Code_Background_Color"><span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span>$ echo $?<br /></span>If the value returned is ’0’, the command succeeded. If it is any other value, the command failed.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Confirm the CF3 module type that is in your mangOH&nbsp;Red:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red using your terminal emulator:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>The following message appears if you are using your CF3 module for the first time (modules are shipped without a password).</p>
+
+  <div align="left"><img alt="41112261_PrepComp00047.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image4" src="../../assets/41112261_PrepComp00047.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Indented2">For now, type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">3</span>&#160;and press Enter, then type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">Y</span>&#160;and press Enter to be reminded the next time you connect. (During this tutorial, do this each time you open an SSH connection to the mangOH&nbsp;Red.)</p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>After completing this tutorial, you should select an appropriate login authentication method (ssh keys or password) from this menu<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>see <span class="FM_Link"><a href="legato.io/legato-docs/latest/basicTarget.html">legato.io/legato-docs/latest/basicTarget.html</a></span> for details.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Display information about the CF3 module and note your module type (Device) and Firmware Version: </p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># cm info</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="example_text_1.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image5" src="../../assets/example_text_1.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Disconnect from the mangOH&nbsp;Red:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># exit</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_27573_7_Install_the"></a>Install the Legato toolchain (SDK):</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to your CF3 module’s device page at <span class="FM_Link"><a href="http://source.sierrawireless.com">http://source.sierrawireless.com</a></span>. (Select AirPrime &gt;&#160;WP Series &gt; (your module type).</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If you already have a Source account, log in.</p>
+
+  <p dir="ltr" class="FM_Indented2">Otherwise, register for a Source account, which is required to download files.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Software Download section, click Firmware.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_70766_d_In_a_later_step"></a>In a later step (in the next chapter), you will do a firmware update to make sure your module is up to date<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>download the firmware file now.</p>
+
+  <p dir="ltr" class="FM_Indented2">In the Firmware Update Instructions table’s Instructions for Legato CLI Users (Linux) row, click the Generic firmware link to download the file. (If there is more than one Generic, click the Generic GCF link.)</p>
+
+  <div align="left"><img alt="source_fw_page.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:462.000pt;" id="image6" src="../../assets/source_fw_page.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Release Content section, click the firmware components link.</p>
+
+  <div align="left"><img alt="source_fw_page_1.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:462.024pt;" id="image7" src="../../assets/source_fw_page_1.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">f.<span style="padding-left: 12pt;" class="FMAutoNumber_1"></span></span>In the Rebuild Linux Distribution section, click the toolchain link for your system (32-bit or 64-bit) to download the Legato toolchain.</p>
+
+  <div align="left"><img alt="components_fw.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:418.536pt;" id="image8" src="../../assets/components_fw.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">g.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_53537_g_Make_a_note_of"></a>Make a note of the Legato Distro Source version.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">h.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Make the downloaded toolchain file executable:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ chmod a+x ~/Downloads/poky*.sh</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">i.<span style="padding-left: 13pt;" class="FMAutoNumber_1"></span></span>Install the toolchain (replace &lt;toolchain&gt; with the downloaded file (e.g. poky-swi-ext-glibc-x86_64-meta-toolchain-swi-ext-armv7a-neon-toolchain-swi-ext-2.2.2.sh):</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ sudo ~/Downloads/&lt;toolchain&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="41112261_PrepComp00058.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image9" src="../../assets/41112261_PrepComp00058.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">j.<span style="padding-left: 13pt;" class="FMAutoNumber_1"></span></span>When prompted for the installation directory, append the version number from <a href="#XREF_53537_g_Make_a_note_of"><span class="FM_blue_color">Step g</span></a>&#160;to the default directory name:</p>
+
+  <p dir="ltr" class="FM_Indented2">For example, &quot;/opt/swi/y22-ext-<span style="font-weight : bold; ">SWI9X07Y_02.14.04.00</span>&quot;.</p>
+
+  <div align="left"><img alt="41112261_PrepComp00061.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:476.339pt;" id="image10" src="../../assets/41112261_PrepComp00061.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">k.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Create a symlink (symbolic link) that points to the toolchain installation directory. The link is used by the Legato makefile and must include the module type in the name (e.g. wp750x, wp76xx, wp85, wp77xx):. Replace &lt;toolchain_install_dir&gt; and &lt;symlink&gt; as shown in the example below:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ cd /opt/swi &amp;&amp; sudo ln -f -s &lt;toolchain_install_dir&gt; &lt;symlink&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="41112261_PrepComp00064.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:405.089pt;" id="image11" src="../../assets/41112261_PrepComp00064.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">l.<span style="padding-left: 13pt;" class="FMAutoNumber_1"></span></span>If the module is a WP7502, WP7504, or WP8548 that has Release&nbsp;15 firmware, additional scripts must be built:</p>
+
+  <p dir="ltr" class="FM_Indented2">(Note: Replace &quot;y17-ext-wpXXXX&quot; in these commands with the &lt;symlink&gt; from the previous step.)</p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment" style="margin-top  : 1.000pt; font-size  : 8.8pt;"><span class="FM_Code_Background_Color"></span><span class="FM_Code_Background_Color">$ export \<br />PATH=$PATH:/opt/swi/y17-ext-wpXXXX/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color"></span><span class="FM_Code_Background_Color">$ cd \<br />/opt/swi/y17-ext-wpXXXX/sysroots/armv7a-vfp-neon-poky-linux-gnueabi/usr/src/kernel</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color">$ sudo chown -R $USER .</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color">$ ARCH=arm CROSS_COMPILE=arm-poky-linux-gnueabi- make scripts</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Widest_CodeFragment"><span class="FM_Code_Background_Color">$ sudo chown -R root .</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">8.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>To support multiple module types if needed (e.g. wp750x, wp85, wp76xx, wp77xx), repeat <a href="#XREF_27573_7_Install_the"><span class="FM_blue_color">Step 7</span></a>&#160;for each required type.</p>
+
+  <div align="left"><img alt="happy_mangoh_canstockphoto11432497_2.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:30.246pt;" align="left" id="image12" src="../../assets/happy_mangoh_canstockphoto11432497_2.jpg" />
+  </div>
+  <p dir="ltr" class="FM_Body">Now that the Legato development environment is installed, you can <a href="../41112261_PrepMangoh/41112261_PrepMangoh.htm#XREF_22697_Prepare_your">Prepare Your mangOH Red For Development</a><a href="../41112261_PrepMangoh/41112261_PrepMangoh.htm#XREF_22697_Prepare_your"><span class="FM_blue_color">Prepare Your mangOH Red For Development</span></a>.</p>
+  <p dir="ltr" class="FM_Body" style="margin-top  : 10.000pt; font-family : Arial; font-weight : bold; font-size  : 18.0pt;">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

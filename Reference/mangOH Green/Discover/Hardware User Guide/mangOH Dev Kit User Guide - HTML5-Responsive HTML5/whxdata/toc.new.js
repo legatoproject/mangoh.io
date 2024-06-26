@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"type":"book","name":"1: Introduction","key":"toc1","url":"mangOH_Dev_Kit_User_Guide_-_HTML5/DevKit_UG_Introduction/DevKit_UG_Introduction.htm"},{"type":"book","name":"2: Setup and Installation","key":"toc2","url":"mangOH_Dev_Kit_User_Guide_-_HTML5/Setup/Setup.htm"},{"type":"book","name":"3: Hardware Setup and Operation","key":"toc3","url":"mangOH_Dev_Kit_User_Guide_-_HTML5/Hardware/Hardware.htm"},{"type":"book","name":"4: Software Setup","key":"toc7","url":"mangOH_Dev_Kit_User_Guide_-_HTML5/Software/Software.htm"},{"type":"item","name":"Legal / Copyright / Trademarks / Contact Us","url":"mangOH_Dev_Kit_User_Guide_-_HTML5/Preface/Preface.htm#TOC_Legal_Copyright"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

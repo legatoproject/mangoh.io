@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>Connect to Your mangOH Yellow</title>
+
+ <link rel="stylesheet" href="Connect_to_mangOH_Yellow.css" type="text/css" />
+
+ <link rel="stylesheet" href="../../HTMLStyling.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+ <meta name="generator" content="Adobe FrameMaker 2019" />
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "4.0_1";
+</script>
+ <meta name="brsprev" value="41113347_mangOH_Yellow_GSG_-_HTML5/Set_Up/Set_Up.htm">
+ <meta name="brsnext" value="41113347_mangOH_Yellow_GSG_-_HTML5/Connect_to_Octave/Connect_to_Octave.htm">
+ <meta name="topic-breadcrumbs" content="Connect to mangOH Yellow" />
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">4: <a name="XREF_43758_Set_Up_Your"></a>Connect to Your mangOH Yellow</p>
+  <p dir="ltr" class="FM_Body"><a name="XREF_50412_3_4_Connect_to"></a>Now that your mangOH is powered on and running, connect to it to quickly test some of its features:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>From your computer’s command prompt, test the USB connection:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ping 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented">You should receive ping responses by ‘pinging’ the CF3 module (which has a default IP address of 192.168.2.2). Press Ctrl+C to cancel the ping request and return to the command prompt.</p>
+  <div align="left"><img alt="Connect_to_mangOH_Yellow00014.jpg" id="image13" src="../../assets/Connect_to_mangOH_Yellow00014.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Yellow using your terminal emulator:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>The following message appears if you are using your CF3 module for the first time (modules are shipped without a password).</p>
+  <div align="left"><img alt="Connect_to_mangOH_Yellow00016.jpg" id="image14" src="../../assets/Connect_to_mangOH_Yellow00016.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented">For now, type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">3</span>&#160;and press Enter, then type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">Y</span>&#160;and press Enter to be reminded the next time you connect. (During this tutorial, do this each time you open an SSH connection to the mangOH&nbsp;Red.)</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>After completing this tutorial, you should select an appropriate login authentication method (ssh keys or password) from this menu<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>see <span class="FM_Link"><a href="https://docs.legato.io/latest/basicTarget.html">docs.legato.io/latest/basicTarget.html</a></span> for details.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">hello</span> to run the welcome application:</p>
+  <div align="left"><img alt="Connect_to_mangOH_Yellow00018.jpg" id="image15" src="../../assets/Connect_to_mangOH_Yellow00018.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Your menu may look a bit different and show more<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>different options as new app versions are produced.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_39639_5_Choose_any_menu"></a>Choose any menu selection to test the mangOH Yellow features:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>DISABLE out-of-box experience<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>When you are ready to work with Octave, select this option to disable ’Vegas mode’.</p>
+  <p dir="ltr" class="FM_Indented2">(The option changes to ENABLE out-of-box experience so you can turn Vegas mode back on again.)</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>LEDs<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Follow the menu options to turn off and on the generic green LED and the generic tri-color LED, or to disable<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>enable Vegas mode.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Buzzer<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Follow the menu options to set the period (length of time between beeps), the duty cycle percentage (beep length), and to test (activate<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>deactivate) the buzzer.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>To return to the main &quot;hello&quot; menu, press Escape, or to return to the shell prompt, press Q.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>To set up your Octave account in the next chapter, you need the serial number (FSN) and IMEI of your mangOH&nbsp;Yellow’s CF3 module. To display your device information (including those fields), enter the following command:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># cm info</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="Connect_to_mangOH_Yellow00020.jpg" id="image16" src="../../assets/Connect_to_mangOH_Yellow00020.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">8.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">exit</span> to close the ssh session.</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" class="table22" border-collapse="collapse" style="max-width: 100% ;height: auto">
+   <tr class="tr23">
+   <td class="td24">
+   <p dir="ltr" class="FM_TableBody" style="color   : #000000;"><span style="font-family : Helvetica; font-size  : 10.0pt; "><img alt="canstockphoto49616518.jpg" align="left" id="image17" src="../../assets/canstockphoto49616518.jpg" style="max-width: 100% ;height: auto" />&nbsp;</span></p>
+</td>
+   <td class="td25">
+   <p dir="ltr" class="FM_TableBody" style=" font-family : Helvetica; font-size  : 10.0pt; color   : #000000;">Now that you’ve peeled and prepared your mangOH, you can <a href="../Connect_to_Octave/Connect_to_Octave.htm#XREF_84678_Hello_World">Connect to Octave</a> and see how the mangOH&nbsp;Yellow sends data to the cloud.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

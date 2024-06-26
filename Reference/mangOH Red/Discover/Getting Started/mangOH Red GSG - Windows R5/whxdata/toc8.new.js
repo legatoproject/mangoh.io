@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"type":"item","name":"A.1.1 Configure the Dev Machine’s Terminal Windows for Development","url":"41112261_mangOH_Red_GSG_-_HTML5/41112261_Develop/41112261_Develop.htm#TOC_A_1_1_Configure_the_Devbc-2"},{"type":"item","name":"A.1.2 Update an Installed Application","url":"41112261_mangOH_Red_GSG_-_HTML5/41112261_Develop/41112261_Develop.htm#TOC_A_1_2_Update_anbc-3"},{"type":"item","name":"A.1.3 Update and Install a New Application","url":"41112261_mangOH_Red_GSG_-_HTML5/41112261_Develop/41112261_Develop.htm#TOC_A_1_3_Update_and_Installbc-4"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

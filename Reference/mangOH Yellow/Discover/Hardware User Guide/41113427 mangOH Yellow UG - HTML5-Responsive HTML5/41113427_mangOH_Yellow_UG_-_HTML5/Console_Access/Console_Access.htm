@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>Console Access</title>
+
+ <meta content="OEM, CDMA2000, 1xRTT, Watcher" name="search-keywords" />
+ <link rel="stylesheet" href="Console_Access.css" type="text/css" />
+
+ <link rel="stylesheet" href="../../HTMLStyling.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+ <meta name="generator" content="Adobe FrameMaker 2019" />
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "4.0_1";
+</script>
+ <meta name="brsprev" value="41113427_mangOH_Yellow_UG_-_HTML5/Hardware_Setup_and_Features/Hardware_Setup_and_Features.htm">
+ <meta name="brsnext" value="41113427_mangOH_Yellow_UG_-_HTML5/Legal/Legal.htm">
+ <meta name="topic-breadcrumbs" content="Console Access" />
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">A: <a name="XREF_77395_Tips"></a>Console Access<span style="font-family:'Times New Roman'; font-size:7.0pt">&nbsp;&nbsp;&nbsp;</span></p>
+  <p dir="ltr" class="FM_Body">If you have two USB ports on your dev machine, you can use one of them to display the mangOH&nbsp;Yellow’s diagnostic messages when the device boots, when certain commands are run, etc.</p>
+  <p dir="ltr" class="FM_Body">To set up a window to display diagnostic messages:</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH&nbsp;Yellow’s CON port to a USB port on the dev machine.</p>
+  <div align="left"><img alt="connect_CON_to_computer.png" id="image38" src="../../assets/connect_CON_to_computer.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open and connect a terminal window to the WP7702 module to display its console messages (kernel messages, warnings, etc.):</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Linux</p>
+  <p dir="ltr" class="FM_Numbered3_Restart"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the terminal window, enter the following command to install the minicom application on your dev machine (if it is not already there):</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt-get install -y minicom</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_NoteIndented3Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>’sudo’ tells the dev machine to run the command as the ’superuser’. Each time you use sudo, you must enter your dev machine’s password to continue.</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Connect to the CF3&nbsp;module’s Linux console via the USB serial port (which enumerated when you connected the CON connector to the dev machine):</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ minicom -D /dev/ttyUSB0</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented3">A welcome message appears, and the window will show console messages when the <span data-name="Product_Tag" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag">mangOH&nbsp;Yellow</span>&#160;powers on in the next step.</p>
+  <div align="left"><img alt="Console_Access00145.jpg" id="image39" src="../../assets/Console_Access00145.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented3Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The USB serial port enumerates as ttyUSB0 because you connected CON to the host before connecting USB to the host (which you will do later). However, if you connected USB first, it would enumerate ttyUSB0, ttyUSB1, and ttyUSB2. Then when CON is connected, it will enumerate as ttyUSB3.</p>
+  <p dir="ltr" class="FM_NoteIndented3Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You can exit minicom at any time<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the purpose of showing it here is to demonstrate how to display console messages for debugging purposes. To exit minicom, press Ctrl+A, then press X. When prompted, select Yes to leave minicom.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Windows</p>
+  <p dir="ltr" class="FM_Numbered3_Restart"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If you do not have a terminal emulator program (e.g. PuTTY, Tera&nbsp;Term, etc.), download and install one now. The examples in this document use PuTTY.</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Open Windows Device Manager, then expand Ports (COM &amp;LPT). The <span data-name="Product_Tag" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag">mangOH&nbsp;Yellow</span>’s CON port enumerates as USB Serial Port (COMxx). (In the example below, it enumerates as COM72.)</p>
+  <div align="left"><img alt="Device_Manager_-_USB_COM.png" id="image40" src="../../assets/Device_Manager_-_USB_COM.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Open a terminal window (e.g. PuTTY) connected to the <span data-name="Product_Tag" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag">mangOH&nbsp;Yellow</span>’s console using the following settings:</p>
+  <p dir="ltr" class="FM_Bulleted4"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Connection type = Serial</p>
+  <p dir="ltr" class="FM_Bulleted4"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Serial line = [USB Serial port COM port]</p>
+  <p dir="ltr" class="FM_Bulleted4"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Speed = 115200</p>
+  <div align="left"><img alt="putty_open_console.png" id="image41" src="../../assets/putty_open_console.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iv.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>Click Open. The window will remain empty until you power up the <span data-name="Product_Tag" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag">mangOH&nbsp;Yellow</span> in the next step.</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-family : Helvetica; font-style : normal; font-size  : 10.0pt; "></span>Only one console connection can be opened at any time since it locks the USB serial port.</p>
+  <p dir="ltr" class="FM_HeadingExample">Example</p>
+  <p dir="ltr" class="FM_Body">If you open the console terminal window before you connect power to the <span data-name="Product_Tag" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag">mangOH&nbsp;Yellow</span>, you will see the messages that are generated during the module boot process:</p>
+  <div align="left"><img alt="Console_Access00149.jpg" id="image42" src="../../assets/Console_Access00149.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

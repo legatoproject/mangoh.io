@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"41110479-80-81-82 Tut Quick Start\" to=\"Legal\" num=\"15\"/></cki>";

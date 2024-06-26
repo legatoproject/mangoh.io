@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"Connect to Octave\"><item name=\"Connect to Octave\" url=\"41113347_mangOH_Yellow_GSG_-_HTML5/Connect_to_Octave/Connect_to_Octave.htm\" /></data>";

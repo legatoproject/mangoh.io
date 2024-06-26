@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>Connect to Octave</title>
+
+ <link rel="stylesheet" href="Connect_to_Octave.css" type="text/css" />
+
+ <link rel="stylesheet" href="../../HTMLStyling.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+ <meta name="generator" content="Adobe FrameMaker 2019" />
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "5.0_1";
+</script>
+ <meta name="brsprev" value="41113347_mangOH_Yellow_GSG_-_HTML5/Connect_to_mangOH_Yellow/Connect_to_mangOH_Yellow.htm">
+ <meta name="brsnext" value="41113347_mangOH_Yellow_GSG_-_HTML5/Install_Leaf_and_Build_mangOH_Software/Install_Leaf_and_Build_mangOH_Software.htm">
+ <meta name="topic-breadcrumbs" content="Connect to Octave" />
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">5: <a name="XREF_84678_Hello_World"></a>Connect to Octave</p>
+  <p dir="ltr" class="FM_Body">Now that your mangOH Yellow is working, it’s time to send its sensor data to the cloud.</p>
+  <p dir="ltr" class="FM_Body">Your mangOH&nbsp;Yellow kit comes with a free 3-month trial subscription to Sierra Wireless’ cloud-based Octave IoT platform, which can collect data from your mangOH&nbsp;Yellow, process it, and act on the data both in the cloud (on Octave) and ’at the edge’ (on your mangOH).</p>
+  <h1 dir="ltr">5.1 <span style="font-family : Helvetica; font-weight : normal; font-size  : 10.0pt; "></span>Claim Your Free Trial Octave Account</h1>
+  <p dir="ltr" class="FM_Body">Your Octave account is pre-configured with some basic options to experiment with collecting, processing, and taking actions based on your mangOH&nbsp;Yellow’s sensor and other data.</p>
+  <p dir="ltr" class="FM_Body">To claim your free trial Octave account:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to <span class="FM_Link"><a href="https://octave.sierrawireless.io">octave.sierrawireless.io</a></span>&#160;and click SIGNUP to create a &quot;single sign on&quot; Sierra Wireless account that will let you access Octave, as well as <span class="FM_Link"><a href="https://source.sierrawireless.com/">the Source</a></span>&#160;and <span class="FM_Link"><a href="https://forum.sierrawireless.com/">the Forum</a></span>.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter your information and click SIGN UP to create the account.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Follow the instructions that appear to complete your Sierra Wireless account activation.<br />When complete, you will be logged in automatically and prompted to create your Octave account.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter the information to create your Octave account (click Next after filling each section, and click Confirm when finished).</p>
+  <div align="left"><img alt="octave_create_step1.png" id="image18" src="../../assets/octave_create_step1.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented"> Your Octave account information appears.</p>
+  <div align="left"><img alt="octave_create_step1.png" id="image19" src="../../assets/octave_create_step1.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented">When you finish creating your account, your Octave welcome screen appears.</p>
+  <div align="left"><img alt="octave_welcome.png" id="image20" src="../../assets/octave_welcome.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Link your mangOH&nbsp;Yellow to your Octave account:</p>
+  <p dir="ltr" class="FM_Numbered2_Restart"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Already have a device? pane, click ACTIVATE A DEVICE.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Follow the instructions on-screen to activate your mangOH&nbsp;Yellow. (Click Next to move through the steps, and click Confirm when finished.)</p>
+  <p dir="ltr" class="FM_Indented2">Note:</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>You are not required to enter payment information to claim the three-month free trial.</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Choose MangOH Yellow as the device model.</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>The serial number is the device’s FSN.</p>
+  <div align="left"><img alt="octave_activateDevice_1.png" id="image21" src="../../assets/octave_activateDevice_1.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>After confirming the activation, the Octave screen displays the Details pane showing an activation status message and device details.</p>
+  <p dir="ltr" class="FM_Indented">Continue to <a href="#XREF_26358_5_2_Send_Sensor"><span class="FM_Blue">Send Sensor Data to Octave</span></a>.</p>
+  <div align="left"><img alt="octave_details.png" id="image22" src="../../assets/octave_details.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <h1 dir="ltr">5.2 <a name="XREF_26358_5_2_Send_Sensor"></a>Send Sensor Data to Octave</h1>
+  <p dir="ltr" class="FM_Tip"><span class="FM_Bold">Tip:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This guide demonstrates a small set of Octave’s features. For more detailed Octave information, click the Documentation link near the bottom of the Octave menu.</p>
+  <p dir="ltr" class="FM_Body">When your mangOH&nbsp;Yellow is activated and powered on, it begins sending data from its sensors (Resources) to Octave.</p>
+  <p dir="ltr" class="FM_Body">To view the sensor data being sent to Octave:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Octave menu, click Details (if not already displayed).</p>
+  <div align="left"><img alt="octave_details00027.png" id="image23" src="../../assets/octave_details00027.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented">The Recent Events section shows data sent from the mangOH&nbsp;Yellow.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Octave menu, click Observations.</p>
+  <div align="left"><img alt="octave_observations.png" id="image24" src="../../assets/octave_observations.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented">A list of pre-configured Observations appears, which are being reported in the Details screen’s Recent Events.</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The observations shown above are an example only.</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>To add your own observations later, refer to the Octave Documentation menu option for details.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Each observation is initially configured as a ’Cloud stream’<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the data is displayed in the stream when it is received from the resource.</p>
+  <p dir="ltr" class="FM_Indented">Click the &quot;Cloud stream&quot; link for any Observation to see the information it is receiving.</p>
+  <div align="left"><img alt="octave_cloudStream_link.png" id="image25" src="../../assets/octave_cloudStream_link.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <div align="left"><img alt="octave_cloudStream_details.png" id="image26" src="../../assets/octave_cloudStream_details.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The environment resource (shown here) is pre-configured to send sensor data every few seconds, so you should see the steam updating frequently. The reporting frequency is user-configurable.</p>
+  <h1 dir="ltr">5.3 Affect <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Yellow</span> Resources from Octave</h1>
+  <p dir="ltr" class="FM_Body">In addition to sending data to Octave from your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Yellow</span>, you can also directly change the <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Yellow</span>’s resource configurations (e.g. LED behavior, activate<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>deactivate the buzzer, etc.) from Octave.</p>
+  <p dir="ltr" class="FM_Body">For example (as a simple demonstration), to activate the <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Yellow</span>’s buzzer:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Octave menu, click Resources.</p>
+  <div align="left"><img alt="octave_resources.png" id="image27" src="../../assets/octave_resources.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Resources list, expand &quot;buzzer/&quot; (if it is not already expanded).</p>
+  <div align="left"><img alt="octave_resources00033.png" id="image28" src="../../assets/octave_resources00033.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the enable row, expand the Configured value column and select true.</p>
+  <div align="left"><img alt="octave_resource_configure.png" id="image29" src="../../assets/octave_resource_configure.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click Apply.<br />The buzzer will begin to sound, based on the current ’percent’ and ’period’ settings.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>To deactivate the buzzer, expand the Configured value column again and select false.</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" class="table22" border-collapse="collapse" style="max-width: 100% ;height: auto">
+   <tr class="tr26">
+   <td class="td24">
+   <p dir="ltr" class="FM_TableBody" style="color   : #000000;"><span style="font-family : Helvetica; font-size  : 10.0pt; "><img alt="canstockphoto49616503.jpg" align="left" id="image30" src="../../assets/canstockphoto49616503.jpg" style="max-width: 100% ;height: auto" />&nbsp;</span></p>
+</td>
+   <td class="td25">
+   <p dir="ltr" class="FM_TableBody" style=" font-family : Helvetica; font-size  : 10.0pt; color   : #000000;">You have successfully taken your first steps with your mangOH&nbsp;Yellow and completed the <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Yellow</span>&#160;Getting Started tutorial.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body"><span style="font-weight : bold; ">BUT...</span>&#160;There’s a lot more you can do with your <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Yellow" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Yellow</span>!</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>For more information on the mangOH platform, visit <span class="FM_Link"><a href="http://mangoh.io">mangoh.io</a></span>.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>To explore Octave’s features more deeply, visit <span class="FM_Link"><a href="https://www.sierrawireless.com/octave/developers/">sierrawireless.com/octave/developers</a></span>.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Begin developing simple applications or modifying existing applications</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Talk with other mangOH developers<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>visit the mangOH developers’ forum at <span class="FM_Link"><a href="https://forum.mangoh.io">forum.mangoh.io</a></span>.</p>
+ </div>
+</body>
+
+</html>
+

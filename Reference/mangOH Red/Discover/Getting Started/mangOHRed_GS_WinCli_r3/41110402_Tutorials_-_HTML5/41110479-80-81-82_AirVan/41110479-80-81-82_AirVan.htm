@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41110479-80-81-82 AirVan</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\41110402 mangOH Red Fundamentals v2 (Linux and Windows CLI)\41110479-80-81-82 AirVan.fm" />
+ <link rel="stylesheet" href="41110479-80-81-82_AirVan.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "6";
+</script>
+ <meta name="brsprev" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_Connect/41110479-80-81-82_Connect.htm">
+ <meta name="brsnext" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_Develop/41110479-80-81-82_Develop.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">7: <a name="XREF_84678_Hello_World"></a>Connect to the IoT Cloud</p>
+  <p dir="ltr" class="FM_Body">In this section, you will register your device with Sierra Wireless’ AirVantage IoT Acceleration platform (a cloud-based service to collect data from your device), and begin submitting your mangOH&nbsp;Red’s on-board sensor data.</p>
+  <h1 dir="ltr"><a name="TOC_7_1_Register_and_connect"></a>7.1 Register and connect to AirVantage</h1>
+  <p dir="ltr" class="FM_Body">Your <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag_1" x-format="Product_Tag_1">mangOH&nbsp;Red</uservariable> kit includes a free account on the AirVantage IoT Acceleration Platform for your CF3&nbsp;module. This platform provides Sierra Wireless’ cloud-based services for over-the-air (OTA) device management and application enablement. These services provide the infrastructure for you to build, connect, and operate your IoT applications in a single platform.</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:436.36pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 2.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 433.368pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You can register up to five devices (CF3 modules and other supported devices) on your free account.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body">To use AirVantage, you must register your device and then connect your mangOH&nbsp;Red to the AirVantage server.</p>
+  <h2 dir="ltr"><a name="TOC_7_1_1_Register_with"></a>7.1.1 Register with AirVantage</h2>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In a browser, go to <span class="FM_Link"><a href="https://eu.airvantage.net/accounts/signup?type=Mangoh">https://eu.airvantage.net/accounts/signup?type=Mangoh</a></span>.</p>
+
+  <div align="left"><img alt="av_signup.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:450.720pt;" id="image0" src="../../assets/av_signup.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the MangOH Signup area, enter your:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>First and last names</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Email address<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Address to use as your AirVantage username.</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 35.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 468.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_ImportantNote"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Use a valid address<span style="font-size: x-small;">&nbsp;</span>—This is your username for accessing AirVantage, and is needed to complete the registration process.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Account name<span style="font-size: x-small;">&nbsp;</span><span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>A descriptive name to identify this AirVantage account. Use a unique name such as a combination of your company name, the project name, your name, etc.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Phone number<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Use international format (for example, for North American phone numbers, use &quot;001&quot; plus the 10-digit area code and phone number).</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Review the Terms of Service and select &quot;I agree to the Terms of Service&quot;.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click Signup.</p>
+  <p dir="ltr" class="FM_Indented">An email is sent automatically to your email address with a confirmation link.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open the email and click the link to confirm your signup request.</p>
+
+  <div align="left"><img alt="av_email_new.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:360.720pt;" id="image1" src="../../assets/av_email_new.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>When your browser opens to confirm the signup request, enter a password that satisfies the requirements shown on-screen, and re-enter it to confirm.</p>
+
+  <div align="left"><img alt="av_confirm_signup_new.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:384.720pt;" id="image2" src="../../assets/av_confirm_signup_new.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click Save.</p>
+  <p dir="ltr" class="FM_Indented">If your password is acceptable, the AirVantage Login screen appears.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">8.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter your account’s email address and password, and click Log In.</p>
+
+  <div align="left"><img alt="av_login.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:378.720pt;" id="image3" src="../../assets/av_login.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">9.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If you did not record your device’s FSN and IMEI earlier (in <a href="../41110479-80-81-82_PrepMangoh/41110479-80-81-82_PrepMangoh.htm#XREF_68638_3_1_Install_mangOH"><span class="FM_blue_color">Build and Install Legato Platform and mangOH Red Platform on Target</span></a>):</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a terminal window and connect to the device:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Display the device information (including the FSN and IMEI):</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># cm info</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">10.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>In the Register mangOH window in your browser, enter your device’s information:</p>
+
+  <div align="left"><img alt="av_register_info_new.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:503.970pt;" id="image4" src="../../assets/av_register_info_new.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Serial Number<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Enter the module’s FSN.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>IMEI/ESN<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Enter the module’s IMEI.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Name<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>(Optional) Enter a descriptive name for the device (e.g. &quot;Test&nbsp;Device&nbsp;1&quot;, &quot;Parking Meter&quot;, etc.)</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Pre-configure system<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>(IMPORTANT) Do NOT select this option.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">11.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>Click Register.</p>
+  <p dir="ltr" class="FM_Indented">The device appears in the ’Registered systems’ section at the bottom of the screen.</p>
+
+  <div align="left"><img alt="av_registered_systems.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:440.478pt;" id="image5" src="../../assets/av_registered_systems.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">12.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>Now that your device is registered, click the monitor icon at the right side of your device entry (<span style="font-family : Arial; "><img alt="av_registered_systems_1.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:11.991pt;" id="image6" src="../../assets/av_registered_systems_1.png" /></span>) (or click Monitor at the top of the screen and select Systems) to go to the System Details screen (see next step).</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">13.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>The System Details screen displays widgets reporting information about your device, communications received from it, running applications, etc.</p>
+  <p dir="ltr" class="FM_Indented">The areas shown below (Last Communication and System Info) are both blank because you have not con&#173;nected your <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag_1" x-format="Product_Tag_1">mangOH&nbsp;Red</uservariable>&#160;to AirVantage yet. Leave this browser window open and continue to <a href="#XREF_67433_7_1_2_Connect_to"><span class="FM_blue_color">Connect to Air&#173;Vantage</span></a>.</p>
+
+  <div align="left"><img alt="av_system_details_-_empty.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:504.720pt;" id="image7" src="../../assets/av_system_details_-_empty.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+  <h2 dir="ltr"><a name="TOC_7_1_2_Connect_to"></a>7.1.2 <a name="XREF_67433_7_1_2_Connect_to"></a>Connect to AirVantage</h2>
+  <p dir="ltr" class="FM_Body">Now that you are registered on AirVantage, connect your mangOH&nbsp;Red to the AirVantage server and begin transmitting data:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>On the dev machine, open a terminal window.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>The mangOH&nbsp;Red platform that you installed earlier includes an application that reports sensor data from your mangOH&nbsp;Red to the IoT cloud. Start the application to send data to AirVantage, and confirm that it started running:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># app start redSensorToCloud</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># app status</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Body"><span style="font-family : Arial; "></span></p>
+
+  <div align="left"><img alt="vb_appstatus_sensor_running.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:394.500pt;" id="image8" src="../../assets/vb_appstatus_sensor_running.png" />
+  </div>
+  <p dir="ltr" class="FM_Body">&nbsp;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:504.61pt;">
+   <tr style=" height : 22.00pt;">
+   <td style="width : 17.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 486.618pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>redSensorToCloud automatically opens a data connection, so you do not need to use &quot;cm data connect&quot;.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In your browser, refresh the AirVantage System Details screen.</p>
+  <p dir="ltr" class="FM_Indented">The System Info section now shows details about your module, and the Last Communication section shows your Registration connection or sensor data, whichever was most recently received.</p>
+
+  <div align="left"><img alt="av_system_details_register.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:504.720pt;" id="image9" src="../../assets/av_system_details_register.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <div align="left"><img alt="av_system_details.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:504.720pt;" id="image10" src="../../assets/av_system_details.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>To see details on all transmissions received, click Timeline.</p>
+
+  <div align="left"><img alt="av_timeline.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:504.720pt;" id="image11" src="../../assets/av_timeline.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>To stop sending data, and to confirm the app has stopped:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># app stop redSensorToCloud</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># app status</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="vb_appstatus_sensor_stopped.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:378.750pt;" id="image12" src="../../assets/vb_appstatus_sensor_stopped.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:6.00pt; padding-top:6.00pt; padding-right:6.00pt; padding-bottom:4.00pt; float:alignleft; width:100%; max-width:451.36pt;">
+   <tr style=" height : 31.00pt;">
+   <td style="width : 17.991pt; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_CellBody">&nbsp;</p>
+</td>
+   <td style="width : 433.368pt; border-top-style: solid; border-top-width: 2px; border-top-color: #6a8e9a; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #6a8e9a; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_RegularNote"><span class="FM_Bold">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>redSensorToCloud automatically closes the data connection, so you do not need to use &quot;cm data connect -1&quot;.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body">You have now registered and connected your device to AirVantage, and completed the <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag_1" x-format="Product_Tag_1">mangOH&nbsp;Red</uservariable>&#160;Getting Started tutorial. For more information on the mangOH platform, visit <span class="FM_Link"><a href="http://mangoh.io">mangoh.io</a></span>.</p>
+  <div align="left"><img alt="success_mangoh_canstockphoto22930807.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:90.996pt;" id="image13" src="../../assets/success_mangoh_canstockphoto22930807.jpg" />
+  </div>
+  <p dir="ltr" class="FM_Spacer">&nbsp;</p>
+  <p dir="ltr" class="FM_Body">To begin developing simple applications or modifying existing applications, work through the examples in <a href="../41110479-80-81-82_Develop/41110479-80-81-82_Develop.htm#XREF_84678_Hello_World"><span class="FM_blue_color">Develop and Test applications</span></a>.</p>
+  <p dir="ltr" class="FM_Spacer" style="font-family : Helvetica; font-size  : 10.0pt; color   : #333a3f;">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>Updating the Firmware on a mangOH</title>
+
+ <link rel="stylesheet" href="41112261_Firmware.css" type="text/css" />
+
+ <link rel="stylesheet" href="../../HTMLStyling.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+ <meta name="generator" content="Adobe FrameMaker 2019" />
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "3_1";
+</script>
+ <meta name="brsprev" value="41113734_mangOH_Red_GSG_-_HTML5/41112261_PrepDevelop/41112261_PrepDevelop.htm">
+ <meta name="brsnext" value="41113734_mangOH_Red_GSG_-_HTML5/41112261_HardwareTips/41112261_HardwareTips.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">B: <a name="XREF_43758_Set_Up_Your"></a>Updating the Firmware on a mangOH</p>
+  <p dir="ltr" class="FM_Body">Firmware images for your mangOH&nbsp;Red can be in two formats<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>.spk and .exe.</p>
+  <p dir="ltr" class="FM_Body">The latest images (in both formats) for various module types are available at:<br /><span class="FM_Link"><a href="https://mangoh.io/mangoh-red-resources-software">mangoh.io/mangoh-red-resources-software</a></span></p>
+  <p dir="ltr" class="FM_Body">You can also build your own .spk file as described in <a href="../41112261_PrepDevelop/41112261_PrepDevelop.htm#XREF_68391_4_3_Build_Install"><span class="FM_blue_color">Build<span style="font-size: x-small;">&nbsp;</span>/<span style="font-size: x-small;">&nbsp;</span>Install the mangOH Development Package</span></a>.</p>
+  <p dir="ltr" class="FM_Body">There are a few ways to update the firmware on a mangOH board’s CF3 module:</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Platform independent (uses .spk)</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>From Linux (uses .spk)</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>From VM (uses .spk)</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>From Windows (uses .exe)</p>
+  <p dir="ltr" class="FM_Figure" style="font-family : Helvetica;">The firmware on a mangOH board is updated over the mangOH’s CF3 USB port.</p>
+  <div align="left"><img alt="connect_to_computer00070.png" id="image50" src="../../assets/connect_to_computer00070.png" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_Figure"><span style="font-family : Helvetica; font-style : italic; ">&#160;</span></p>
+  <p dir="ltr" class="FM_Heading4">Platform-independent</p>
+  <p dir="ltr" class="FM_Body">This approach has the advantage of working using a Linux or Windows PC to perform the update. The disadvantage of this method is that it requires the user to login to the device via ssh or console and this is a bit inconvenient and may not even be possible if a bad firmware was installed previously.</p>
+  <p dir="ltr" class="FM_Body">To install an image to the mangOH&nbsp;Red’s module:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH’s USB (not console) port to a powered USB port on your computer.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Locate the firmware .spk file that is to be installed and copy it to the mangOH (replace &lt;spk_file_path&gt; with the pathname for the .spk file to install):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ scp &lt;spk_file_path&gt; root@192.168.2.2:/tmp</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Firmware00072.jpg" id="image51" src="../../assets/41112261_Firmware00072.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Log in to the mangOH:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install the firmware update:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color" style="background-color: #aacdd9; "># fwupdate download /tmp/&lt;spk_file&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_FigureIndented" style="display:inline"><img alt="41112261_Firmware00074.jpg" id="image52" src="../../assets/41112261_Firmware00074.jpg" style="max-width: 100% ;height: auto" />&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Press the reset button to restart the device. The device will boot with the new firmware.</p>
+  <p dir="ltr" class="FM_Heading4">Linux</p>
+  <p dir="ltr" class="FM_Body">To install an image from a Linux system to the mangOH&nbsp;Red’s module:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH’s USB (not console) port to a powered USB port on your computer running Linux.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Locate the firmware .spk file that is to be installed and install it on the mangOH:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Replace &lt;module_series&gt; with your CF3 module type (WP750X, WP76XX, WP77XX, WP85XX).</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Replace &lt;update_file_path&gt; with the pathname for the .spk file to install:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ swiflash -m &lt;module_series&gt; -i &lt;update_file_path&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Firmware00076.jpg" id="image53" src="../../assets/41112261_Firmware00076.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This may take several minutes to run. If the download fails, repeat the swiflash command. If you still have difficulties, use &quot;swiflash&nbsp;--help&quot; for usage information or refer to <span class="FM_Link"><a href="https://source.sierrawireless.com/resources/airprime/software/swiflash">source.sierrawireless.com/resources/airprime/software/swiflash</a></span>&#160;for details.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Press the reset button to restart the device. The device will boot with the new firmware.</p>
+  <p dir="ltr" class="FM_Heading4">VM</p>
+  <p dir="ltr" class="FM_Body">To install an image from the VM to the mangOH&nbsp;Red’s module:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH’s USB (not console) port to a powered USB port on your computer.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter the leaf shell:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ leaf shell</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to your Leaf workspace:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">(lsh:p1_red76)$ cd ~/myWorkspace</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the command below, replace &lt;spk_file_path&gt; with the pathname for the .spk file to install.</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ fwupdate download &lt;spk_file_path&gt; 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Firmware00078.jpg" id="image54" src="../../assets/41112261_Firmware00078.jpg" style="max-width: 100% ;height: auto" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This will take several minutes to run. If the download fails, repeat the fwupdate command. If you still have difficulties, use &quot;fwupdate --help&quot; to display usage information.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Press the reset button to restart the device. The device will boot with the new firmware.</p>
+  <p dir="ltr" class="FM_Heading4">Windows</p>
+  <p dir="ltr" class="FM_Body">To install an image from Windows to the mangOH&nbsp;Red’s module:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Use a micro-USB cable to connect the mangOH’s USB (not console) port to a powered USB port on your computer running Windows.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Locate the firmware .exe file that is to be installed.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Log in to the mangOH.</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If ssh is not available at the command line level, use an ssh client to connect to 192.168.2.2 as the root user.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Stop legato:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color" style="background-color: #aacdd9; "># legato stop</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_FigureIndented" style="display:inline"><img alt="41112261_Firmware00080.jpg" id="image55" src="../../assets/41112261_Firmware00080.jpg" style="max-width: 100% ;height: auto" />&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The software in the firmware .exe file does not wait long enough for a device that is running Legato to enter the mode where it is ready for programming. By stopping Legato before running the .exe, the device will be able to enter programming mode quickly enough when the .exe is run.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>On your PC, double-click the firmware .exe file to install it on the mangOH.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Press the reset button to restart the device. The device will boot with the new firmware.</p>
+  <p dir="ltr" class="FM_Heading4">Troubleshooting</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If the platform-independent method doesn't work, any of the other methods.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If the Linux, VM or Windows methods are not working:</p>
+  <p dir="ltr" class="FM_Numbered2_Restart"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Try moving the TP1_BOOT DIP switch (SW401 dipswitch 7) into the ON position and then press the reset button before initiating programming.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Once programming has begun, move the TP1_BOOT DIP switch back to the OFF position.</p>
+ </div>
+</body>
+
+</html>
+

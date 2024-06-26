@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><ck><di ky=\"0\" rd=\"4118961_Tut_Quick_Start.htm|4118961 Tut Quick Start\" ct=\"       1: Getting Started    Now that you have your mangOH Green, it’s time to start using it.    Wh ...\" bc=\"\"/></ck>";

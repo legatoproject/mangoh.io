@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"SB555 Development Kit Enabling Software Guide\" to=\"41110400 Preface\" num=\"6\"/></cki>";

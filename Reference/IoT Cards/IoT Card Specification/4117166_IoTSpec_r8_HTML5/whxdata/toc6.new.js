@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"type":"item","name":"4.1 Overview","url":"IPM_Specification_-_HTML5/IOT_Spec_Mechanical/IOT_Spec_Mechanical.htm#TOC_4_1_Overviewbc-1"},{"type":"book","name":"4.2 Mechanical Dimensions","key":"toc7","url":"IPM_Specification_-_HTML5/IOT_Spec_Mechanical/IOT_Spec_Mechanical.htm#TOC_4_2_Mechanical_Dimensionsbc-2"},{"type":"book","name":"4.3 Host-side Requirements and Considerations","key":"toc8","url":"IPM_Specification_-_HTML5/IOT_Spec_Mechanical/IOT_Spec_Mechanical.htm#TOC_4_3_Host_sidebc-5"},{"type":"item","name":"4.4 Pull-up Resistors","url":"IPM_Specification_-_HTML5/IOT_Spec_Mechanical/IOT_Spec_Mechanical.htm#TOC_4_4_Pull_up_Resistorsbc-8"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

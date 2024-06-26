@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"Legal\"><item name=\"Legal/Copyright/Trademarks/Contact US\" url=\"41113116_mangOH_Yellow_HW_Guide_-_HTML5/Legal/Legal.htm\" /></data>";

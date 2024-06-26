@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"type":"item","name":"3.1 Install Drivers","url":"41112261_mangOH_Red_GSG_-_HTML5/41112261_Tut_SetUp/41112261_Tut_SetUp.htm#TOC_3_1_Install_Driversbc-1"},{"type":"item","name":"3.2 Assemble Your mangOH — Quick Steps","url":"41112261_mangOH_Red_GSG_-_HTML5/41112261_Tut_SetUp/41112261_Tut_SetUp.htm#TOC_3_2_Assemble_Your_mangOHbc-2"},{"type":"item","name":"3.3 Assemble Your mangOH — Detailed Steps","url":"41112261_mangOH_Red_GSG_-_HTML5/41112261_Tut_SetUp/41112261_Tut_SetUp.htm#TOC_3_3_Assemble_Your_mangOHbc-3"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

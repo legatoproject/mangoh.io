@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>PrepComp</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\41110402 mangOH Red Fundamentals v2 (Linux and Windows CLI)\PrepComp.fm" />
+ <link rel="stylesheet" href="PrepComp.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "3";
+</script>
+ <meta name="brsprev" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_Tut_SetUp/41110479-80-81-82_Tut_SetUp.htm">
+ <meta name="brsnext" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_PrepMangoh/41110479-80-81-82_PrepMangoh.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">4: <a name="XREF_22697_Prepare_your"></a>Prepare Your Linux Dev Machine For Legato Development</p>
+
+  <p dir="ltr" class="FM_Body">In this chapter, you will prepare your dev machine for Legato application development by setting up the development environment with required applications and packages.</p>
+
+  <p dir="ltr" class="FM_Important"><span class="FM_Bold">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>To install and use the development environment, your dev machine must meet the requirements in <a href="../41110479-80-81-82_Tut_Quick_Start/41110479-80-81-82_Tut_Quick_Start.htm#XREF_29432_Minimum_System"><span class="FM_blue_color">Table&nbsp;1-1</span></a>.</p>
+
+  <h1 dir="ltr"><a name="TOC_4_1_Prepare_Dev_Machine"></a>4.1 <span style="font-family : Helvetica; font-weight : normal; font-size  : 10.0pt; "></span><a name="XREF_87760_Prepare_a_Ubuntu"></a>Prepare Dev Machine For Application Development</h1>
+
+  <p dir="ltr" class="FM_Body">After preparing your mangOH Red hardware in <a href="../41110479-80-81-82_Tut_SetUp/41110479-80-81-82_Tut_SetUp.htm#XREF_52287_Set_up_your_mangOH"><span class="FM_blue_color">Set Up Your mangOH&nbsp;Red Hardware</span></a>, you can prepare your dev machine for application development:</p>
+
+  <p dir="ltr" class="FM_Important"><span class="FM_Bold">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Download, installation and use of Legato Application Framework and Platform Services is subject to the <span class="FM_Link"><a href="http://source.sierrawireless.com/~/media/support_downloads/legato/legato software licence agreement 15 january 2016.ashx">Legato License</a></span>&#160;and <span class="FM_Link"><a href="http://source.sierrawireless.com/~/media/support_downloads/legato/legato open source licenses.ashx?la=en">Open Source Licenses</a></span>. (Note: These links automatically download the licenses as PDF files.)</p>
+
+  <h1 dir="ltr"><a name="TOC_4_2_Build_and_Install"></a>4.2 <a name="XREF_67774_4_2_1_Connect_the"></a><a name="XREF_68638_3_1_Install_mangOH"></a>Build and Install the Development Environment</h1>
+
+  <p dir="ltr" class="FM_Body">In this section you will build and install the environment to develop applications for the CF3 module used in your mangOH&nbsp;Red. The environment includes:</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Legato toolchain<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Tools and libraries used to build the Legato Platform for your CF3 module. The Legato toolchain is module-specific; you must make sure you install the toolchain designed for your module.</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>mangOH Red platform<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Drivers for on-board components, and a basic device-to-cloud application.</p>
+
+  <p dir="ltr" class="FM_Body">To build and install the development environment on your dev machine:</p>
+
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a terminal window.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install packages required for the development environment:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Display your Ubuntu version: </p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ lsb_release -d</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-style : normal; font-size  : 10.0pt; "></span>If the version is less than 16.04, upgrade your operating system to 16.04 or higher, then continue with these instructions.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_25537_2_Check_whether"></a>Check whether your dev machine is 32-bit or 64-bit:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ uname -m</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Figure">&#160;&#160;</p>
+
+  <div align="left"><img alt="cli_uname.png" style=" width:100%; margin-top:10pt; max-width:378.042pt;" id="image0" src="../../assets/cli_uname.png" />
+  </div>
+  <p dir="ltr" class="FM_Indented">The dev machine’s hardware type appears <span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>e.g. &quot;x86_64&quot; is a 64-bit system.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install several packages that are required for the Legato Platform and the mangOH Red platform<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>enter the following command and follow any prompts that appear:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt-get install build-essential openjdk-8-jre \</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">libwebkitgtk-1.0-0 python python-jinja2 cmake \</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">git subversion libsdl-dev diffstat texinfo gawk \</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">chrpath wget cpio vim zsh bash ninja-build screen \</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">sshpass bc python-git unzip libxml2-utils gcovr \</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">libcurl4-gnutls-dev zlib1g-dev libbz2-dev \</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">bsdiff libssl-dev zip autoconf automake</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The ’\’ at the ends of the lines tells the system that the command continues on the next line. When you run this command (and any others in this guide that use the ’\’), you can copy and paste the full command (including ’\’ characters) in your terminal window. If you type the command manually all on one line, do not type the ’\’ characters.</p>
+
+  <div align="left"><img alt="packages5.png" style=" width:100%; margin-top:10pt; max-width:379.536pt;" id="image1" src="../../assets/packages5.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>As shown in the previous step, the output you see when you run some commands may be different from the examples shown. To check if a command succeeded or failed, enter the following command:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ echo $?</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="dependencies2a.png" style=" width:100%; margin-top:10pt; max-width:379.542pt;" id="image2" src="../../assets/dependencies2a.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Indented">If the value returned is ’0’, the command succeeded. If it is any other value, the command failed.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If your dev machine is 64-bit, install additional dependencies:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt-get install lib32z1 lib32ncurses5</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Build the Legato toolchain (SDK):</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If you have previously installed Legato toolchains, make sure you do not have any old toolchain files (&quot;poky*.sh&quot;) in your Downloads directory (e.g.&nbsp;~/Downloads), and remove any changes that may have been made to your .bashrc file:</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to your Downloads directory:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~/Downloads</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Either move or delete any old toolchain files:</p>
+
+  <p dir="ltr" class="FM_Indented3">Delete files:</p>
+
+  <p dir="ltr" class="FM_Indented4_CodeFragment"><span class="FM_Code_Background_Color">$ rm poky*</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented3">Move files:</p>
+
+  <p dir="ltr" class="FM_Indented4_CodeFragment"><span class="FM_Code_Background_Color">$ mkdir old_toolchains</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented4_CodeFragment"><span class="FM_Code_Background_Color">$ mv poky* old_toolchains</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>Edit your ~/.bashrc file, comment out any items at the bottom of the file that begin with &quot;LEGATO&quot;, and save and close the file.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to <span class="FM_Link"><a href="http://source.sierrawireless.com/resources/legato/downloads">http://source.sierrawireless.com/resources/legato/downloads</a></span>&#160;and click the latest Legato (32-bit or 64-bit) toolchain download link (the link is to a .sh file).</p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-style : normal; font-size  : 10.0pt; "></span>You must register on the Source for an account before you can download files.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click Download.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If prompted, save the file to your Downloads folder. (e.g. ~/Downloads)</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the terminal window, open the folder and run the file.</p>
+
+  <p dir="ltr" class="FM_Indented2">(In the command below, replace &lt;file_name&gt; with the actual file name.<br />e.g. If the file name is &quot;poky-swi-ext-sample-1.7.3.sh&quot;, the command would be &quot;bash poky-swi-ext-sample-1.7.3.sh&quot;):</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~/Downloads</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ bash &lt;file_name&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="poky6.png" style=" width:100%; margin-top:10pt; max-width:378.774pt;" id="image3" src="../../assets/poky6.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">f.<span style="padding-left: 12pt;" class="FMAutoNumber_1"></span></span><span class="FM_CodeFragment"></span>When prompted to enter a target directory for the SDK, press Enter to accept the default (/opt/swi/y17-ext).</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">g.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>When prompted to install or (possibly) replace the SDK, type ’<span class="FM_Code_Background_Color">Y</span>’ and press Enter.</p>
+
+  <p dir="ltr" class="FM_Indented2">When finished, installing, the message &quot;SDK has been successfully set up and is ready to be used.&quot; will appear.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">h.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Configure the toolchain to make it available for use in generating the mangOH&nbsp;Red platform and the kernel modules that it references:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ export PATH=$PATH:/opt/swi/y17-ext/sysroots/\</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">x86_64-pokysdk-linux/usr/bin/\</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">arm-poky-linux-gnueabi</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ cd /opt/swi/y17-ext/sysroots/\</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">armv7a-vfp-neon-poky-linux-gnueabi/usr/\</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">src/kernel</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ sudo chown -R $USER .</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ARCH=arm CROSS_COMPILE=arm-poky-linux-gnueabi- \</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">make scripts</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ sudo chown -R root .</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="configure_toolchain.png" style=" width:100%; margin-top:10pt; max-width:378.774pt;" id="image4" src="../../assets/configure_toolchain.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">8.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_13380_8_Install_the_repo"></a>Install the repo application, which will be used to clone the Legato file repository:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt-get install repo</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This may take a few minutes to run.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">9.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If the install in <a href="#XREF_13380_8_Install_the_repo"><span class="FM_blue_color">Step 8</span></a> failed because phablet-tools was previously installed:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter the following command:</p>
+
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ sudo apt-get remove --purge phablet-tools &amp;&amp; \</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">apt-get install repo</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go back to <a href="#XREF_13380_8_Install_the_repo"><span class="FM_blue_color">Step 8</span></a>.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">10.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>If you have not used git or git-repo to clone a project before, identify yourself as follows:</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ git config --global user.email &quot;youremail@example.com&quot;</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ git config --global user.name &quot;your.name&quot;</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">11.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span><a name="XREF_35694_5_Download_the"></a>Download the mangOH platform files into a working directory<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>enter the following command and either replace &lt;mangOH_work_directory&gt; with a new directory name (e.g. &quot;mangOH_work&quot;), or remove it (to use the default directory name &quot;mangOH&quot;).</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ git clone --recursive https://github.com/mangOH/\</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">mangOH &lt;mangOH_work_directory&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="clone_mangoh2.png" style=" width:100%; margin-top:10pt; max-width:378.822pt;" id="image5" src="../../assets/clone_mangoh2.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <div align="left"><img alt="clone_mangOH3.png" style=" width:100%; margin-top:10pt; max-width:378.822pt;" id="image6" src="../../assets/clone_mangOH3.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>&lt;mangOH_work_directory&gt; is optional<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>if not used, a working directory is created with the same name as the repository (in this case, &quot;mangOH&quot;).</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">12.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>Add an environment variable (shortcut) for the mangoh work directory:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Edit your ~/.bashrc file (the startup script that runs when you open a terminal window) and add the following line at the end of the file:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">export MANGOH_ROOT=~/mangOH_work</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>. If you downloaded into a different directory name in <a href="#XREF_35694_5_Download_the"><span class="FM_blue_color">Step 11</span></a>, replace &quot;mangOH_work&quot; with that name in the above export statement:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Save and close the file.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Run the script to set the new environment variable for your current window:</p>
+
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ . ~/.bashrc</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <p dir="ltr" class="FM_Important_Indented3"><span class="FM_Bold">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Make sure you include the ’.’ (period) at the beginning of the command. This command runs the script in the open terminal window; you will not have to run it in new windows.</p>
+
+  <p dir="ltr" class="FM_Body">Now that the Legato development environment is installed, you can <a href="../41110479-80-81-82_PrepMangoh/41110479-80-81-82_PrepMangoh.htm#XREF_22697_Prepare_your"><span class="FM_blue_color">Prepare Your mangOH Red For Development</span></a>.</p>
+  <p dir="ltr" class="FM_Body">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc10.js\"  name=\"C.6 VirtualBox Tips\" url=\"41112261_mangOH_Red_GSG_-_HTML5/41112261_Tips/41112261_Tips.htm#TOC_C_6_VirtualBox_Tipsbc-6\"><item name=\"C.6.1 Modifying resources\" url=\"41112261_mangOH_Red_GSG_-_HTML5/41112261_Tips/41112261_Tips.htm#TOC_C_6_1_Modifying_resourcesbc-7\" /></data>";

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>SB555 Development Kit Enabling Software Guide</title>
+
+ <meta content="OEM, CDMA2000, 1xRTT, Watcher" name="search-keywords" />
+ <link rel="stylesheet" href="41113251_Tips.css" type="text/css" />
+
+ <link rel="stylesheet" href="../../HTMLStyling.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+ <meta name="generator" content="Adobe FrameMaker 2019" />
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "3";
+</script>
+ <meta name="brsprev" value="41113251_mangOH_Red_GSG_-_HTML5/41113251_AirVan/41113251_AirVan.htm">
+ <meta name="brsnext" value="41113251_mangOH_Red_GSG_-_HTML5/41113251_HardwareTips/41113251_HardwareTips.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">6: <a name="XREF_77395_Tips"></a>Tips</p>
+  <h1 dir="ltr"><a name="TOC_6_1_Finding_your_SIM_s"></a>6.1 Finding your SIM’s APN</h1>
+  <p dir="ltr" class="FM_Body">Your SIM provider should give you the APN that you use to connect to their network. If you don’t have the APN, you should be able to find it online.</p>
+  <p dir="ltr" class="FM_Body">If your mobile network operator uses different APNs for 3G and LTE, make sure to use the APN for the correct network based on your CF3 module type (e.g. WP8548 is a 3G-only module<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the APN for the network operator’s 3G network should be used).</p>
+  <p dir="ltr" class="FM_Body">Examples:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Sierra Wireless<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>internet.sierrawireless.com</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span><span style="font-size: x-small;">&nbsp;</span>Rogers Wireless<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>internet.com (GPRS); ltemobile.apn (LTE)</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Others<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Search the Internet for &quot;&lt;provider&gt; APN&quot;. For example, &quot;Rogers Wireless APN&quot;</p>
+
+  <h1 dir="ltr"><a name="TOC_6_2_Using_the_Linux"></a>6.2 Using the Linux Terminal program</h1>
+
+  <p dir="ltr" class="FM_Body">Ubuntu includes a terminal emulator, which is labeled as &quot;Terminal&quot; in the desktop environment. The emulator allows you to execute command-line programs that interact with the Legato framework tools on your dev machine and the CF3 module in the <span data-name="Product_Tag_1" data-val="mangOH&nbsp;Red" data-showval="TRUE" data-format="Product_Tag_1">mangOH&nbsp;Red</span>.</p>
+
+  <p dir="ltr" class="FM_Body">For this tutorial, here are some useful tips:</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Open a terminal window. For example, in the Unity desktop shell used by default on Ubuntu Linux, do this using either of these methods:</p>
+
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Click the Search icon and type &quot;terminal&quot;, then run the application that is listed.</p>
+
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Press Ctrl+Alt+T</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Open a new tab in a window<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Press Ctrl+Shift+T</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Change a tab name in a window—<span style="font-size: x-small;">&nbsp;</span>Right-click in the tab and select Set Title.</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Copy text from a window<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Highlight the text and press Ctrl+Insert.</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Paste text into a window<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Press Shift+Insert.</p>
+
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>For in-depth detail, refer to <span class="FM_Link"><a href="https://help.ubuntu.com/community/UsingTheTerminal">https://help.ubuntu.com/community/UsingTheTerminal</a></span>.</p>
+
+  <p dir="ltr" class="FM_Spacer"><span style="font-family : Arial; font-weight : bold; font-size  : 18.0pt; color   : #333a3f; ">&nbsp;</span></p>
+ </div>
+</body>
+
+</html>
+

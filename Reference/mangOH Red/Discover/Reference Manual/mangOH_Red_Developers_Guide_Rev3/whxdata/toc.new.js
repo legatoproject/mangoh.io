@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"type":"item","name":"1: Introduction","url":"41110401_mangOH_Dev_Guide_-_HTML5/41110401_mangOH_DevGuide_Introduction/41110401_mangOH_DevGuide_Introduction.htm"},{"type":"book","name":"2: Hardware","key":"toc1","url":"41110401_mangOH_Dev_Guide_-_HTML5/41110401_Architecture/41110401_Architecture.htm"},{"type":"book","name":"3: Regulatory Compliance","key":"toc5","url":"41110401_mangOH_Dev_Guide_-_HTML5/41110401_Regulatory/41110401_Regulatory.htm"},{"type":"item","name":"Legal / Copyright / Trademarks / Contact Us","url":"41110401_mangOH_Dev_Guide_-_HTML5/41110401_Preface/41110401_Preface.htm#TOC_Legal_Copyright"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

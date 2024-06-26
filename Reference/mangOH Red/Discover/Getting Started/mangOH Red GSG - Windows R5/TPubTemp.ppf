@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE polprojfile>
+<ppfml version="2.00" project="41112261 mangOH Red GSG - HTML5" type="4">
+ <windowlist defaultwindow="NewWindow">
+  <window name="NewWindow" x="5%" y="5%" width="90%" height="90%" viewtype="doublepane" workspacestyle="DEFAULT" toolbar="off" locationbar="off" menu="off" resizable="yes" statusbar="off" usecurrentwindowsettings="yes" caption="NewWindow">
+   <elements><element name="BrowseSequence" Present="yes" /><element name="SearchInput" Present="no" />
+   </elements>
+   <agents defaultagent="toc">
+    <agent>toc
+    </agent>
+    <agent>ndx
+    </agent>
+    <agent>nls
+    </agent>
+    <agent>gls
+    </agent>
+   </agents>
+  </window>
+ </windowlist>
+ <contextmap>
+ </contextmap>
+ <topiclist defaulttopic="41112261_mangOH_Red_GSG_-_HTML5\41112261_Tut_Quick_Start\41112261_Tut_Quick_Start.htm">
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Tut_Quick_Start\41112261_Tut_Quick_Start.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Register\41112261_Register.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Tut_SetUp\41112261_Tut_SetUp.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_PrepComp\41112261_PrepComp.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_PrepMangoh\41112261_PrepMangoh.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Connect\41112261_Connect.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_AirVan\41112261_AirVan.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Develop\41112261_Develop.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_UpLegato\41112261_UpLegato.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Tips\41112261_Tips.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_HardwareTips\41112261_HardwareTips.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Console_Access\41112261_Console_Access.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Module_install_extract\41112261_Module_install_extract.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Commands_List\41112261_Commands_List.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Terminology\41112261_Terminology.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Activate_ATT\41112261_Activate_ATT.htm
+  </topic>
+  <topic>41112261_mangOH_Red_GSG_-_HTML5\41112261_Legal\41112261_Legal.htm
+  </topic>
+ </topiclist>
+ <projectincludes>
+ </projectincludes>
+ <filenamemap>
+  <filenameentry moniker="wh_languagetype">
+   <filename>en_US
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="nls">
+   <filename>.nla
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_lngfile">
+   <filename>index.lng
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_stoplist">
+   <filename>index.stp
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="startpage">
+   <filename>index.html
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="favicon">
+   <filename>Responsive HTML5_favicon.png
+   </filename>
+  </filenameentry>
+ </filenamemap>
+</ppfml>

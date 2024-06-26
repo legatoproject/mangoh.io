@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>SB555 Development Kit Enabling Software Guide</title>
+
+ <meta content="OEM, CDMA2000, 1xRTT, Watcher" name="search-keywords" />
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="F:\JaggedPeak\Current Projects\SWI\CTO\41112261-4112327 mangOH Red Getting Started r4\41112261 UpLegato.fm" />
+ <link rel="stylesheet" href="41112261_UpLegato.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "7";
+</script>
+ <meta name="brsprev" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_Develop/41112261_Develop.htm">
+ <meta name="brsnext" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_Tips/41112261_Tips.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">B: <a name="XREF_77395_Tips"></a>Update Legato Application Framework</p>
+  <p dir="ltr" class="FM_Body">The mangOH&nbsp;VM that you installed on your dev machine in <a href="../41112261_PrepComp/41112261_PrepComp.htm#XREF_22697_Prepare_your"><span class="FM_blue_color">Prepare Your Dev Machine For Legato Development</span></a>&#160;was pre-configured with the latest version of the Legato Application Framework (AF).</p>
+  <p dir="ltr" class="FM_Body">When new versions of the framework are released, you can install them on your dev machine using the procedure below.</p>
+  <h1 dir="ltr"><a name="TOC_B_1_Update_the_Legato_AF"></a>B.1 Update the Legato AF on Your Dev Machine</h1>
+  <p dir="ltr" class="FM_Body">To update the Legato AF in the VM on your dev machine:</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a terminal window.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Configure your environment for development:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cfglegato</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Check the version of the Legato AF that is currently installed:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd $LEGATO_ROOT/..</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ls -al .repo</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_UpLegato00159.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:471.090pt;" id="image0" src="../../assets/41112261_UpLegato00159.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented">The installed version is indicated in the manifest.xml link.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to <span class="FM_Link"><a href="http://legato.io/legato-docs/latest/aboutReleaseInfo.html">http://legato.io/legato-docs/latest/aboutReleaseInfo.html</a></span>&#160;to get the version number of the most recent release.</p>
+  <div align="left"><img alt="legato_release_num.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:340.488pt;" id="image1" src="../../assets/legato_release_num.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If your release is older (lower version number) than the most recent release:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Download the framework files into your working directory (for example, &quot;~/legato_framework&quot;)<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Replace the release number in the ’repo’ command below with the most recent release (this example downloads version 18.03.0):</p>
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Download the framework files into the work directory and follow any prompts that may appear:</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ repo init -u git://github.com/legatoproject/\</span><span style="font-size: x-small;">&nbsp;</span><br /><span class="FM_Code_Background_Color">manifest -m legato/releases/18.03.0/legato.xml</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color">$ repo sync</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_UpLegato00164.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image2" src="../../assets/41112261_UpLegato00164.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented3Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This may take several minutes to run.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Build the mangOH Distribution for the module in your mangOH Red — In the mangOH&nbsp;VM, open&#160;a terminal window and run the following commands (replace &lt;module_series&gt; with your CF3 module series — red_wp750x, red_wp76xx, red_wp77xx, red_wp85) (Detailed instructions —Step 4 on page 26):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd ~/mangOH</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ git pull &amp;&amp; git submodule update --init</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make &lt;module_series&gt;</span><span style="font-size: x-small;">&nbsp;</span>&#160;&#160;&#160;&#160;&#160;(For optional make parameters, see <a href="../41112261_Tips/41112261_Tips.htm#XREF_34284_C_3_mangOH"><span class="FM_blue_color">Section&nbsp;C.3 mangOH Platform ’make’ parameters</span></a>.)</p>
+  <p dir="ltr" class="FM_Indented">(e.g. &quot;make red_wp76xx&quot; to build for the WP7603 module)</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cfglegato</span><span style="font-size: x-small;">&nbsp;</span> &#160;&#160;&#160;&#160;&#160;# Set up the environment</p>
+  <p dir="ltr" class="FM_Body">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

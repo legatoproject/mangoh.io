@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>SB555 Development Kit Enabling Software Guide</title>
+
+ <meta content="OEM, CDMA2000, 1xRTT, Watcher" name="search-keywords" />
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\41110402 mangOH Red Fundamentals v2 (Linux and Windows CLI)\41110479-80-81-82 Tips.fm" />
+ <link rel="stylesheet" href="41110479-80-81-82_Tips.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "9";
+</script>
+ <meta name="brsprev" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_UpLegato/41110479-80-81-82_UpLegato.htm">
+ <meta name="brsnext" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_HardwareTips/41110479-80-81-82_HardwareTips.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">C: <a name="XREF_77395_Tips"></a>Tips</p>
+  <h1 dir="ltr"><a name="TOC_C_1_Finding_your_SIM_s"></a>C.1 Finding your SIM’s APN</h1>
+  <p dir="ltr" class="FM_Body">Your SIM provider should give you the APN that you use to connect to their network. If you don’t have the APN, you should be able to find it online.</p>
+  <p dir="ltr" class="FM_Body">If your mobile network operator uses different APNs for 3G and LTE, make sure to use the APN for the correct network based on your CF3 module type (e.g. WP8548 is a 3G-only module<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the APN for the network operator’s 3G network should be used).</p>
+  <p dir="ltr" class="FM_Body">Examples:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Sierra Wireless<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>internet.sierrawireless.com</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span><span style="font-size: x-small;">&nbsp;</span>Rogers Wireless<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>internet.com (GPRS); ltemobile.apn (LTE)</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Others<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Search the Internet for &quot;&lt;provider&gt; APN&quot;. For example, &quot;Rogers Wireless APN&quot;</p>
+  <h1 dir="ltr"><a name="TOC_C_2_Using_the_Linux"></a>C.2 Using the Linux Terminal program</h1>
+  <p dir="ltr" class="FM_Body">Ubuntu includes a terminal emulator, which is labeled as &quot;Terminal&quot; in the desktop environment. The emulator allows you to execute command-line programs that interact with the Legato framework tools on your dev machine and the CF3 module in the <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag_1" x-format="Product_Tag_1">mangOH&nbsp;Red</uservariable>.</p>
+  <p dir="ltr" class="FM_Body">For this tutorial, here are some useful tips:</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Open a terminal window. For example, in the Unity desktop shell used by default on Ubuntu Linux, do this using either of these methods:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Click the Search icon and type &quot;terminal&quot;, then run the application that is listed.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Press Ctrl+Alt+T</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Open a new tab in a window<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Press Ctrl+Shift+T</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Change a tab name in a window—<span style="font-size: x-small;">&nbsp;</span>Right-click in the tab and select Set Title.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Copy text from a window<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Highlight the text and press Ctrl+Insert.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Paste text into a window<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Press Shift+Insert.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>For in-depth detail, refer to <span class="FM_Link"><a href="https://help.ubuntu.com/community/UsingTheTerminal">https://help.ubuntu.com/community/UsingTheTerminal</a></span>.</p>
+  <h1 dir="ltr"><a name="TOC_C_3_Useful_commands_for"></a>C.3 Useful commands for this tutorial (and more)</h1>
+  <p dir="ltr" class="FM_Body">The following table describes the Legato and Linux commands used in this tutorial, plus other useful commands.</p>
+  <p dir="ltr" class="FM_Spacer">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:505.00pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 505.00pt;">Table C-1:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span>Legato commands</caption>
+   <tr style=" height : 20.00pt;background : #b2b2b2;">
+   <th style="width : 97.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Command types</p>
+</th>
+   <th style="width : 117.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Command</p>
+</th>
+   <th style="width : 291.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td style="width : 97.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">Versioning</p>
+</td>
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm info</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Display the module’s model, IMEI, FSN (serial number), and firmware and bootloader versions.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td rowspan="3" style="width : 97.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">Radio</p>
+</td>
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm radio</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Display the radio status.</p>
+</td>
+</tr>
+   <tr style=" height : 32.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm radio on</p>
+   <p dir="ltr" class="FM_TableBody">cm radio off</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Enable or disable the radio.</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td colspan="2" style="width : 408.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Refer to cm radio (<span class="FM_Link"><a href="http://legato.io/legato-docs/latest/toolsTarget_cm.html#toolsTarget_cm_radio">http://legato.io/legato-docs/latest/toolsTarget_cm.html#toolsTarget_cm_radio</a></span>) for more details and command options.</p>
+</td>
+</tr>
+   <tr style=" height : 32.00pt; background : #ffffff;">
+   <td rowspan="5" style="width : 97.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">Data connections</p>
+</td>
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm data</p>
+   <p dir="ltr" class="FM_TableBody">cm data info</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Display information about the current profile in use.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm data apn &lt;yourAPN&gt;</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Set the APN for your profile to the APN from your SIM provider.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm data connect</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Start a data connection.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm data connect &lt;timeout&gt;</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Start a data connection (keep trying for up to &lt;timeout&gt; seconds).</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td colspan="2" style="width : 408.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Refer to cm data (<span class="FM_Link"><a href="http://legato.io/legato-docs/latest/toolsTarget_cm.html#toolsTarget_cm_data">http://legato.io/legato-docs/latest/toolsTarget_cm.html#toolsTarget_cm_data</a></span>) for more details and command options.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td rowspan="4" style="width : 97.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">SIM</p>
+</td>
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm sim info</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Display information about the SIM.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm sim status</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Display the SIM status</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">cm sim enterpin</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Enter a SIM PIN code to be able to use the SIM.</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td colspan="2" style="width : 408.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody" style="color   : #0000ff;"><span class="FM_Link"><a href="http://legato.io/legato-docs/latest/toolsTarget_cm.html#toolsTarget_cm_sim">Refer to cm sim (http://legato.io/legato-docs/latest/toolsTarget_cm.html#toolsTarget_cm_sim) for more details and command options.</a></span></p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td rowspan="3" style="width : 97.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">Applications</p>
+</td>
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">app status</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Display the status of installed applications (running, stopped).</p>
+</td>
+</tr>
+   <tr style=" height : 45.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">app start &lt;appName&gt;</p>
+   <p dir="ltr" class="FM_TableBody">app stop &lt;appName&gt;</p>
+   <p dir="ltr" class="FM_TableBody">app remove &lt;appName&gt;</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Start, stop, or remove an application.</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td colspan="2" style="width : 408.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Refer to app (<span class="FM_Link"><a href="http://legato.io/legato-docs/latest/toolsTarget_app.html">http://legato.io/legato-docs/latest/toolsTarget_app.html</a></span>) for more details and command options.</p>
+</td>
+</tr>
+  </table>
+</div>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:505.00pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 505.00pt;">Table C-2:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span>Linux commands</caption>
+   <tr style=" height : 20.00pt;background : #b2b2b2;">
+   <th style="width : 97.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Command types</p>
+</th>
+   <th style="width : 117.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Command</p>
+</th>
+   <th style="width : 291.000pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Description</p>
+</th>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td rowspan="4" style="width : 97.000pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">Packages</p>
+</td>
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">add-apt-repository</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Add a package repository to your list of locations where the apt-get package management tool searches for the packages you request.</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">apt-get update</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Update the list of repositories to include those you added with add-apt-repository.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">apt-get install</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Search the repositories for a package, and install it.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 117.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">update-alternatives</p>
+</td>
+   <td style="width : 291.000pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">TBD</p>
+</td>
+</tr>
+  </table>
+</div>
+  <h1 dir="ltr"><a name="TOC_C_4_Definitions"></a>C.4 Definitions</h1>
+  <p dir="ltr" class="FM_Spacer">&#160;</p>
+<div width="100%" align="left">
+  <table border-spacing="0" dir="ltr" border-collapse="collapse" style=" border-spacing:0; padding-left:4.00pt; padding-top:6.00pt; padding-right:4.00pt; padding-bottom:4.00pt; float:alignleft; margin-bottom:12.00pt; width:100%; max-width:378.75pt;">
+   <caption dir="ltr" class="FM_TableTitle" style=" width: 378.75pt;">Table C-3:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span>Definitions</caption>
+   <tr style=" height : 20.00pt;background : #b2b2b2;">
+   <th style="width : 112.500pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Term</p>
+</th>
+   <th style="width : 266.251pt; background : #b2b2b2;border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableColumnHead">Definition</p>
+</th>
+</tr>
+   <tr style=" height : 39.00pt; background : #ffffff;">
+   <td style="width : 112.500pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">sudo</p>
+</td>
+   <td style="width : 266.251pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Allows you to run commands that require another user’s security privileges. In this tutorial, the sudo command is used to run commands that require root/admin privileges.</p>
+</td>
+</tr>
+   <tr style=" height : 39.00pt; background : #ffffff;">
+   <td style="width : 112.500pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">Legato Application Framework (AF)</p>
+</td>
+   <td style="width : 266.251pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Collection of daemons (Supervisor, Config tree, service directory, etc.), liblegato, and tools that provide a framework for developing and installing apps on modules (e.g. WP8548)</p>
+</td>
+</tr>
+   <tr style=" height : 39.00pt; background : #ffffff;">
+   <td style="width : 112.500pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">Legato Platform</p>
+</td>
+   <td style="width : 266.251pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Legato Application Framework, Platform services, and a toolchain (applications) running on top of a supported operating system (e.g. Linux or RTOS).</p>
+</td>
+</tr>
+   <tr style=" height : 49.00pt; background : #ffffff;">
+   <td style="width : 112.500pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">Platform Services</p>
+</td>
+   <td style="width : 266.251pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Collection of apps installed with the Legato Application Framework to provide connectivity to module hardware. Platform Services exposes APIs for developers to connect apps running on the hardware to the Cloud.</p>
+</td>
+</tr>
+   <tr style=" height : 19.00pt; background : #ffffff;">
+   <td style="width : 112.500pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">wget</p>
+</td>
+   <td style="width : 266.251pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">Gets files from a web server</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td style="width : 112.500pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">IDE perspective</p>
+</td>
+   <td style="width : 266.251pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">A defined layout of the IDE. Each perspective will show different view (panel) combinations.</p>
+</td>
+</tr>
+   <tr style=" height : 29.00pt; background : #ffffff;">
+   <td style="width : 112.500pt; background : #ffffff;border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableRowHead">IDE view</p>
+</td>
+   <td style="width : 266.251pt; background : #ffffff;border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000; vertical-align : top;padding-left: 6.00pt; padding-top: 3.00pt; padding-right: 6.00pt; padding-bottom: 3.00pt;">
+   <p dir="ltr" class="FM_TableBody">A panel of information. For example, a directory structure, a panel for entering Terminal commands, etc.</p>
+</td>
+</tr>
+  </table>
+</div>
+  <p dir="ltr" class="FM_Body"><span style="font-family : Arial; font-weight : bold; font-size  : 18.0pt; "><a name="XREF_38388_A_5_VirtualBox_Tips"></a>&nbsp;</span></p>
+ </div>
+</body>
+
+</html>
+

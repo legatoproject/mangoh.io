@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>4118961 Tut DevelopApps</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\rebuilding green for mangohio\4118961 Tut DevelopApps.fm" />
+ <link rel="stylesheet" href="4118961_Tut_DevelopApps.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "2";
+</script>
+ <meta name="brsprev" value="Tutorials_-_HTML5/4118961_Tut_PrepareComputer/4118961_Tut_PrepareComputer.htm">
+ <meta name="brsnext" value="Tutorials_-_HTML5/4118961_Tut_MakeConnection/4118961_Tut_MakeConnection.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">5: <a name="XREF_84678_Hello_World"></a>Develop and test applications</p>
+  <p dir="ltr" class="FM_Body">In this section, you will learn how to use the Legato development environment to build a simple application (“Hello World”), install it onto the CF3 module in your mangOH Green, and test that the application runs.</p>
+  <p dir="ltr" class="FM_Body">Legato provides two interfaces for developing applications:</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>CLI<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Command Line Interface in a terminal window.</p>
+  <p dir="ltr" class="FM_Bulleted"><span class="FM_Number">•<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Developer Studio<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>A GUI (Graphical User Interface) development environment.</p>
+
+  <p dir="ltr" class="FM_Body">This document describes development using CLI.</p>
+
+  <p dir="ltr" class="FM_Tip">Tip:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span><span style="font-family : Helvetica; font-style : normal; font-size  : 10.0pt; "></span>This tutorial touches on the basics of using the Legato development environment. For detailed references, forums, etc., see <span class="FM_Link"><a href="http://legato.io/legato-docs/latest/mangOH_developers.html"></a><a href="http://legato.io/legato-docs/latest/mangOH_developers.html">http://legato.io/legato-docs/latest/mangOH_devel&#173;opers.html</a></span>.</p>
+
+  <h1 dir="ltr"><a name="TOC_5_1_Develop_using_the"></a>5.1 <a name="XREF_80001_5_1_Develop_using"></a>Develop using the CLI<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Command Line Interface</h1>
+
+  <h2 dir="ltr"><a name="TOC_5_1_1_Develop_and_test"></a>5.1.1 <span style="font-family : Helvetica; font-weight : normal; font-size  : 10.0pt; "></span><a name="XREF_42102_5_1_2_Develop_and"></a>Develop and test applications</h2>
+
+  <p dir="ltr" class="FM_Body">When you installed Legato, sample application files were also stored, including a “hello world” application. This section uses the “hello world” application for examples.</p>
+
+  <p dir="ltr" class="FM_Body">Compile an application on the host computer, and install it on the target:</p>
+
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect the mangOH Green to the host using the micro-USB cable.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>On the host, open a new terminal window (referred to as DEV_TERM in this procedure).</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to the sample application directory for Hello World:</p>
+
+  <p dir="ltr" class="FM_Indented" style="font-family : 'Courier New';"><span class="FM_CodeFragment">$ cd $LEGATO_ROOT/apps/sample/helloWorld</span></p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Compile the application for the correct target type. In this example, we are using a WP85XX CF3 module, and the target type is “wp85”.</p>
+
+  <p dir="ltr" class="FM_Indented" style="font-family : 'Courier New';"><span class="FM_CodeFragment">$ make wp85</span></p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Install the application on the target:</p>
+
+  <p dir="ltr" class="FM_Indented" style="font-family : 'Courier New';"><span class="FM_CodeFragment">$ instapp helloWorld.wp85.update 192.168.2.2</span></p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If the message “The authenticity of host ...” appears, type “<span class="FM_CodeFragment">yes</span>” and press Enter to continue.</p>
+
+  <div align="left"><img alt="cli_ssh_continue_1.png" style=" width:100%; margin-top:10pt; max-width:504.055pt;" id="image0" src="../../assets/cli_ssh_continue_1.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Body">Run the application on the target:</p>
+
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Set up a window to show the application’s output (the “Hello World” application writes to a log file) as follows:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a new terminal window (referred to as LOG_TERM in this procedure).</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the target’s console:</p>
+
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment">$ ssh root@192.168.2.2</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>The first time you use a ssh (secure shell) connection to your device, the following error message may appear.</p>
+
+  <div align="left"><img alt="cli_ssh_warning_2.png" style=" width:100%; margin-top:10pt; max-width:471.024pt;" id="image1" src="../../assets/cli_ssh_warning_2.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Indented2">If it does appear:</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> i.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Enter the command:</p>
+
+  <p dir="ltr" class="FM_Indented3" style="font-family : 'Courier New';"><span class="FM_CodeFragment">$ ssh-keygen -f “/home/legato/ssh/known_hosts” -R 192.168.2.2</span></p>
+
+  <div align="left"><img alt="cli_ssh_warning_3.png" style=" width:100%; margin-top:10pt; max-width:471.024pt;" id="image2" src="../../assets/cli_ssh_warning_3.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> ii.<span style="padding-left: 8pt;" class="FMAutoNumber_1"></span></span>Try again to connect to the target’s console:</p>
+
+  <p dir="ltr" class="FM_Indented3" style="font-family : 'Courier New';"><span class="FM_CodeFragment">$ ssh root@192.168.2.2</span></p>
+
+  <p dir="ltr" class="FM_Numbered3"><span class="FM_Number"> iii.<span style="padding-left: 6pt;" class="FMAutoNumber_1"></span></span>If prompted to continue connecting, type “<span class="FM_CodeFragment">yes</span>” and press Enter.</p>
+
+  <div align="left"><img alt="keygen_continue_1.png" style=" width:100%; margin-top:10pt; max-width:478.584pt;" id="image3" src="../../assets/keygen_continue_1.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Watch the log file and show when a message from “hello world” appears:</p>
+
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># logread -f | grep “Hello”</span></p>
+
+  <p dir="ltr" class="FM_NoteBody"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Nothing will appear to happen until you run the Hello World application ion in the next step. Leave this command running until after you see the Hello World output, then you can press Ctrl+C to terminate it.</p>
+
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Run the application:</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open an existing or new terminal window to run the application (referred to as APP_TERM in this procedure).</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the target‘s console:</p>
+
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment">$ ssh root@192.168.2.2</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Check that the application is installed:</p>
+
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># app status</span></p>
+
+  <div align="left"><img alt="cli_app_status_1.png" style=" width:100%; margin-top:10pt; max-width:505.524pt;" id="image4" src="../../assets/cli_app_status_1.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Indented2">The “hello world” application should appear in the list with a status of ‘Running’. The application was built to run automatically; when you write your own applications, you can make them install without running, if you prefer.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Stop the application (so you can restart it and see the output):</p>
+
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># app stop helloWorld</span></p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Run the application and see that it outputs a “Hello, world.” message to LOG_TERM:</p>
+
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># app start helloWorld</span></p>
+
+  <div align="left"><img alt="cli_app_start_1.png" style=" width:100%; margin-top:10pt; max-width:489.780pt;" id="image5" src="../../assets/cli_app_start_1.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureWide">&nbsp;</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">f.<span style="padding-left: 12pt;" class="FMAutoNumber_1"></span></span>(Optional) If you want to see information about the application, use:</p>
+
+  <p dir="ltr" class="FM_Indented2" style="font-family : 'Courier New';"><span class="FM_CodeFragment"># app info helloWorld</span></p>
+
+  <p dir="ltr" class="FM_FigureWide"><span style="color   : #333a3f; "></span>&#160;</p>
+
+  <div align="left"><img alt="cli_app_info_1.png" style=" width:100%; margin-top:10pt; max-width:473.221pt;" id="image6" src="../../assets/cli_app_info_1.png" />
+  </div>
+  <p dir="ltr" class="FM_Body">You have now successfully compiled a working application, and installed, stopped, and run it on the module.</p>
+
+  <p dir="ltr" class="FM_Body">Now you are ready to <a href="../4118961_Tut_MakeConnection/4118961_Tut_MakeConnection.htm#XREF_84678_Hello_World">Connect To Mobile Networks</a>.</p>
+
+  <p dir="ltr" class="FM_Body" style="margin-top  : 10.000pt; font-family : Arial; font-weight : bold; font-size  : 18.0pt;">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+

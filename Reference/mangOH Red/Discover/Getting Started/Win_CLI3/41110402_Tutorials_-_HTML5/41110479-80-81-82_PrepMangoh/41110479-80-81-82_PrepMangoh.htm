@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41110479-80-81-82 PrepMangoh</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="N:\JaggedPeak\Current Projects\SWI\CTO\41110402 mangOH Red Fundamentals v2 (Linux and Windows CLI)\41110479-80-81-82 PrepMangoh.fm" />
+ <link rel="stylesheet" href="41110479-80-81-82_PrepMangoh.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "4";
+</script>
+ <meta name="brsprev" value="41110402_Tutorials_-_HTML5/PrepComp/PrepComp.htm">
+ <meta name="brsnext" value="41110402_Tutorials_-_HTML5/41110479-80-81-82_Connect/41110479-80-81-82_Connect.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">5: <a name="XREF_22697_Prepare_your"></a>Prepare Your mangOH Red For Development</p>
+  <p dir="ltr" class="FM_Body">In this chapter, you will update the CF3 module on your mangOH Red with the basic mangOH Red platform (application suite).</p>
+  <h1 dir="ltr"><a name="TOC_5_1_Build_and_Install"></a>5.1 <a name="XREF_67774_4_2_1_Connect_the"></a><a name="XREF_68638_3_1_Install_mangOH"></a>Build and Install Legato Platform and mangOH Red Platform on Target</h1>
+
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In a terminal window, build and install the Legato Application Framework (AF):</p>
+
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd legato</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make clean &amp;&amp; make wp85 &amp;&amp; source bin/configlegatoenv</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="build_platform_1.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image0" src="../../assets/build_platform_1.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <div align="left"><img alt="build_platform_3.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image1" src="../../assets/build_platform_3.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to the mangoh work directory and build the platform:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ cd $MANGOH_ROOT</span></p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ make red_wp85</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="build_platform_4.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image2" src="../../assets/build_platform_4.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+
+  <div align="left"><img alt="build_platform_6.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image3" src="../../assets/build_platform_6.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>This may take several minutes to run.</p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>In the command &quot;make red_wp85&quot;, ’wp85’ indicates the target type on which the applications will run. If a different module type is used, the make command must be modified to indicate the correct type. For example, if the CF3 module is a WP7602, the target must be changed from &quot;wp85&quot; to &quot;wp76&quot;. This applies to all make commands described in this guide.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Verify that the update file mangOH_Red.wp85.update was created:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ls -al *.update</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="build_platform_7.png" style=" width:100%; margin-top:10pt; max-width:378.666pt;" id="image4" src="../../assets/build_platform_7.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; "></span>Make sure the mangOH board is powered on and is connected to your dev machine<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the board is connected if you receive ping responses:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ping 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented">Press Ctrl+C to return to the command prompt.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_82328_5_Follow_the_steps"></a>Follow the steps in <a href="#XREF_23943_5_2_How_to_Update"><span class="FM_blue_color">How to Update Module Firmware</span></a>&#160;to make sure you have the latest firmware on the CF3 module.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_87875_6_Install_the"></a>Install the mangOH_Red platform on your mangOH board:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ instsys mangOH_Red.wp85.update 192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Important_Indented1"><span class="FM_Bold">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Before you can install the platform you just built (using the most recent Legato framework) onto your mangOH&nbsp;Red, you must make sure you also have the latest firmware<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>the platform is built to work on the matching firmware.</p>
+  <p dir="ltr" class="FM_Indented">If the applications install successfully, the last message shown will be &quot;SUCCESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Done&quot;.</p>
+
+  <div align="left"><img alt="41110479-80-81-82_PrepMangoh00022.jpg" style=" width:100%; margin-top:10pt; max-width:378.750pt;" id="image5" src="../../assets/41110479-80-81-82_PrepMangoh00022.jpg" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; "></span>Verify the mangOH platform apps installed correctly:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Show the list of installed apps to confirm the build and install succeeded:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># app status</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented2">If the following apps appear in the list, the build and install succeeded:</p>
+
+  <div align="left"><img alt="app_status_new.png" style=" width:100%; margin-top:10pt; max-width:379.416pt;" id="image6" src="../../assets/app_status_new.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Body">Now that the mangOH&nbsp;Red platform is installed, you will learn how to <a href="../41110479-80-81-82_Connect/41110479-80-81-82_Connect.htm#XREF_84678_Hello_World"><span class="FM_blue_color">Connect To Mobile Networks</span></a>.</p>
+  <h1 dir="ltr"><a name="TOC_5_2_How_to_Update_Module"></a>5.2 <a name="XREF_23943_5_2_How_to_Update"></a>How to Update Module Firmware</h1>
+  <p dir="ltr" class="FM_Body">Use the following procedure to update your module firmware, and you can use it again when new firmware versions are released:</p>
+  <p dir="ltr" class="FM_Numbered_Restart"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Check the firmware version on your module:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Open a terminal window in the VM.</p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>In the Ubuntu desktop, a terminal window may be opened using a keyboard shortcut (e.g. Ctrl+Alt+T) or the Terminal icon.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_97272_b_Connect_to_the"></a>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>The following message appears if you are using your CF3 module for the first time (modules are shipped without a password).</p>
+
+  <p dir="ltr" class="FM_Figure">&#160;</p>
+
+  <div align="left"><img alt="login_nagger.png" style=" width:100%; margin-top:10pt; max-width:321.000pt;" id="image7" src="../../assets/login_nagger.png" />
+  </div>
+  <p dir="ltr" class="FM_Indented2">For now, type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">3</span>&#160;and press Enter, then type <span class="FM_Code_Background_Color" style="font-family : 'Courier New'; ">Y</span>&#160;and press Enter to be reminded the next time you connect.</p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>After completing this tutorial, you should select an appropriate login authenti&#173;cation method (ssh keys or password) from this menu<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>see <span class="FM_Link"><a href="legato.io/legato-docs/latest/basicTarget.html">legato.io/legato-docs/latest/basicTarget.html</a></span> for details.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Display information about the CF3 module:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># cm info</span><span style="font-size: x-small;">&nbsp;</span></p>
+
+  <div align="left"><img alt="vb_cm_info.png" style=" width:100%; margin-top:10pt; max-width:378.894pt;" id="image8" src="../../assets/vb_cm_info.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; "></span>Make note of your Firmware version, IMEI, and FSN. You will use all of these in this guide.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">f.<span style="padding-left: 12pt;" class="FMAutoNumber_1"></span></span>Disconnect from the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># exit</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Go to <span class="FM_Link"><a href="https://source.sierrawireless.com">https://source.sierrawireless.com</a></span> and do the following:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Devices section, click AirPrime.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click WP series.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Click your module type.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Software download section, click Firmware to display the list of available firmware packages.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">e.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>In the Combined Images table, compare the Firmware version for the Generic carrier with your module’s firmware version:</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If your version is the same as the Generic version<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>The firmware does not need to be updated. Continue to the next section (<a href="#XREF_68638_3_1_Install_mangOH"><span class="FM_blue_color">Build and Install Legato Platform and mangOH Red Platform on Target</span></a>).</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If your version is lower than the Generic version<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Continue to <a href="#XREF_53761_f_asdfasdf"><span class="FM_blue_color">Step f</span></a>&#160;to update your firmware.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">f.<span style="padding-left: 12pt;" class="FMAutoNumber_1"></span></span><a name="XREF_53761_f_asdfasdf"></a>If you did not load the latest Drivers for your module yet, load them now<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>see <a href="../41110479-80-81-82_Tut_SetUp/41110479-80-81-82_Tut_SetUp.htm#XREF_41555_3_2_Install_Drivers">Install Drivers</a> for instructions.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">g.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_20617_g_In_the_Windows"></a>In the Windows EXE column for the Generic carrier, click Download.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">h.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Make sure the mangOH&nbsp;Red is connected to the dev machine with a mini-USB cable.</p>
+
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">i.<span style="padding-left: 13pt;" class="FMAutoNumber_1"></span></span>Run the downloaded file and follow the instructions that appear.</p>
+
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span><span style="font-family : Helvetica; font-style : normal; font-size  : 10.0pt; "></span>This will take several minutes to run.</p>
+
+  <div align="left"><img alt="fwupdate_message.png" style=" width:100%; margin-top:10pt; max-width:378.894pt;" id="image9" src="../../assets/fwupdate_message.png" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><span style="font-family : Arial; "></span>As indicated in the response on the previous step, wait (1–2&nbsp;minutes) while the module reboots with the new firmware. (If you still have your console terminal window open, you will see when the device has finished rebooting.)</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Verify that the firmware updated:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Display information about the CF3 module and confirm the new Firmware version is listed:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># cm info</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Disconnect from the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># exit</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If you did this firmware update as part of the instructions in <a href="#XREF_67774_4_2_1_Connect_the"><span class="FM_blue_color">Build and Install Legato Platform and mangOH Red Platform on Target</span></a>, go to <a href="#XREF_87875_6_Install_the"><span class="FM_blue_color">Step 6</span></a>.</p>
+ </div>
+</body>
+
+</html>
+

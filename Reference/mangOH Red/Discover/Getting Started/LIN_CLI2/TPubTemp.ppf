@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE polprojfile>
+<ppfml version="2.00" project="41110402 Tutorials - HTML5" type="4">
+ <windowlist defaultwindow="NewWindow">
+  <window name="NewWindow" x="5%" y="5%" width="90%" height="90%" viewtype="doublepane" workspacestyle="DEFAULT" toolbar="off" locationbar="off" menu="off" resizable="yes" statusbar="off" usecurrentwindowsettings="yes" caption="NewWindow">
+   <elements><element name="BrowseSequence" Present="yes" /><element name="SearchInput" Present="no" />
+   </elements>
+   <agents defaultagent="toc">
+    <agent>toc
+    </agent>
+    <agent>ndx
+    </agent>
+    <agent>nls
+    </agent>
+    <agent>gls
+    </agent>
+   </agents>
+  </window>
+ </windowlist>
+ <contextmap>
+ </contextmap>
+ <topiclist defaulttopic="41110402_Tutorials_-_HTML5\41110479-80-81-82_Tut_Quick_Start\41110479-80-81-82_Tut_Quick_Start.htm">
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_Tut_Quick_Start\41110479-80-81-82_Tut_Quick_Start.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_Tut_BeforeBegin\41110479-80-81-82_Tut_BeforeBegin.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_Tut_SetUp\41110479-80-81-82_Tut_SetUp.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\PrepComp\PrepComp.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_PrepMangoh\41110479-80-81-82_PrepMangoh.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_Connect\41110479-80-81-82_Connect.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_AirVan\41110479-80-81-82_AirVan.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_Develop\41110479-80-81-82_Develop.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_UpLegato\41110479-80-81-82_UpLegato.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_Tips\41110479-80-81-82_Tips.htm
+  </topic>
+  <topic>41110402_Tutorials_-_HTML5\41110479-80-81-82_Preface\41110479-80-81-82_Preface.htm
+  </topic>
+ </topiclist>
+ <projectincludes>
+ </projectincludes>
+ <filenamemap>
+  <filenameentry moniker="wh_languagetype">
+   <filename>en_US
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="nls">
+   <filename>.nla
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_lngfile">
+   <filename>index.lng
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_stoplist">
+   <filename>index.stp
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="startpage">
+   <filename>index.html
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="favicon">
+   <filename>Responsive HTML5_favicon.png
+   </filename>
+  </filenameentry>
+ </filenamemap>
+</ppfml>

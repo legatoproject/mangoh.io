@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc3.js\"  name=\"Arduino-compatible Circuit\" url=\"mangOH_Dev_Kit_User_Guide_-_HTML5/Hardware/Hardware.htm#TOC_Arduino_compatiblebc-10\"><item name=\"Connect Arduino-compatible Shield\" url=\"mangOH_Dev_Kit_User_Guide_-_HTML5/Hardware/Hardware.htm#TOC_Connect_Arduinobc-11\" /></data>";

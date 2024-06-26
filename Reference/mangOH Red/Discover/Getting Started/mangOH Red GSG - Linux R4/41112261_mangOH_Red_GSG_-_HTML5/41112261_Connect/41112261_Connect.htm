@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>41112261 Connect</title>
+
+ <meta name="generator" content="Adobe FrameMaker 2015" />
+ <meta name="Originator" content="ImportMif" />
+ <meta name="OriginalFile" content="F:\JaggedPeak\Current Projects\SWI\CTO\41112261-4112327 mangOH Red Getting Started r4\41112261 Connect.fm" />
+ <link rel="stylesheet" href="41112261_Connect.css" type="text/css" />
+
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "../..";
+gCommonRootRelPath = "../..";
+gTopicId = "4";
+</script>
+ <meta name="brsprev" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_PrepMangoh/41112261_PrepMangoh.htm">
+ <meta name="brsnext" value="41112261_mangOH_Red_GSG_-_HTML5/41112261_AirVan/41112261_AirVan.htm">
+</head>
+
+<body dir="ltr">
+<script type="text/javascript" src="../../ehlpdhtm.js"></script>
+
+ <div dir="ltr">
+  
+  <p dir="ltr" class="FM_ChapterTitle">6: <a name="XREF_44019_Register_On_Mobile"></a>Register On Mobile Network</p>
+  <p dir="ltr" class="FM_Body">In this chapter, you will make sure the mangOH&nbsp;Red can connect to the mobile network (for your SIM provider).</p>
+  <h1 dir="ltr"><a name="TOC_6_1_Connect_To_a_Mobile"></a>6.1 Connect To a Mobile Network</h1>
+  <p dir="ltr" class="FM_Body">To connect to a mobile network, you must have a micro-SIM in the mangOH&nbsp;Red.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">1.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If you do not have a micro-SIM in the mangOH&nbsp;Red, insert one before continuing:</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_13365_a_Disconnect_the"></a>Disconnect power from the mangOH&nbsp;Red (remove the jumper from the power header, or unplug the micro-USB cable that is providing power).</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Insert a micro-SIM in the slot on the bottom side of the <uservariable x-value="mangOH&nbsp;Red" x-showvalue="TRUE" name="Product_Tag_1" x-format="Product_Tag_1">mangOH&nbsp;Red</uservariable>. (Either the micro-SIM included with the kit, or one that has been activated by another mobile network provider.)</p>
+  <div align="left"><img alt="sim_insertion_3.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:379.368pt;" id="image0" src="../../assets/sim_insertion_3.jpg" />
+  </div>
+  <p dir="ltr" class="FM_Figure">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Reconnect the power (plug in the micro-USB cable or insert the jumper on the power header on the same pins it was removed from in <a href="#XREF_13365_a_Disconnect_the"><span class="FM_blue_color">step a</span></a>. The Power LED will light immediately.</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>You must disconnect the power before switching SIMs so the mangOH_Red can detect the SIM while powering on.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Wait until the device enumerates.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">2.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Connect to the mangOH&nbsp;Red:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color">$ ssh root@192.168.2.2</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">3.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Turn off the CF3 module’s radio (it may have been started automatically by other processes):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># cm radio off</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">4.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Set the CF3&nbsp;module to use IPv4 addressing (this is required for use with AirVantage later in the guide):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># cm data pdp ipv4</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">5.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Turn on the CF3 module’s radio, which will attempt to register on the mobile network:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>To connect to the mobile network (using the module’s preferred network order -- e.g. LTE, then UMTS, then 2G):</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># cm radio on</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>If the module is a WP7702 that has LTE-M1 support enabled, and LTE-M1 is not available, the module will fall back to 2G after approximately 5&nbsp;minutes. To attempt to register on 2G immediately:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># cm radio rat GSM</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># cm radio on</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">6.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>You must be using an activated SIM for the radio to successfully register on the mobile network.</p>
+  <p dir="ltr" class="FM_Indented">If you are using:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>a Sierra Wireless SIM provided with the kit (the SIM is not activated), you must activate it via AirVantage (in the next chapter)<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Continue to <a href="#XREF_76427_6_Check_the"><span class="FM_blue_color">Step 9</span></a> to get the information needed to activate the SIM.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>an activated SIM<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Continue to the next step.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>a non-activated SIM<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Activate the SIM with your provider, then continue to the next step.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">7.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_76708_2_Start_a_data"></a>Display the status of the CF3 module’s radio (some typical examples are shown below):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># cm radio</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Connect00105.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.840pt;" id="image1" src="../../assets/41112261_Connect00105.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <div align="left"><img alt="41112261_Connect00108.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.840pt;" id="image2" src="../../assets/41112261_Connect00108.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <div align="left"><img alt="41112261_Connect00111.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.840pt;" id="image3" src="../../assets/41112261_Connect00111.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <div align="left"><img alt="41112261_Connect00114.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:486.840pt;" id="image4" src="../../assets/41112261_Connect00114.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Important_Indented1"><span class="FM_Bold_Red_Important">Important:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>Typically, your module will register on a network in &lt;&nbsp;1&nbsp;minute. However, the very first time your CF3 module and Sierra SIM are used, registration may take from 5–20&nbsp;minutes.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">8.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If the:</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Power is ON and Status is &quot;Not registered but currently searching ...&quot;’<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Wait 10–15 seconds while the radio searches for a network to register on, then repeat <a href="#XREF_76708_2_Start_a_data"><span class="FM_blue_color">Step 7</span></a>.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Power is ON and Status is &quot;Registered ...&quot;<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Continue to <a href="#XREF_76427_6_Check_the"><span class="FM_blue_color">Step 9</span></a>.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Power is ON and the Status indicates some type of registration issue<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Make sure you are using an activated SIM (you can also check if it works in another device) and repeat this procedure.</p>
+  <p dir="ltr" class="FM_Bulleted2"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Power is OFF<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Turn on the radio and then go back to <a href="#XREF_76708_2_Start_a_data"><span class="FM_blue_color">Step 7</span></a>:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># cm radio on</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">9.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_76427_6_Check_the"></a>Display the SIM card’s ICCID value (which will be used when you register for your free AirVantage account):</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># cm sim info</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="example_text_17.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image5" src="../../assets/example_text_17.png" />
+  </div>
+  <p dir="ltr" class="FM_Indented">&nbsp;</p>
+  <p dir="ltr" class="FM_Indented">Your SIM data should appear as shown above.</p>
+  <p dir="ltr" class="FM_NoteIndented1Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>The Home Network Operator is the ISP that provides the network on which the CF3 module is connected. This may be different than the provider of the SIM if you are connecting to a network that your SIM’s provider has an agreement with. For example, Sierra Wireless SIMs will connect to a variety of networks as in the example above.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">10.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span>Check the connection status:</p>
+  <p dir="ltr" class="FM_Indented_CodeFragment"><span class="FM_Code_Background_Color"># cm data</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="41112261_Connect00119.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image6" src="../../assets/41112261_Connect00119.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <div align="left"><img alt="41112261_Connect00122.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image7" src="../../assets/41112261_Connect00122.jpg" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">a.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_73629_b_Determine_which"></a>Determine which APN to use for your SIM:</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Sierra Wireless (included with kit)<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>internet.sierrawireless.com</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>AT&amp;T (included with ATT_mangOH_Red kit only)<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>m2m.com.attz</p>
+  <p dir="ltr" class="FM_Bulleted3"><span class="FM_Number">·<span style="padding-left: 15pt;" class="FMAutoNumber_1"></span></span>Others<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span>Check with the mobile network provider, or search the Internet for &quot;&lt;provider&gt; APN&quot;. For example, &quot;Rogers Wireless APN&quot;</p>
+  <p dir="ltr" class="FM_NoteIndented2Body"><span class="FM_Note">Note:<span style="font-size: small;">&nbsp;&nbsp;&nbsp;</span></span>If your mobile network operator uses different APNs for 3G and LTE, make sure to use the correct APN for your CF3 module type. (e.g. WP8548 is a 3G module, and WP7603 is an LTE module.</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">b.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span><a name="XREF_75166_b_Set_the_APN"></a>Set the APN (replace &lt;apn_value&gt; with the actual APN):</p>
+  <p dir="ltr" class="FM_Indented3_CodeFragment"><span class="FM_Code_Background_Color"># cm data apn &lt;apn_value&gt;</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <p dir="ltr" class="FM_Indented3">(e.g., &quot;# cm data apn internet.sierrawireless.com&quot;)</p>
+  <div align="left"><img alt="example_text_18.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image8" src="../../assets/example_text_18.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented3">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">c.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>Check the connection status again to make sure you set the APN correctly:</p>
+  <p dir="ltr" class="FM_Indented2_CodeFragment"><span class="FM_Code_Background_Color"># cm data</span><span style="font-size: x-small;">&nbsp;</span></p>
+  <div align="left"><img alt="example_text_19.png" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:443.339pt;" id="image9" src="../../assets/example_text_19.png" />
+  </div>
+  <p dir="ltr" class="FM_FigureIndented2">&nbsp;</p>
+  <p dir="ltr" class="FM_Numbered2"><span class="FM_Number">d.<span style="padding-left: 10pt;" class="FMAutoNumber_1"></span></span>If the APN is not the value you set, go back to <a href="#XREF_75166_b_Set_the_APN"><span class="FM_blue_color">step b</span></a>.</p>
+  <p dir="ltr" class="FM_Numbered"><span class="FM_Number">11.<span style="padding-left: 5pt;" class="FMAutoNumber_1"></span></span><a name="XREF_81433_9_The_target_is"></a>The CF3&nbsp;module is registered on a mobile network (if using an activated SIM), and the SIM is installed and configured with the correct APN.</p>
+  <p dir="ltr" class="FM_Body"><img alt="happy_mangoh_canstockphoto11432497_9.jpg" style=" width:100%; margin-top:10pt; margin-bottom:20pt; max-width:28.960pt;" align="left" id="image10" src="../../assets/happy_mangoh_canstockphoto11432497_9.jpg" />In the next section<span style="font-size: x-small;">&nbsp;</span>—<span style="font-size: x-small;">&nbsp;</span><a href="../41112261_AirVan/41112261_AirVan.htm#XREF_84678_Hello_World"><span class="FM_blue_color">Connect to the IoT Cloud</span></a>, you will set up your free account on the Sierra Wireless AirVantage IoT Acceleration Platform and begin sending data to the ’cloud’.</p>
+  <p dir="ltr" class="FM_Body">&nbsp;</p>
+ </div>
+</body>
+
+</html>
+
